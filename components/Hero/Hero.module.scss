@@ -1,0 +1,12 @@
+@import '/styles/system/theme.module.scss';
+
+.ImageBox {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: $base-radius;
+  height: 624px;
+  max-height: 624px;
+  overflow: hidden;
+}

@@ -1,0 +1,22 @@
+@import '/styles/system/theme.module.scss';
+
+.Container {
+  text-align: center;
+}
+
+.TempBox {
+  background-color: $base_charcoal;
+  color: $base_white;
+  border-radius: $base_radius;
+  height: 300px;
+}
+
+.TempOverlay {
+  position: relative;
+  top: 0px;
+  height: 100%;
+  color: #e5e9ee;
+  font-weight: 700;
+  letter-spacing: 1px;
+  background-color: rgba(3, 68, 143, 0.8);
+}

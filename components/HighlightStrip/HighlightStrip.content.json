@@ -1,0 +1,20 @@
+{
+  "Items": [
+    {
+      "title": "Projects",
+      "description": "Projects Showcase"
+    },
+    {
+      "title": "Tech Stack",
+      "description": "Languages and Frameworks"
+    },
+    {
+      "title": "Clients",
+      "description": "Client work"
+    },
+    {
+      "title": "Work",
+      "description": "Professional Work"
+    }
+  ]
+}

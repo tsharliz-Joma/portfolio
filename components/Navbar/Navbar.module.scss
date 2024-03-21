@@ -1,0 +1,15 @@
+@import 'styles/system/theme.module.scss';
+
+
+.NavItem {
+  padding: 10px;
+  font-weight: 600;
+}
+
+#Welcome {
+  flex-grow: 1;
+}
+
+.Hidden {
+  display: none;
+}

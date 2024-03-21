@@ -1,0 +1,28 @@
+@import './system/theme.module.scss';
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: $font-anta-base;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $base-charcoal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.6;
+  color: $base-charcoal;
+  background-color: $base-white;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
