@@ -1,0 +1,11 @@
+@import './styles/system/theme.module.scss';
+
+.Container {
+  border: 2px solid blue;
+
+  padding: $base_padding * 4;
+}
+
+.HighlightItem {
+  border: 2px solid purple;
+}

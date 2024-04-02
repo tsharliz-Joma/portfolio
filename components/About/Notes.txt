@@ -1,0 +1,10 @@
+//gsap.utils.random 
+
+This generates a random number base on the provided parameters 
+Eg. 
+gsap.utils.random(0, 100, 5) --> 65
+Eg.
+Or randomly pick from the supplied array 
+gsap.utils.random(['red', 'green', 'blue']) --> 'red'
+
+

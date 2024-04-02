@@ -2,13 +2,16 @@
 
 .Container {
   text-align: center;
+  padding-top: $base_padding * 4;
+  padding-bottom: $base_padding * 7;
+  border: 2px solid violet;
 }
 
 .TempBox {
   background-color: $base_charcoal;
   color: $base_white;
   border-radius: $base_radius;
-  height: 300px;
+  height: 400px;
 }
 
 .TempOverlay {
@@ -19,4 +22,8 @@
   font-weight: 700;
   letter-spacing: 1px;
   background-color: rgba(3, 68, 143, 0.8);
+}
+
+.HeadingBox {
+  margin-bottom: $base_margin * 3;
 }

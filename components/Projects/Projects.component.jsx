@@ -8,6 +8,7 @@ import content from './Projects.content.json';
 import style from './Projects.module.scss';
 import clsx from 'clsx';
 
+// Each individual Project
 const ProjectItems = ({ content }) => {
   const Projects = content.Projects;
   const [hover, setHover] = useState(false);
@@ -31,10 +32,14 @@ const ProjectItems = ({ content }) => {
   );
 };
 
+// Container for all the projects
 const Projects = () => {
   return (
     <Box className={style.Container}>
       <Container maxWidth='lg'>
+        <Box className={style.HeadingBox}>
+          <Typograhy variant='h2'>Projects</Typograhy>
+        </Box>
         <Grid container spacing={3}>
           <ProjectItems content={content} />
         </Grid>

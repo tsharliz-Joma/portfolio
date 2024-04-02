@@ -1,0 +1,37 @@
+@import './styles/system/theme.module.scss';
+
+.Container {
+  padding-top: $base_padding * 10;
+  padding-bottom: $base_padding * 10;
+  border: 2px solid crimson;
+}
+
+.SecondaryContainer {
+}
+
+.FloatBox {
+  position: relative;
+  border-radius: $base_radius;
+  background-color: black;
+  color: #fff;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ButtonBox {
+  width: fit-content;
+  padding: $base_padding;
+}
+
+.Modal {
+  position: relative;
+  top: 50%;
+  margin: 0 auto;
+  transform: translate(-50% -50%);
+  width: 80%;
+  border: 2px solid $base_black;
+  background-color: $base_paper;
+}

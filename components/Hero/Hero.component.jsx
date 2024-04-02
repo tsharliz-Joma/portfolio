@@ -6,7 +6,7 @@ import style from './Hero.module.scss';
 
 const Hero = ({ src, alt, maxWidth }) => {
   return (
-    <Container maxWidth={maxWidth}>
+    <Container maxWidth={maxWidth} className={style.Container}>
       <Box className={style.ImageBox}>
         <Image src={src} alt={alt} layout='responsive' />
       </Box>

@@ -1,29 +1,31 @@
 @use 'sass:map';
+@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
 $font-anta-base: 'Anta', sans-serif;
+$font-exo-base: "Exo", sans-serif;
 
-$anta: (
-  'regular': (
-    'weight': 400,
-    'style': normal,
-  ),
-);
+// $anta: (
+//   'regular': (
+//     'weight': 400,
+//     'style': normal,
+//   ),
+// );
 
-@function font-weight($key) {
-  @return map.get($anta, $key, 'weight');
-}
+// @function font-weight($key) {
+//   @return map.get($anta, $key, 'weight');
+// }
 
-@function font-style($key) {
-  @return map.get($anta, $key, 'style');
-}
+// @function font-style($key) {
+//   @return map.get($anta, $key, 'style');
+// }
 
-@each $key, $props in $anta {
-  @font-face {
-    font-family: 'Anta', sans-serif;
-    src: url('/static/fonts/anta/anta-regular/Anta-Regular.woff2')
-      format('woff2');
-    font-weight: font-weight($key);
-    font-style: font-style($key);
-    font-display: swap;
-  }
-}
+// @each $key, $props in $anta {
+//   @font-face {
+//     font-family: 'Anta', sans-serif;
+//     src: url('/static/fonts/anta/anta-regular/Anta-Regular.woff2')
+//       format('woff2');
+//     font-weight: font-weight($key);
+//     font-style: font-style($key);
+//     font-display: swap;
+//   }
+// }

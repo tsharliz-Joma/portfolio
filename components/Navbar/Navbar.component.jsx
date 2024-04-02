@@ -59,9 +59,9 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar position='static'>
+    <AppBar position='static' className={style.AppBar}>
       <Toolbar>
-        <Typography variant='h4' id={style.Welcome}>
+        <Typography id={style.Welcome}>
           W E L C O M E
         </Typography>
         {isMobile ? (
