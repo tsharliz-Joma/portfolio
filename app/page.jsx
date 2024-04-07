@@ -11,6 +11,7 @@ import Footer from '@/components/Footer/Footer.component';
 import About from '@/components/About/About.component';
 import TechStack from '@/components/TechStack/TechStack.component';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
+import Work from '@/components/Work/Work.component';
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Header />
       <Hero src={HeroImage} alt={'hero Image'} maxWidth={'lg'} />
       <About />
+      <Work />
       <HighlightStrip />
       <Testimonials />
       <TechStack />

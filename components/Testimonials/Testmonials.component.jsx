@@ -4,7 +4,7 @@ import style from './Testimonials.module.scss';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Typograpghy from '@mui/material/Typography';
+import Typography from '@mui/material/Typography';
 import content from './Testimonials.content.json';
 
 const Testimonial = ({ content }) => {
@@ -15,15 +15,15 @@ const Testimonial = ({ content }) => {
   return (
     <Box key={key}>
       <Box>
-        <Typograpghy variant='subtitle1'>{value.Title}</Typograpghy>
+        <Typography variant='subtitle1'>{value.Title}</Typography>
       </Box>
       {/* Description */}
       <Box className={style.paddingY}>
-        <Typograpghy variant='h5'>{value.Description}</Typograpghy>
+        <Typography variant='h5'>{value.Description}</Typography>
       </Box>
       <Box>
         {/* Author */}
-        <Typograpghy variant='subtitle1'>{value.Author}</Typograpghy>
+        <Typography variant='subtitle1'>{value.Author}</Typography>
       </Box>
     </Box>
   );
