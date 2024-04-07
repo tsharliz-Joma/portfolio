@@ -28,10 +28,21 @@
 
 .Modal {
   position: relative;
-  top: 50%;
+  top: 35%;
   margin: 0 auto;
   transform: translate(-50% -50%);
-  width: 80%;
-  border: 2px solid $base_black;
+  width: 50%;
   background-color: $base_paper;
+  border-radius: $base_radius / 2;
+  color: $base_white;
+}
+
+.ModalInfo {
+  display: flex;
+  flex-direction: column;
+  padding: $base_padding;
+}
+
+.ModalCloseButton {
+  align-self: flex-end;
 }

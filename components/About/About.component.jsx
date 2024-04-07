@@ -8,6 +8,7 @@ import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import style from './About.module.scss';
+import CloseIcon from '@mui/icons-material/Close';
 gsap.registerPlugin(useGSAP);
 
 const MyMeJustMe = () => {
@@ -19,7 +20,9 @@ const MyMeJustMe = () => {
     <Box>
       <Container>
         <Box className={style.ButtonBox}>
-          <Typography onClick={openModal}>Me</Typography>
+          <Button variant='outlined' onClick={openModal}>
+            <Typography onClick={openModal}>Me</Typography>
+          </Button>
         </Box>
         <Modal
           open={open}
@@ -28,7 +31,23 @@ const MyMeJustMe = () => {
           onClose={closeModal}
         >
           <Box className={style.Modal}>
-            <Typography>Text in modal</Typography>
+            <Box className={style.ModalInfo}>
+              <Box>
+                <Typography variant='h4'>Boxer</Typography>
+                <Typography variant='body1'>Info about boxing</Typography>
+              </Box>
+              <Box>
+                <Typography variant='h4'>Barista</Typography>
+                <Typography variant='body1'>Info about baristaing</Typography>
+              </Box>
+              <Box>
+                <Typography variant='h4'>Skater</Typography>
+                <Typography variant='body1'>Info about Skating</Typography>
+              </Box>
+              <Button className={style.ModalCloseButton} variant='outline'>
+                <CloseIcon onClick={closeModal} />
+              </Button>
+            </Box>
           </Box>
         </Modal>
       </Container>
