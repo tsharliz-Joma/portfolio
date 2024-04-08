@@ -1,39 +1,39 @@
 {
   "TechStack": [
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "Javascript",
+      "src": "static/logos/javascript.svg",
+      "alt": "Javascript logo"
     },
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "React",
+      "src": "static/logos/react.svg",
+      "alt": "React logo"
     },
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "Next",
+      "src": "static/logos/next.svg",
+      "alt": "Next logo"
     },
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "Netlify CMS",
+      "src": "static/logos/netlify.svg",
+      "alt": "Netlify logo"
     },
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "Node Js",
+      "src": "static/logos/node.svg",
+      "alt": "Node logo"
     },
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "Material UI",
+      "src": "static/logos/mui.svg",
+      "alt": "Matirial UI logo"
     },
     {
-      "Title": "",
-      "src": "",
-      "alt": ""
+      "Title": "Scss",
+      "src": "static/logos/scss.svg",
+      "alt": "Scss logo"
     }
   ]
 }

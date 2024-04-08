@@ -1,17 +1,20 @@
 'use client';
+import React, { useEffect, useState } from 'react'
 import { ThemeProvider } from '@mui/material/styles';
 import theme from './customTheme';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
+import style from './Header.module.scss'
 
 const Header = () => {
+
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ border: '2px solid red', padding: '100px 0px' }}>
+      <Box className={style.Header}>
         <Container
-          sx={{ display: 'flex', border: '2px solid orange' }}
+          className={style.HeaderIntro}
           maxWidth='xl'
         >
           <Grid container>

@@ -41,7 +41,7 @@ const MyMeJustMe = () => {
                 <Typography variant='body1'>Info about baristaing</Typography>
               </Box>
               <Box>
-                <Typography variant='h4'>Skater</Typography>
+                <Typography variant='h4'>Music</Typography>
                 <Typography variant='body1'>Info about Skating</Typography>
               </Box>
               <Button className={style.ModalCloseButton} variant='outline'>
@@ -56,20 +56,76 @@ const MyMeJustMe = () => {
 };
 
 const MyVision = () => {
+  const [open, setOpen] = useState(false);
+  const openModal = () => setOpen(true);
+  const closeModal = () => setOpen(false);
+
   return (
     <Box>
       <Container>
-        <Typography>Vision</Typography>
+        <Box className={style.ButtonBox}>
+          <Button variant='outlined' onClick={openModal}>
+            <Typography onClick={openModal}>Vision</Typography>
+          </Button>
+        </Box>
+        <Modal
+          open={open}
+          aria-labelledby='My-vision-modal'
+          aria-describedby='My-vision-description'
+          onClose={closeModal}
+        >
+          <Box className={style.Modal}>
+            <Box className={style.ModalInfo}>
+              <Box>
+                <Typography variant='h4'>My Dreams</Typography>
+                <Typography variant='body1'>
+                  Little Description about my goals, dreams and what i see
+                </Typography>
+              </Box>
+              <Button className={style.ModalCloseButton} variant='outline'>
+                <CloseIcon onClick={closeModal} />
+              </Button>
+            </Box>
+          </Box>
+        </Modal>
       </Container>
     </Box>
   );
 };
 
 const MyJourney = () => {
+  const [open, setOpen] = useState(false);
+  const openModal = () => setOpen(true);
+  const closeModal = () => setOpen(false);
+
   return (
     <Box>
       <Container>
-        <Typography>Journey</Typography>
+        <Box className={style.ButtonBox}>
+          <Button variant='outlined' onClick={openModal}>
+            <Typography onClick={openModal}>Journey</Typography>
+          </Button>
+        </Box>
+        <Modal
+          open={open}
+          aria-labelledby='My-journey-modal'
+          aria-describedby='My-journey-modal-description'
+          onClose={closeModal}
+        >
+          <Box className={style.Modal}>
+            <Box className={style.ModalInfo}>
+              <Box>
+                <Typography variant='h4'>My Journey</Typography>
+                <Typography variant='body1'>
+                  Little Description of my Journey so far , things ive overcome
+                </Typography>
+              </Box>
+              <Button className={style.ModalCloseButton} variant='outline'>
+                <CloseIcon onClick={closeModal} />
+              </Button>
+            </Box>
+          </Box>
+        </Modal>
       </Container>
     </Box>
   );

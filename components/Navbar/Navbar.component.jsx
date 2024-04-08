@@ -37,11 +37,29 @@ const MenuItems = ({ content }) => {
 
 const Navbar = (props) => {
   const theme = useTheme();
-  const { window } = props;
+  // const { window } = props;
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const pathname = usePathname();
-  console.log(pathname);
+  const top_offset = 54;
+  const [showBackground, setShowBackground] = useState(false);
+
+  console.log(window);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= top_offset) {
+        setShowBackground(true);
+      } else {
+        setShowBackground(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleDrawer = (open) => {
     // Keyboard event filter
@@ -59,11 +77,12 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar position='static' className={style.AppBar}>
+    <AppBar
+      className={style.AppBar}
+      style={{ backgroundColor: showBackground ? 'transparent' : `#333333` }}
+    >
       <Toolbar>
-        <Typography id={style.Welcome}>
-          W E L C O M E
-        </Typography>
+        <Typography id={style.Welcome}>W E L C O M E</Typography>
         {isMobile ? (
           <>
             <IconButton
