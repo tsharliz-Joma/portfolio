@@ -9,7 +9,6 @@ import Modal from '@mui/material/Modal';
 import Button from '@mui/material/Button';
 import style from './About.module.scss';
 import CloseIcon from '@mui/icons-material/Close';
-gsap.registerPlugin(useGSAP);
 
 const MyMeJustMe = () => {
   const [open, setOpen] = useState(false);
@@ -133,7 +132,7 @@ const MyJourney = () => {
 
 const About = () => {
   //Refrences
-  const container = useRef(null);
+  const containerRef = useRef(null);
   const meRef = useRef(null);
   const visionRef = useRef(null);
   const journeyRef = useRef(null);
@@ -155,35 +154,65 @@ const About = () => {
       x: x,
       y: y,
       duration: gsap.utils.random(1, 5),
-      ease: 'power2.inOut',
+      ease: 'power4.inOut',
+
       onComplete: () => animateWithinBounds(ref, bounds),
     });
   };
 
-  // useGSAP(
-  //   () => {
-  //     const containerRef = container.current;
-  //     const containerBounds = containerRef.getBoundingClientRect();
+  useGSAP(
+    () => {
+      const container = containerRef.current;
+      const elements = [meRef.current, visionRef.current, journeyRef.current];
 
-  //     const bounds = {
-  //       width: containerBounds.width / 5,
-  //       height: containerBounds.height / 5,
-  //       paddingLeft: 0,
-  //       paddingTop: 0,
-  //       paddingRight: 5,
-  //       paddingBottom: 0,
-  //     };
+      if (container) {
+        const test = container.getBoundingClientRect();
+        const {
+          width: containerWidth,
+          height: containerHeight,
+          x: containerX,
+          y: containerY,
+          left: containerLeft,
+          right: containerRight,
+          top: containerTop,
+          bottom: containerBottom,
+        } = container.getBoundingClientRect();
 
-  //     animateWithinBounds(meRef, bounds);
-  //     animateWithinBounds(visionRef, bounds);
-  //     animateWithinBounds(journeyRef, bounds);
-  //   },
-  //   { scope: container }
-  // );
+        console.log(test);
+
+        elements.forEach((el) => {
+          if (el) {
+            const { width: elWidth, height: elHeight } =
+              el.getBoundingClientRect();
+
+            const maxElX = containerWidth - elWidth;
+            const maxElY = containerHeight - elHeight;
+
+            const animate = () => {
+              gsap.to(el, {
+                x: gsap.utils.random(0, maxElX, 5),
+                y: gsap.utils.random(0, maxElY, 5),
+                duration: gsap.utils.random(1, 5, 1),
+                ease: 'none',
+                onComplete: animate,
+              });
+            };
+
+            animate();
+          }
+        });
+      }
+    },
+    { scope: containerRef }
+  );
 
   return (
-    <Box className={style.Container} ref={container}>
-      <Container className={style.SecondaryContainer} maxWidth='lg'>
+    <Box className={style.Container}>
+      <Container
+        className={style.SecondaryContainer}
+        ref={containerRef}
+        maxWidth='lg'
+      >
         <Box className={style.FloatBox} ref={meRef}>
           <MyMeJustMe />
         </Box>

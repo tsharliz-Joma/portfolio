@@ -44,8 +44,6 @@ const Navbar = (props) => {
   const top_offset = 54;
   const [showBackground, setShowBackground] = useState(false);
 
-  console.log(window);
-
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= top_offset) {
@@ -82,7 +80,7 @@ const Navbar = (props) => {
       style={{ backgroundColor: showBackground ? 'transparent' : `#333333` }}
     >
       <Toolbar>
-        <Typography id={style.Welcome}>W E L C O M E</Typography>
+        <Typography id={style.Welcome} variant='h3' fontWeight={600}>W E L C O M E</Typography>
         {isMobile ? (
           <>
             <IconButton

@@ -17,7 +17,7 @@ export default function Home() {
     <main className={styles.main}>
       <Navbar />
       <Header />
-      <Hero src={HeroImage} alt={'hero Image'} maxWidth={'lg'} />
+      {/* <Hero src={HeroImage} alt={'hero Image'} maxWidth={'lg'} /> */}
       <About />
       <HighlightStrip />
       <Testimonials />
