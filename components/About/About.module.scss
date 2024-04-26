@@ -1,19 +1,13 @@
 @import './styles/system/theme.module.scss';
 
 .Container {
-  padding-top: $base_padding * 10;
-  padding-bottom: $base_padding * 10;
-  width: 100%;
   overflow: hidden;
+  position: relative;
+  padding: $base_padding * 7 0px;
   border: 1px solid blue;
 }
 
-.SecondaryContainer {
-  border: 1px solid red;
-}
-
 .FloatBox {
-  position: relative;
   border-radius: $base_radius * 10;
   background-color: black;
   color: #fff;
@@ -24,28 +18,18 @@
   align-items: center;
 }
 
+.a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  will-change: transform;
+}
+
 .ButtonBox {
   width: fit-content;
   padding: $base_padding;
-}
-
-.Modal {
-  position: relative;
-  top: 35%;
-  margin: 0 auto;
-  transform: translate(-50% -50%);
-  width: 50%;
-  background-color: $base_paper;
-  border-radius: $base_radius / 2;
-  color: $base_white;
-}
-
-.ModalInfo {
-  display: flex;
-  flex-direction: column;
-  padding: $base_padding;
-}
-
-.ModalCloseButton {
-  align-self: flex-end;
 }

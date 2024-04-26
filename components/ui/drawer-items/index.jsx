@@ -26,4 +26,5 @@ const DrawerItems = ({ handleDrawerToggle }) => {
   );
 };
 
+DrawerItems.displayName = 'Drawer Items'
 export default DrawerItems

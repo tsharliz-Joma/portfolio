@@ -9,30 +9,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import EmailIcon from '@mui/icons-material/Email';
 import clsx from 'clsx';
 import style from './Footer.module.scss';
-
-const GetInTouch = () => {
-  return (
-    <Box component='form' autoComplete='off'>
-      <Box className={style.GetInTouch}>
-        <Box>
-          <Box>
-            <Typography variant='button'>Say hey</Typography>
-          </Box>
-          <Box className={style.DisplayFlexCenterAround}>
-            <TextField
-              className={style.Input}
-              variant='outlined'
-              label='email'
-              size='small'
-         
-            />
-            <Button variant='contained'>Send</Button>
-          </Box>
-        </Box>
-      </Box>
-    </Box>
-  );
-};
+import ContactCard from '../ui/contact-card';
 
 const Footer = () => {
   return (
@@ -63,7 +40,7 @@ const Footer = () => {
             </Grid>
           </Grid>
           <Grid item xs={12} md={6}>
-            <GetInTouch />
+            <ContactCard />
           </Grid>
         </Grid>
       </Container>

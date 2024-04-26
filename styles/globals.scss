@@ -23,7 +23,7 @@ body {
 body {
   line-height: 1.6;
   color: $base-charcoal;
-  background-color: $base-white;
+  background-color: $base-charcoal;
 }
 
 a {
@@ -41,4 +41,9 @@ ol {
 .wrapper {
   margin: 0 auto;
   max-width: 1440px;
+}
+
+.paddingY {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

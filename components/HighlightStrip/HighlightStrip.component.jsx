@@ -4,29 +4,19 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import style from './HighlightStrip.module.scss'
-
-const HighlightItems = ({ content }) => {
-  return (
-    <>
-      {content.map((item, index) => (
-        <Grid key={index} item xs={12} md={3} className={style.HighlightItem}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Typography variant='h4'>{item.title}</Typography>
-            <Typography variant='subtitle2'>{item.description}</Typography>
-          </Box>
-        </Grid>
-      ))}
-    </>
-  );
-};
+import style from './HighlightStrip.module.scss';
+import HighlightCard from '../ui/highlight-card';
 
 const HighlightStrip = () => {
+  const HighlightItems = content.Items;
+
   return (
     <Box>
       <Container maxWidth='' className={style.Container}>
         <Grid container>
-          <HighlightItems content={content.Items} />
+          {HighlightItems.map((item, index) => (
+            <HighlightCard className={style.HighlightItem} key={index} content={item} />
+          ))}
         </Grid>
       </Container>
     </Box>

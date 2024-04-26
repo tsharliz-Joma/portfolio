@@ -36,23 +36,6 @@ const Header = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item xs={12}>
-              {/* Grid item */}
-              <Box sx={{ width: 'fit-content', float: 'right' }}>
-                <Typography
-                  variant='h4'
-                  fontWeight='bold'
-                  color='black'
-                  textAlign={'right'}
-                >
-                  Welcome to my coding portfolio.
-                  <br />
-                  I enjoy building projects and Im eager to grow!
-                  <br />
-                  Explore my work and get in touch for collaborations.
-                </Typography>
-              </Box>
-            </Grid>
           </Grid>
         </Container>
       </Box>

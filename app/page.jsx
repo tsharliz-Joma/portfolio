@@ -5,11 +5,11 @@ import Hero from '@/components/Hero/Hero.component';
 import HeroImage from '../content/hero-image.png';
 import Header from '@/components/Header/Header.component';
 import HighlightStrip from '@/components/HighlightStrip/HighlightStrip.component';
-import Testimonials from '@/components/Testimonials/Testmonials.component';
-import Projects from '@/components/Projects/Projects.component';
+import Testimonials from '@/components/sections/testimonials-section/Testmonials.component';
+import Projects from '@/components/sections/projects-section/Projects.component';
 import Footer from '@/components/Footer/Footer.component';
 import About from '@/components/About/About.component';
-import TechStack from '@/components/TechStack/TechStack.component';
+import TechStack from '@/components/sections/tech-section';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
 export default function Home() {
@@ -17,7 +17,6 @@ export default function Home() {
     <main className={styles.main}>
       <Navbar />
       <Header />
-      {/* <Hero src={HeroImage} alt={'hero Image'} maxWidth={'lg'} /> */}
       <About />
       <HighlightStrip />
       <Testimonials />

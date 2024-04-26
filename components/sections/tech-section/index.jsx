@@ -3,27 +3,14 @@ import React, { useRef, useEffect } from 'react';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import content from './TechStack.content.json';
 import Grid from '@mui/material/Grid';
 import Image from 'next/image';
 import style from './TechStack.module.scss';
-
-const TechItems = ({ content }) => {
-  
-  return (
-    <>
-      {content.map((item, index) => (
-        <Grid key={index} item xs={12} md={3} className={style.TechStack}>
-          <Box sx={{ textAlign: 'center' }}>
-            <Image src={item.src} width={150} height={150} alt={item.alt} />
-          </Box>
-        </Grid>
-      ))}
-    </>
-  );
-};
+import TechCard from '@/components/ui/tech-card';
+import content from './TechStack.content.json';
 
 const TechStack = () => {
+  const TechStack = content.TechStack
   return (
     <Box className={style.Container}>
       <Container maxWidth=''>
@@ -32,7 +19,9 @@ const TechStack = () => {
         </Box>
         <Box className={style.InfiniteContainer}>
           <Grid container justifyContent='center'>
-            <TechItems content={content.TechStack} />
+            {TechStack.map((item, index) => (
+              <TechCard key={index} content={item} />
+            ))}
           </Grid>
         </Box>
       </Container>
@@ -40,4 +29,5 @@ const TechStack = () => {
   );
 };
 
+TechStack.displayName = 'Tech Stack';
 export default TechStack;

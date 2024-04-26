@@ -1,15 +1,5 @@
 @import '/styles/system/theme.module.scss';
 
-.Footer {
-  background-color: $base_black;
-  padding-top: $base_padding;
-  padding-bottom: $base_padding;
-}
-
-.Container {
-  color: $base_white;
-}
-
 .GetInTouch {
   background-color: $base_red;
   border-radius: $base_radius;
@@ -36,15 +26,4 @@
     border-radius: $base_radius;
     width: 35%;
   }
-}
-
-.FooterNavItem {
-  p {
-    padding-top: $base_padding / 1.75;
-  }
-}
-
-.FooterSocialItem {
-  display: flex;
-  padding-top: $base_padding / 1.75;
 }
