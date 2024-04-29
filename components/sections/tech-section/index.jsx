@@ -1,33 +1,27 @@
-'use client';
-import React, { useRef, useEffect } from 'react';
-import Container from '@mui/material/Container';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Image from 'next/image';
-import style from './TechStack.module.scss';
-import TechCard from '@/components/ui/tech-card';
-import content from './TechStack.content.json';
+import React from "react";
+import TechCard from "@/components/ui/tech-card";
+import content from "./TechStack.content.json";
 
 const TechStack = () => {
-  const TechStack = content.TechStack
+  const techStack = content.TechStack;
   return (
-    <Box className={style.Container}>
-      <Container maxWidth=''>
-        <Box className={style.HeadingBox}>
-          <Typography variant='h2'>Tech Stack</Typography>
-        </Box>
-        <Box className={style.InfiniteContainer}>
-          <Grid container justifyContent='center'>
-            {TechStack.map((item, index) => (
+    <div className="text-center py-20">
+      <div className="flex flex-col gap-12 max-w-7xl">
+        <div className="">
+          <h2 className="text-5xl font-extrabold text-gray-900">Tech Stack</h2>
+        </div>
+        <div className="flex justify-center overflow-x-auto">
+          <div className="grid grid-cols-2 sm:grid-row-1 gap-[40px]">
+            {techStack.map((item, index) => (
               <TechCard key={index} content={item} />
             ))}
-          </Grid>
-        </Box>
-      </Container>
-    </Box>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-TechStack.displayName = 'Tech Stack';
 export default TechStack;
+
+/* Tailwind CSS Styles */

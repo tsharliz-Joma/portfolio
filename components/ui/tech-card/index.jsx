@@ -1,18 +1,15 @@
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Image from 'next/image';
-import style from './style.module.scss';
+import React from "react";
+import Image from "next/image";
 
-const TechCard = React.forwardRef(({ content, ...props }, ref) => {
+const TechCard = ({content}) => {
   return (
-    <Grid key={content.index} item xs={12} md={3}>
-      <Box sx={{ textAlign: 'center' }}>
+    <div className="w-full flex items-center justify-center md:w-1/4 p-4">
+      <div className="text-center">
         <Image src={content.src} width={150} height={150} alt={content.alt} />
-      </Box>
-    </Grid>
+      </div>
+    </div>
   );
-});
+};
 
-TechCard.displayName = 'Tech Display Card';
+TechCard.displayName = "Tech Display Card";
 export default TechCard;

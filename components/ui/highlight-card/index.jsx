@@ -1,20 +1,19 @@
-import * as React from 'react';
-import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
+import React from "react";
+import { Divider } from "../divider";
 
-const HighlightCard = React.forwardRef(
-  ({ className, content, ...props }, ref) => {
-    return (
-      <Grid item xs={12} md={3} className={className}>
-        <Box sx={{ textAlign: 'center' }}>
-          <Typography variant='h4'>{content.title}</Typography>
-          <Typography variant='subtitle2'>{content.description}</Typography>
-        </Box>
-      </Grid>
-    );
-  }
-);
+const HighlightCard = React.forwardRef(({content, ...props}, ref) => {
+  return (
+    <div className="w-full md:w-1/4 flex flex-col gap-5">
+      <div className="text-center">
+        <h4 className="text-3xl font-bold">{content.title}</h4>
+        <p className="text-sm">{content.description}</p>
+      </div>
+      <div className="container w-1/2">
+        <Divider />
+      </div>
+    </div>
+  );
+});
 
-HighlightCard.displayName = 'Highlight Card';
+HighlightCard.displayName = "Highlight Card";
 export default HighlightCard;

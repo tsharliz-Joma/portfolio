@@ -1,32 +1,28 @@
-// Each individual Project
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Grid from '@mui/material/Grid';
-import Typography  from '@mui/material/Typography';
-import style from './style.module.scss';
+'use client'
+import React, { useState } from "react";
 
 const ProjectCard = ({ content }) => {
-  const Projects = content.Projects;
-  const [hover, setHover] = React.useState(false);
+  const [hover, setHover] = useState(false);
 
   return (
-    <>
-      {Projects.map((project, index) => (
-        <Grid key={index} item xs={12} md={6}>
-          <Box className={style.TempBox}>
-            {hover && (
-              <Box className={clsx({ [style.TempOverlay]: hover })}>
-                <Typography>Title</Typography>
-                <Typography>Live Site</Typography>
-                <Typography>Repo</Typography>
-              </Box>
-            )}
-          </Box>
-        </Grid>
-      ))}
-    </>
+    <div className="w-full md:w-1/2">
+      <div
+        className="relative overflow-hidden bg-white rounded-xl h-[400px]"
+     
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        {hover && (
+          <div className="absolute inset-0 flex flex-col justify-center items-center bg-blue-800 bg-opacity-80">
+            <p className="text-white">Title</p>
+            <p className="text-white">Live Site</p>
+            <p className="text-white">Repo</p>
+          </div>
+        )}
+      </div>
+    </div>
   );
 };
 
-ProjectCard.displayName = 'Project Card';
+ProjectCard.displayName = "Project Card";
 export default ProjectCard;

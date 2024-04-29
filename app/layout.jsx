@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
-import style from './page.module.scss'
-import "../styles/globals.scss";
+import "../styles/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +11,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={style.Layout}>{children}</body>
+      <body className='overflow-y-scroll bg-white'>{children}</body>
     </html>
   );
 }

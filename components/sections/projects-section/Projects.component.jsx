@@ -1,27 +1,24 @@
-'use client';
-import React, { useState } from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Typograhy from '@mui/material/Typography';
-import content from './Projects.content.json';
-import style from './Projects.module.scss';
-import clsx from 'clsx';
-import ProjectCard from '../../ui/project-card';
+import React from "react";
+import content from "./Projects.content.json";
+import ProjectCard from "@/components/ui/project-card";
 
-// Container for all the projects
 const Projects = () => {
+  const Projects = content.Projects;
   return (
-    <Box className={style.Container}>
-      <Container maxWidth='xl'>
-        <Box className={style.HeadingBox}>
-          <Typograhy variant='h2'>Projects</Typograhy>
-        </Box>
-        <Grid container spacing={3}>
-          <ProjectCard content={content} />
-        </Grid>
-      </Container>
-    </Box>
+    <div className="bg-charcoal min-h-screen">
+      <div className="container mx-auto py-20 flex flex-col gap-12">
+        <div className="">
+          <p className="text-white text-5xl font-bold">Projects</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          {Projects.map((item, index) => (
+            <div key={index}>
+              <ProjectCard content={item} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
   );
 };
 

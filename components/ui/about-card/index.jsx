@@ -1,50 +1,44 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
-import style from './style.module.scss';
-import CloseIcon from '@mui/icons-material/Close';
+"use client";
+import * as React from "react";
+import {Dialog, Transition} from "@headlessui/react";
+// import {XMark} from "@heroicons/react/24/outline";
 
-const InfoCard = React.forwardRef(({ content, ...props }, ref) => {
-    
+const AboutCard = React.forwardRef(({content, ...props}, ref) => {
   const [open, setOpen] = React.useState(false);
   const openModal = () => setOpen(true);
   const closeModal = () => setOpen(false);
 
   return (
-    <Box ref={ref}>
-      <Container>
-        <Box className={style.ButtonBox}>
-          <Button variant='outlined' onClick={openModal}>
-            <Typography onClick={openModal}>{content.title}</Typography>
-          </Button>
-        </Box>
-        <Modal
+    <div ref={ref} className="absolute flex w-full h-auto rounded-3xl  border-black border-2 ">
+      <div className="flex w-full h-[400px] p-4">
+        <button
+          className="w-full rounded px-4 py-2 text-xl"
+          onClick={openModal}>
+          {content.title}
+        </button>
+      </div>
+
+      <Transition show={open} as={React.Fragment}>
+        <Dialog
           open={open}
-          aria-labelledby='My-journey-modal'
-          aria-describedby='My-journey-modal-description'
           onClose={closeModal}
-        >
-          <Box className={style.Modal}>
-            <Box className={style.ModalInfo}>
-              <Box>
-                <Typography variant='h4'>{content.title}</Typography>
-                <Typography variant='body1'>
-                  {content.description}
-                </Typography>
-              </Box>
-              <Button className={style.ModalCloseButton} variant='outline'>
-                <CloseIcon onClick={closeModal} />
-              </Button>
-            </Box>
-          </Box>
-        </Modal>
-      </Container>
-    </Box>
+          className="container fixed inset-0 w-full bg-[#0000007F] overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen ">
+            <Dialog.Panel className="w-full bg-white transform rounded-md p-6 shadow-lg">
+              <div className="flex flex-col">
+                <h4 className="text-lg font-bold">{content.title}</h4>
+                <p className="text-sm">{content.description}</p>
+              </div>
+              <button className="ml-auto mt-4" onClick={closeModal}>
+                {/* <XMark className="h-6 w-6" /> */}
+              </button>
+            </Dialog.Panel>
+          </div>
+        </Dialog>
+      </Transition>
+    </div>
   );
 });
 
-InfoCard.displayName = 'Info Card';
-export default InfoCard;
+AboutCard.displayName = "About Card";
+export default AboutCard;

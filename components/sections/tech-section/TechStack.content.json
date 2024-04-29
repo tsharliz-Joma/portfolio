@@ -15,6 +15,12 @@
       "src": "static/logos/next.svg",
       "alt": "Next logo"
     },
+    
+    {
+      "Title": "Contentful",
+      "src": "static/logos/contentful.svg",
+      "alt": "Contentful logo"
+    },
     {
       "Title": "Netlify CMS",
       "src": "static/logos/netlify.svg",
@@ -34,6 +40,12 @@
       "Title": "Scss",
       "src": "static/logos/scss.svg",
       "alt": "Scss logo"
+    },
+    
+    {
+      "Title": "Tailwind",
+      "src": "static/logos/tailwind.svg",
+      "alt": "Tailwind logo"
     }
   ]
 }

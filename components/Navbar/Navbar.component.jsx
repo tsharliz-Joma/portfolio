@@ -1,44 +1,23 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import style from './Navbar.module.scss';
-import content from './Navbar.content.json';
-import Link from 'next/link';
-import clsx from 'clsx';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import IconButton from '@mui/material/IconButton';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import useTheme from '@mui/material/styles/useTheme';
-import Button from '@mui/material/Button';
-import MenuIcon from '@mui/icons-material/Menu';
+"use client";
+import React, {useState, useEffect} from "react";
+import content from "./Navbar.content.json";
+import AppBar from "@mui/material/AppBar";
+import IconButton from "@mui/material/IconButton";
+import Toolbar from "@mui/material/Toolbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/material/styles/useTheme";
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuItems from "../ui/menu-items";
 
-import { usePathname } from 'next/navigation';
-import Drawer from '@mui/material/Drawer';
+import {usePathname} from "next/navigation";
+import Drawer from "@mui/material/Drawer";
 const drawerWidth = 240;
-
-const MenuItems = ({ content }) => {
-  const navItems = content.navItems;
-  return Object.entries(navItems).map(([key, value]) => (
-    <Link
-      key={key}
-      color='inherit'
-      href={`#${value}`}
-      className={clsx(style.NavItem, {
-        [style.NavItemActive]: '' === `#${value}`,
-      })}
-    >
-      {value}
-    </Link>
-  ));
-};
 
 const Navbar = (props) => {
   const theme = useTheme();
+  const nav_items = content.navItems;
   // const { window } = props;
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const pathname = usePathname();
   const top_offset = 54;
@@ -53,9 +32,9 @@ const Navbar = (props) => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -64,9 +43,9 @@ const Navbar = (props) => {
     return (event) => {
       if (
         event &&
-        event.type === 'keydown' &&
+        event.type === "keydown" &&
         // Because it is in brackets the evaluation of this expression if returned as a (single value) true of false
-        (event.key === 'Tab' || event.key === 'Shift')
+        (event.key === "Tab" || event.key === "Shift")
       ) {
         return;
       }
@@ -75,35 +54,36 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar
-      className={style.AppBar}
-      style={{ backgroundColor: showBackground ? 'transparent' : `#333333` }}
-    >
-      <Toolbar>
-        <Typography id={style.Welcome} variant='h3' fontWeight={600}>W E L C O M E</Typography>
+    <AppBar className={`bg-gray-900`}>
+      <Toolbar className="flex justify-between items-center">
+        <p id="Welcome" className="flex-grow font-bold text-3xl text-white">
+          W E L C O M E
+        </p>
         {isMobile ? (
           <>
             <IconButton
-              size='large'
-              edge='end'
-              color='inherit'
-              aria-label='close'
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon className={style.$base_white} />
+              size="large"
+              edge="end"
+              color="inherit"
+              aria-label="close"
+              onClick={toggleDrawer(true)}>
+              <MenuIcon className="text-white" />
             </IconButton>
             <Drawer
-              anchor='left'
+              anchor="left"
               open={drawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              <MenuItems content={content} />
+              onClose={toggleDrawer(false)}>
+              {nav_items.map((item, index) => (
+                <MenuItems key={index} item={item} />
+              ))}
             </Drawer>
           </>
         ) : (
-          <Box className={clsx({ [style.Hidden]: isMobile })}>
-            <MenuItems content={content} />
-          </Box>
+          <div className={` ${isMobile ? "hidden" : ""}`}>
+            {nav_items.map((item, index) => (
+              <MenuItems key={index} item={item} />
+            ))}
+          </div>
         )}
       </Toolbar>
     </AppBar>
