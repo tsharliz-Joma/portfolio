@@ -1,8 +1,9 @@
-import React from "react";
+import * as React from "react";
 
-const Divider = ({}) => {
-  return <div className={`bg-black w-full h-px`}></div>;
-};
+
+const Divider = React.forwardRef(({ bg , ...props}, ref) => {
+  return <div style={{ backgroundColor: bg }} className={`w-full h-px`}></div>;
+})
 
 Divider.displayName = "Divider";
 export {Divider};

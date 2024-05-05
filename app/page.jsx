@@ -12,11 +12,8 @@ import TechStack from '@/components/sections/tech-section';
 import ThemeProvider from '@mui/material/styles/ThemeProvider';
 
 export default function Home() {
-
-
-  
   return (
-    <main className='w-full'>
+    <main className='w-full bg-black text-white'>
       <Navbar />
       <Header />
       <AboutSection />

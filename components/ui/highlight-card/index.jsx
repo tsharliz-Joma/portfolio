@@ -9,7 +9,7 @@ const HighlightCard = React.forwardRef(({content, ...props}, ref) => {
         <p className="text-sm">{content.description}</p>
       </div>
       <div className="container w-1/2">
-        <Divider />
+        <Divider bg={`#FFF`}/>
       </div>
     </div>
   );

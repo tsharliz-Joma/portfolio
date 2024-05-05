@@ -6,6 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import AboutCard from '../../ui/about-card';
 import content from './About.content.json';
 import CustomCard from '../../ui/custom-card';
+import { generateRandomColors } from '@/lib/helper';
 gsap.registerPlugin(ScrollTrigger);
 
 const AboutSection = ({ className, ...props }) => {
@@ -13,22 +14,12 @@ const AboutSection = ({ className, ...props }) => {
   const cardsRef = React.useRef([]);
   const [bgColors, setBgColors] = React.useState([]);
 
-  // Function to generate random colors
-  const generateRandomColors = () => {
-    // This function will generate a random color for each item in map function 
-    return content.About.map(
-      () => `hsl(${Math.floor(Math.random() * 360)}, 100%, 75%)`
-    );
-  };
-
   useGSAP(() => {
     // here is generates 3 colors and sets the state to an array of the three colors
-    setBgColors(generateRandomColors());
+    setBgColors(generateRandomColors(content, 'About'));
 
     const vh = window.innerHeight;
     const totalHeight = content.About.length * vh; // Adjust as necessary for your content
-
-    // const extendedHeight = totalHeight * window.innerHeight - cardHeight
 
     // Set up the GSAP timeline and ScrollTrigger
     const tl = gsap.timeline({
@@ -36,7 +27,7 @@ const AboutSection = ({ className, ...props }) => {
         trigger: containerRef.current,
         start: 'top top',
         end: `+=${totalHeight}`,
-        scrub: 3,
+        scrub: 1,
         pin: true,
         anticipatePin: 1,
         markers: true,
@@ -74,13 +65,13 @@ const AboutSection = ({ className, ...props }) => {
   return (
     <div
       ref={containerRef}
-      className='section-container relative overflow-y-scroll w-full h-full'
+      className='section-container relative overflow-y-scroll w-full h-full z-[10]'
     >
       <div className='w-full relative h-screen'>
         <div className='flex flex-col justify-start items-start gap-7 w-full '>
           {content.About.map((item, index) => (
             <AboutCard
-            // here the bg color is set to one of the 3 that are set in the state
+              // here the bg color is set to one of the 3 that are set in the state
               bg={bgColors[index]}
               className='about-card'
               key={index}

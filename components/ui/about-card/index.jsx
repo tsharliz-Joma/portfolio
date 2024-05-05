@@ -12,7 +12,7 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
     <div
       ref={ref}
       style={{ backgroundColor: props.bg }}
-      className={`${className} absolute flex items-center justify-center border-black border-2 w-full min-h-full rounded-3xl`}
+      className={`${className} absolute flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`}
     >
       <div
         className='flex items-center justify-center w-full'
