@@ -50,5 +50,3 @@ const TechStack = () => {
 };
 
 export default TechStack;
-
-/* Tailwind CSS Styles */

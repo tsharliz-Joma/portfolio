@@ -3,6 +3,7 @@ import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { useMediaQuery } from 'react-responsive';
 import { X } from 'lucide-react';
+import { Divider } from '../divider';
 
 const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
   const [open, setOpen] = React.useState(false);
@@ -48,16 +49,17 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
           }}
           className={`bg-skytopia-mobile bg-cover bg-no-repeat container relative inset-0 w-screen bg-transparent overflow-y-auto`}
         >
-          <div className='absolute top-0 right-0 flex justify-end w-full h-auto'>
-            <div className='bg-white rounded m-2'>
-              <X onClick={closeModal} />
-            </div>
-          </div>
           <div className='flex items-center justify-center min-h-screen '>
-            <Dialog.Panel className='w-full bg-white transform rounded-md p-6 shadow-lg'>
-              <div className='flex flex-col'>
+            <Dialog.Panel className='w-full bg-white transform rounded-md p-6 flex flex-col gap-[30px]'>
+              <div className='flex flex-col gap-[10px]'>
                 <p className='text-3xl font-bold'>{content.title}</p>
+                <Divider bg={'#000'} />
                 <p className='text-sm'>{content.description}</p>
+              </div>
+              <div className='relative top-0 right-0 flex justify-end w-full h-auto'>
+                <button className='bg-white rounded m-2'>
+                  <X onClick={closeModal} />
+                </button>
               </div>
             </Dialog.Panel>
           </div>
