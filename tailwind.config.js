@@ -9,6 +9,10 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'skytopia-mobile': 'url("/static/img/skytopia-mobile.jpeg")',
+        'skytopia-desktop': 'url"(/static/img/skytopia-desktop.jpeg")',
+      },
       keyframes: {
         slideDown: {
           '0%': { transform: 'translateY(-100%)' },

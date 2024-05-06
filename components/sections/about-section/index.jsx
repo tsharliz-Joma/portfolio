@@ -27,7 +27,7 @@ const AboutSection = ({ className, ...props }) => {
         trigger: containerRef.current,
         start: 'top top',
         end: `+=${totalHeight}`,
-        scrub: 1,
+        scrub: 0.5,
         pin: true,
         anticipatePin: 1,
 
@@ -72,6 +72,7 @@ const AboutSection = ({ className, ...props }) => {
           {content.About.map((item, index) => (
             <AboutCard
               // here the bg color is set to one of the 3 that are set in the state
+              modalBg={item.bg}
               bg={bgColors[index]}
               className='about-card'
               key={index}

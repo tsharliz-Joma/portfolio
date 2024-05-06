@@ -1,11 +1,17 @@
 'use client';
 import * as React from 'react';
 import { Dialog, Transition } from '@headlessui/react';
-// import {XMark} from "@heroicons/react/24/outline";
+import { useMediaQuery } from 'react-responsive';
+import { X } from 'lucide-react';
 
 const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
   const [open, setOpen] = React.useState(false);
-  const scrollPositionRef = React.useRef(window.scrollY);
+  const scrollPositionRef = React.useRef(null);
+  const isDesktop = useMediaQuery({ minWidth: '640px' });
+
+  React.useEffect(() => {
+    scrollPositionRef.current = window.scrollY;
+  }, []);
 
   const openModal = () => {
     scrollPositionRef.current = window.scrollY;
@@ -35,17 +41,24 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
         <Dialog
           open={open}
           onClose={closeModal}
-          className='container relative inset-0 w-full bg-transparent overflow-y-auto'
+          style={{
+            backgroundImage: isDesktop
+              ? `url('/static/img/${props.modalBg}-desktop.svg')`
+              : `url('/static/img/${props.modalBg}-mobile.svg')`,
+          }}
+          className={`bg-skytopia-mobile bg-cover bg-no-repeat container relative inset-0 w-screen bg-transparent overflow-y-auto`}
         >
+          <div className='absolute top-0 right-0 flex justify-end w-full h-auto'>
+            <div className='bg-white rounded m-2'>
+              <X onClick={closeModal} />
+            </div>
+          </div>
           <div className='flex items-center justify-center min-h-screen '>
             <Dialog.Panel className='w-full bg-white transform rounded-md p-6 shadow-lg'>
               <div className='flex flex-col'>
-                <h4 className='text-lg font-bold'>{content.title}</h4>
+                <p className='text-3xl font-bold'>{content.title}</p>
                 <p className='text-sm'>{content.description}</p>
               </div>
-              <button className='ml-auto mt-4' onClick={closeModal}>
-                {/* <XMark className="h-6 w-6" /> */}
-              </button>
             </Dialog.Panel>
           </div>
         </Dialog>
