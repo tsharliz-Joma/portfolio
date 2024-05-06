@@ -5,7 +5,7 @@ import HeroImage from '../content/hero-image.png';
 import Header from '@/components/header';
 import HighlightStrip from '@/components/sections/highlight-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
-import Projects from '@/components/sections/projects-section/Projects.component';
+import Projects from '@/components/sections/projects-section';
 import Footer from '@/components/footer/Footer.component';
 import AboutSection from '@/components/sections/about-section';
 import TechStack from '@/components/sections/tech-section';
@@ -18,10 +18,10 @@ export default function Home() {
       <Header />
       <AboutSection />
       <HighlightStrip />
-      {/* <TestimonialsSection />
+      <TestimonialsSection />
       <TechStack />
       <Projects />
-      <Footer /> */}
+      <Footer />
     </main>
   );
 }

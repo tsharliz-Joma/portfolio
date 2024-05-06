@@ -30,7 +30,7 @@ const AboutSection = ({ className, ...props }) => {
         scrub: 1,
         pin: true,
         anticipatePin: 1,
-        markers: true,
+
         onLeave: () => {
           // This is triggered when the scroll passes the end of the pinned section
           document.body.style.overflow = 'auto'; // Ensure scrolling is enabled when leaving the pinned section
@@ -43,10 +43,10 @@ const AboutSection = ({ className, ...props }) => {
     });
 
     tl.from('.about-card', {
-      scale: 0,
-      opacity: 0,
+      yPercent: -100,
+      // opacity: 0,
       duration: 0.75,
-      stagger: 1.5,
+      stagger: 1,
       ease: 'power2.inOut',
     });
 

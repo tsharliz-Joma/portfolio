@@ -5,8 +5,16 @@ import { Dialog, Transition } from '@headlessui/react';
 
 const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
   const [open, setOpen] = React.useState(false);
-  const openModal = () => setOpen(true);
-  const closeModal = () => setOpen(false);
+  const scrollPositionRef = React.useRef(window.scrollY);
+
+  const openModal = () => {
+    scrollPositionRef.current = window.scrollY;
+    setOpen(true);
+  };
+  const closeModal = () => {
+    setOpen(false);
+    window.scrollTo(0, scrollPositionRef.current);
+  };
 
   return (
     <div
@@ -18,16 +26,16 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
         className='flex items-center justify-center w-full'
         onClick={openModal}
       >
-        <p className='font-bold text-[4rem] tracking-[3.5px] uppercase'>
+        <h2 className='font-bold text-[4rem] tracking-[3.5px] uppercase'>
           {content.title}
-        </p>
+        </h2>
       </div>
 
       <Transition show={open} as={React.Fragment}>
         <Dialog
           open={open}
           onClose={closeModal}
-          className='container fixed inset-0 w-full bg-[#0000007F] overflow-y-auto'
+          className='container relative inset-0 w-full bg-transparent overflow-y-auto'
         >
           <div className='flex items-center justify-center min-h-screen '>
             <Dialog.Panel className='w-full bg-white transform rounded-md p-6 shadow-lg'>
