@@ -73,7 +73,7 @@ body {
   font-family: "Exo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 *,
@@ -83,7 +83,7 @@ body {
 }
 
 #__next {
-  transition: all 30ms linear; 
+  transition: all 30ms linear;
 }
 
 body {
@@ -116,6 +116,47 @@ ol {
   body {
     /* @apply bg-background; */
   }
+
+  @font-face {
+    font-family: "Jaro";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/jaro/jaro-Regular/Jaro-Regular.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "Jersey";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/jersey/jersey-Regular/Jersey25Charted-Regular.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "Permanent Marker";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/permanent-marker/permanent-marker-Regular/PermanentMarker-Regular.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "Rock Salt";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/rock-salt/rock-salt-Regular/RockSalt-Regular.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "Yarndings";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/yarndings20/yarndings20-Regular/Yarndings20-Regular.woff2")
+      format("woff2");
+  }
   @font-face {
     font-family: "Exo";
     font-style: normal;
@@ -123,11 +164,12 @@ ol {
     font-display: swap;
     src: url("/static/fonts/exo/Exo-Regular/exo-Regular.woff2") format("woff2");
   }
-   @font-face {
+  @font-face {
     font-family: "anta";
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url("/static/fonts/anta/anta-regular/Anta-Regular.woff2") format("woff2");
+    src: url("/static/fonts/anta/anta-regular/Anta-Regular.woff2")
+      format("woff2");
   }
 }

@@ -1,12 +1,10 @@
 import React from "react";
 import Image from "next/image";
 
-const TechCard = ({content}) => {
+const TechCard = ({ content }) => {
   return (
-    <div className="w-full flex items-center justify-center md:w-1/4 p-4">
-      <div className="text-center">
-        <Image src={content.src} width={150} height={150} alt={content.alt} />
-      </div>
+    <div className="place-self-center w-full flex items-center justify-center sm:w-full p-4">
+      <Image src={content.src} width={150} height={150} alt={content.alt} />
     </div>
   );
 };

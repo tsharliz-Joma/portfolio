@@ -1,16 +1,33 @@
-'use client';
-import * as React from 'react';
-import { Dialog, Transition } from '@headlessui/react';
-import { useMediaQuery } from 'react-responsive';
-import { X } from 'lucide-react';
-import { Divider } from '../divider';
+"use client";
+import React, { forwardRef, useState, useEffect, useRef } from "react";
+import {
+  Dialog,
+  Transition,
+  DialogPanel,
+  DialogTitle,
+} from "@headlessui/react";
+import { useMediaQuery } from "react-responsive";
+import { X } from "lucide-react";
+import Divider from "../divider";
+import Spotify from "../spotify";
+import VideoPlayer from "../video-player";
 
-const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
-  const [open, setOpen] = React.useState(false);
-  const scrollPositionRef = React.useRef(null);
-  const isDesktop = useMediaQuery({ minWidth: '640px' });
+const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
+  const [open, setOpen] = useState(false);
+  const scrollPositionRef = useRef(null);
+  const isDesktop = useMediaQuery({ minWidth: "640px" });
+  const [spotify, setSpotify] = useState(!!content.spotify);
+  const [video, setVideo] = useState(!!content.video);
 
-  React.useEffect(() => {
+  if (content.spotify) {
+    console.log("spotify");
+  }
+
+  if (content.video) {
+    console.log("video");
+  }
+
+  useEffect(() => {
     scrollPositionRef.current = window.scrollY;
   }, []);
 
@@ -27,18 +44,18 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
     <div
       ref={ref}
       style={{ backgroundColor: props.bg }}
-      className={`${className} absolute flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`}
+      className={`${className} fixed  flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`}
     >
       <div
-        className='flex items-center justify-center w-full'
+        className="flex items-center justify-center w-full"
         onClick={openModal}
       >
-        <h2 className='font-bold text-[4rem] tracking-[3.5px] uppercase'>
+        <h2 className="font-bold text-[4rem] tracking-[3.5px] uppercase">
           {content.title}
         </h2>
       </div>
 
-      <Transition show={open} as={React.Fragment}>
+      <Transition show={open} appear>
         <Dialog
           open={open}
           onClose={closeModal}
@@ -47,17 +64,41 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
               ? `url('/static/img/${props.modalBg}-desktop.svg')`
               : `url('/static/img/${props.modalBg}-mobile.svg')`,
           }}
-          className={`bg-skytopia-mobile bg-cover bg-no-repeat container relative inset-0 w-screen bg-transparent overflow-y-auto`}
+          className={`bg-cover `}
         >
-          <div className='flex items-center justify-center min-h-screen '>
-            <Dialog.Panel className='w-full bg-white transform rounded-md p-6 flex flex-col gap-[30px]'>
-              <div className='flex flex-col gap-[10px]'>
-                <p className='text-3xl font-bold'>{content.title}</p>
-                <Divider bg={'#000'} />
-                <p className='text-sm'>{content.description}</p>
+          {/* <Transition.Child>
+            <div className="fixed inset-0 bg-black/30" />
+          </Transition.Child> */}
+
+          <div className="flex items-center text-black justify-center sm:container w-full sm:h-screen sm:w-3/6">
+            <Dialog.Panel className="w-full h-auto sm:rounded-md p-6 sm:flex sm:flex-col bg-opacity-20 backdrop-blur-md">
+              <div className="flex flex-col gap-[10px]">
+                <Dialog.Title className="text-3xl font-extrabold tracking-[1px]">
+                  {content.title}
+                </Dialog.Title>
+                <Divider bg={"#000"} />
+                <Dialog.Description className="grid gap-[20px]">
+                  <p className="font-bold tracking-[0.5px]">
+                    {content.description_intro}
+                  </p>
+                  <p className="font-bold tracking-[0.5px]">
+                    {content.description_body}
+                  </p>
+                  <div className={`sm:w-3/5`}>
+                    <div className={`${spotify ? "block" : "hidden"}`}>
+                      <Spotify uri={content?.spotify?.uri} />
+                    </div>
+                    <div className={`${video ? "block" : "hidden"}`}>
+                      <VideoPlayer src={content?.video?.src} width={"100%"} />
+                    </div>
+                  </div>
+                  <p className="font-bold tracking-[0.5px] relative sm:top-[-30px]">
+                    {content.description_body2}
+                  </p>
+                </Dialog.Description>
               </div>
-              <div className='relative top-0 right-0 flex justify-end w-full h-auto'>
-                <button className='bg-white rounded m-2'>
+              <div className="relative flex justify-start w-full h-auto">
+                <button className="rounded focus:outline-none hover:text-white">
                   <X onClick={closeModal} />
                 </button>
               </div>
@@ -69,5 +110,5 @@ const AboutCard = React.forwardRef(({ content, className, ...props }, ref) => {
   );
 });
 
-AboutCard.displayName = 'About Card';
+AboutCard.displayName = "About Card";
 export default AboutCard;

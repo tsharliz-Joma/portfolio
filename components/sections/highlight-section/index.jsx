@@ -2,18 +2,17 @@
 import React, { useState } from 'react';
 import content from './HighlightStrip.content.json';
 import HighlightCard from '../../ui/highlight-card';
-import { Divider } from '@/components/ui/divider';
+import Divider from '../../ui/divider'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 import { generateRandomColors } from '@/lib/helper';
+import { BasicCarousel } from '@/components/ui/carousel';
 gsap.registerPlugin(ScrollTrigger);
 
 const HighlightStrip = () => {
   const HighlightItems = content.Items;
   const [bgColors, setBgColors] = useState([]);
-
-
 
   useGSAP(() => {
     setBgColors(generateRandomColors(content, 'Items'));
@@ -21,7 +20,6 @@ const HighlightStrip = () => {
 
     tl.from('.highlights-container', {
       yPercent: -100,
-      opacity: 0.5,
       ease: 'power2.inOut',
       scrollTrigger: {
         trigger: '.highlights-container',
@@ -32,18 +30,19 @@ const HighlightStrip = () => {
   }, []);
 
   return (
-    <div className=''>
+    <div className='w-full'>
       <div
         style={{
           backgroundColor: bgColors[1],
           border: `1px solid ${bgColors[4]}`,
         }}
-        className='highlights-container container relative top-[-20px] mx-auto py-20 text-black rounded-b-3xl z-[3]'
+        className='highlights-container relative top-[-20px] border-black border-2 py-20 text-black rounded-b-3xl z-[3]'
       >
-        <div className='highlights-inner grid grid-cols-1 md:grid-cols-4 gap-5'>
+        <div className='highlights-inner container  sm:justify-items-center w-full grid grid-cols-1 md:grid-cols-4 gap-5'>
+          {/* <BasicCarousel {...HighlightItems}/> */}
           {HighlightItems.map((item, index) => (
             <div className='stagger' key={index}>
-              <HighlightCard bg={bgColors[index]} key={index} content={item} />
+              <HighlightCard bg={bgColors[index]} key={index} {...item} />
             </div>
           ))}
         </div>
@@ -53,4 +52,4 @@ const HighlightStrip = () => {
 };
 
 HighlightStrip.displayName = 'Highlight strip';
-export default HighlightStrip;
+export default HighlightStrip

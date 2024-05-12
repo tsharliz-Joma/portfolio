@@ -12,16 +12,16 @@ const ContactCard = () => {
   return (
     <div className="bg-red rounded-xl p-6">
       <div>
-        <p className="text-[18px] ext-white font-bold">Say hey :)</p>
+        <p className="text-[18px] ext-white font-bold">Get in touch!</p>
       </div>
       <div className="flex items-center justify-between pt-4">
         <input
-          className="w-3/5 bg-white border border-gray-300 rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="w-3/5 bg-white border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500"
           type="email"
           placeholder="Enter your email"
         />
         <button
-          className="w-1/3 font-bold bg-white text-[18px] text-black rounded-[50px] py-2 px-4 hover:bg-black hover:text-white transition duration-300 ease-in-out focus:outline-none"
+          className="w-1/3 font-bold bg-white text-[18px] text-black rounded-[10px] tracking-[1.5px] py-2 px-4 hover:bg-black hover:text-white transition duration-300 ease-in-out focus:outline-none"
           onClick={handleOpen}>
           Send
         </button>
@@ -49,4 +49,4 @@ const ContactCard = () => {
 };
 
 ContactCard.displayName = "Contact Card";
-export default ContactCard;
+export default ContactCard

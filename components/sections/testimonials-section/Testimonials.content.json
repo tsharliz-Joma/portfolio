@@ -1,9 +1,37 @@
 {
   "Testimonials": [
     {
-      "Title": "/ / Feedback from users",
-      "Description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
-      "Author": "- TechInsight Magazine"
+      "title": "/ / Feedback from Island Fight Centre",
+      "description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
+      "author": "- Founder of IFC - Michael",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    },
+    {
+      "title": "/ / Feedback from users",
+      "description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
+      "author": "- TechInsight Magazine",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    },
+    {
+      "title": "/ / Feedback from users",
+      "description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
+      "author": "- TechInsight Magazine",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
     }
   ]
 }

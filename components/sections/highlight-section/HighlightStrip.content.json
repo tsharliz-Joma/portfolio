@@ -2,19 +2,43 @@
   "Items": [
     {
       "title": "Projects",
-      "description": "Projects Showcase"
+      "description": "Projects Showcase",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
     },
     {
       "title": "Tech Stack",
-      "description": "Languages and Frameworks"
+      "description": "Languages and Frameworks",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
     },
     {
       "title": "Clients",
-      "description": "Client work"
+      "description": "Client work",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
     },
     {
       "title": "Work",
-      "description": "Professional Work"
+      "description": "Professional Work",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
     }
   ]
 }

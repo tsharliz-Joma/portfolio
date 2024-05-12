@@ -1,24 +1,40 @@
 {
   "Projects": [
     {
-      "title": "PgLang Clone",
-      "url": "www.example.com",
-      "repo": "#"
+      "title": "Island fight Centre",
+      "url": "https://www.islandfightcentre.com.au/",
+      "repo": "https://github.com/tsharliz-Joma/island_fight_centre",
+      "image": {
+        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
+        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+      }
     },
     {
       "title": "Project 1",
       "url": "www.example.com",
-      "repo": "#"
+      "repo": "#",
+      "image": {
+        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
+        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+      }
     },
     {
       "title": "Project 1",
       "url": "www.example.com",
-      "repo": "#"
+      "repo": "#",
+      "image": {
+        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
+        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+      }
     },
     {
       "title": "Project 1",
       "url": "www.example.com",
-      "repo": "#"
+      "repo": "#",
+      "image": {
+        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
+        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+      }
     }
   ]
 }

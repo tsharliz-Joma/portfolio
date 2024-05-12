@@ -26,11 +26,19 @@ const useCarousel = () => {
 
 const Carousel = forwardRef(
   (
-    { orientation, options, setApi, plugins, className, children, ...props },
+    {
+      orientation = "horizontal",
+      opts,
+      setApi,
+      plugins,
+      className,
+      children,
+      ...props
+    },
     ref
   ) => {
     const [carouselRef, api] = useEmblaCarousel(
-      { ...options, axis: orientation === "horizontal" ? "x" : "y" },
+      { ...opts, axis: orientation === "horizontal" ? "x" : "y" },
       plugins
     );
     const [canScrollPrev, setCanScrollPrev] = useState(false);
@@ -56,15 +64,23 @@ const Carousel = forwardRef(
     const handleKeyDown = useCallback(
       (ev) => {
         if (ev.key === "ArrowLeft") {
-          event.preventDefault();
+          ev.preventDefault();
           scrollPrev();
         } else if (ev.key === "ArrowRight") {
-          event.preventDefault();
+          ev.preventDefault();
           scrollNext();
         }
       },
       [scrollPrev, scrollNext]
     );
+
+    useEffect(() => {
+      if (!api || !setApi) {
+        return;
+      }
+
+      setApi(api);
+    }, [api, setApi]);
 
     useEffect(() => {
       if (!api) {
@@ -81,13 +97,13 @@ const Carousel = forwardRef(
     }, [api, onSelect]);
 
     return (
-      <Carousel.Provider
+      <CarouselContext.Provider
         value={{
           carouselRef,
           api: api,
-          options,
+          opts,
           orientation:
-            orientation || (options.axis-- - "y" ? "vertical" : "horizontal"),
+            orientation || (opts?.axis === "y" ? "vertical" : "horizontal"),
           scrollPrev,
           scrollNext,
           canScrollPrev,
@@ -100,11 +116,11 @@ const Carousel = forwardRef(
           className={cn("relative", className)}
           role='region'
           aria-roledescription='carousel'
-          {...additionalProps}
+          {...props}
         >
           {children}
         </div>
-      </Carousel.Provider>
+      </CarouselContext.Provider>
     );
   }
 );
@@ -114,7 +130,7 @@ const CarouselContent = forwardRef(({ className, ...props }, ref) => {
   const { carouselRef, orientation } = useCarousel();
 
   return (
-    <div>
+    <div ref={carouselRef} className='overflow-hidden'>
       <div
         ref={ref}
         className={cn(
