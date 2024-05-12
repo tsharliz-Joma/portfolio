@@ -21,13 +21,12 @@ const AboutSection = () => {
         duration: 3,
         scrollTrigger: {
           trigger: containerRef.current,
-          start: "top center",
-          end: "top 100px",
+          start: "top top",
+          // end: "top 100px",
           markers: true,
           scrub: true,
           
         },
-        stagger: 0.9 * index, // Adjust stagger timing based on index
       });
     });
   }, []);
