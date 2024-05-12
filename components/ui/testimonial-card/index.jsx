@@ -1,25 +1,23 @@
-import * as React from 'react';
-import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import styles from './style.module.scss'
+import React from 'react';
 
-const TestimonialCard = React.forwardRef(({ content,...props }, ref) => {
+const TestimonialCard = React.forwardRef(({ content, ...props }, ref) => {
   return (
-    <Box key={content}>
-      <Box>
-        <Typography variant='subtitle1'>{content.Title}</Typography>
-      </Box>
+    <div
+      key={content}
+      className='bg-gray-800 text-white p-5 rounded-2xl'
+      ref={ref}
+    >
+      {/* Title */}
+      <div className='text-lg mb-2 text-gray-500'>{content.Title}</div>
+
       {/* Description */}
-      <Box sx={{ py:5 , color: "#FFF" }}>
-        <Typography variant='h5'>{content.Description}</Typography>
-      </Box>
-      <Box>
-        {/* Author */}
-        <Typography variant='subtitle1'>{content.Author}</Typography>
-      </Box>
-    </Box>
+      <div className='text-2xl mb-5 tracking-[0.5px]'>{content.Description}</div>
+
+      {/* Author */}
+      <div className='text-lg text-gray-500'>{content.Author}</div>
+    </div>
   );
 });
 
-TestimonialCard.displayName = 'Testimonal Card';
-export default TestimonialCard
+TestimonialCard.displayName = 'TestimonialCard';
+export default TestimonialCard;
