@@ -46,6 +46,12 @@
       "Title": "Tailwind",
       "src": "static/logos/tailwind.svg",
       "alt": "Tailwind logo"
+    },
+
+    {
+      "Title": "Firebase",
+      "src": "static/logos/firebase.svg",
+      "alt": "Firebase logo"
     }
   ]
 }

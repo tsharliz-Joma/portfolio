@@ -28,7 +28,7 @@ const TechStack = () => {
   }, []);
 
   return (
-    <div className="tech-container text-center bg-white border-black border-2 py-10 relative top-[-57px] z-[1] rounded-b-3xl">
+    <section className="tech-container text-center bg-white border-black border-2 py-10 relative top-[-57px] z-[1] rounded-b-3xl">
       <div className="flex flex-col gap-12 max-w-7xl container">
         <div>
           <p className="text-5xl font-extrabold text-black tracking-[2.5px] uppercase">
@@ -47,7 +47,7 @@ const TechStack = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

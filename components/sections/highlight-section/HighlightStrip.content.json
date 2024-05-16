@@ -9,6 +9,7 @@
       "desktopImage": {
         "src": ""
       }
+      
     },
     {
       "title": "Tech Stack",
@@ -21,8 +22,8 @@
       }
     },
     {
-      "title": "Clients",
-      "description": "Client work",
+      "title": "Work",
+      "description": "Professional Work History",
       "mobileImage": {
         "src": ""
       },
@@ -31,8 +32,8 @@
       }
     },
     {
-      "title": "Work",
-      "description": "Professional Work",
+      "title": "Contact",
+      "description": "Contact Details",
       "mobileImage": {
         "src": ""
       },

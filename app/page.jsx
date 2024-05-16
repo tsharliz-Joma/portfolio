@@ -1,15 +1,14 @@
-import Image from 'next/image';
-import Navbar from '@/components/navbar';
-import Hero from '@/components/ui/hero';
-import HeroImage from '../content/hero-image.png';
-import Header from '@/components/header';
+
+import Navbar from '@/components/Navbar';
+import Header from '@/components/Header';
 import HighlightStrip from '@/components/sections/highlight-section';
 import TestimonialsSection from '@/components/sections/testimonials-section';
 import Projects from '@/components/sections/projects-section';
-import Footer from '@/components/footer/Footer.component';
+import Footer from '@/components/Footer/Footer.component';
 import AboutSection from '@/components/sections/about-section';
 import TechStack from '@/components/sections/tech-section';
-import ThemeProvider from '@mui/material/styles/ThemeProvider';
+import ExperienceSection from '@/components/sections/work-section';
+
 
 export default function Home() {
   // setupAnimations()
@@ -21,6 +20,7 @@ export default function Home() {
       <HighlightStrip />
       <TestimonialsSection />
       <TechStack />
+      <ExperienceSection />
       <Projects />
       <Footer />
     </main>

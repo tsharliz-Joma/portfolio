@@ -27,7 +27,7 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="projects-container bg-black py-20 min-h-screen relative top-[-75px] z-[0] rounded-b-3xl">
+    <section className="projects-container bg-black py-20 min-h-screen relative top-[-75px] z-[0] rounded-b-3xl">
       <div className="container mx-auto py-20 flex flex-col gap-12">
         <div className="">
           <p className="text-white text-5xl tracking-[3.5px] font-bold uppercase">
@@ -42,7 +42,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

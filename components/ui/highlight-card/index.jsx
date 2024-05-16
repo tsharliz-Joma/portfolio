@@ -10,7 +10,7 @@ const HighlightCard = forwardRef(({ title, description, ...props }, ref) => {
         <p className="text-sm tracking-[0.5px]">{description}</p>
       </div>
       <div className="container w-1/2 sm:w-full">
-        <Divider bg={props.bg} />
+        <Divider bg={'#000'} />
       </div>
     </div>
   );

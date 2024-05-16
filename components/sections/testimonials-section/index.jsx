@@ -1,12 +1,12 @@
 "use client";
-import  React, { useState} from "react";
+import React, {useState} from "react";
 import gsap from "gsap";
 import content from "./Testimonials.content.json";
 import TestimonialCard from "@/components/ui/testimonial-card";
-import { useGSAP } from "@gsap/react";
-import { generateRandomColors } from "@/lib/helper";
+import {useGSAP} from "@gsap/react";
+import {generateRandomColors} from "@/lib/helper";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { BasicCarousel } from "@/components/ui/carousel";
+import {BasicCarousel} from "@/components/ui/carousel";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -26,19 +26,16 @@ const TestimonialsSection = () => {
         trigger: ".testimonials-container",
         start: "top center",
         scrub: true,
-        markers: true
       },
     });
   }, []);
 
   return (
-    <div className="testimonials-container pt-[70px] border-black border-2 pb-10 bg-black relative top-[-40px] rounded-b-3xl z-[2]">
-      <div className="">
-        <div className="container flex flex-col mx-auto justify-around  gap-7">
-          <BasicCarousel items={items} />
-        </div>
+    <section className="testimonials-container pt-[70px] border-black border-2 pb-10 bg-black relative top-[-40px] rounded-b-3xl z-[2]">
+      <div className="container flex flex-col mx-auto justify-around  gap-7">
+        <BasicCarousel items={items} />
       </div>
-    </div>
+    </section>
   );
 };
 

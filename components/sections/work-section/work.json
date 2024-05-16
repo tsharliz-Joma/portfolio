@@ -1,0 +1,44 @@
+{
+  "Work": [
+    {
+      "title": "Creative Technologist",
+      "subTitle": "Junior Creative Technologist",
+      "description": [
+        "Hospitality and Beverage Coordinaton",
+        "Proactive Supply Coordination",
+        "Espresso Equipment Specialist"
+      ],
+      "image": {
+        "src": "folks.svg"
+      },
+      "date": "February 2022 - current"
+    },
+    {
+      "title": "Trainer",
+      "subTitle": "Boxing Coach",
+      "description": [
+        "Train Competition Fighters",
+        "Supervise Competition sparring",
+        "Instruct Boxfit classes"
+      ],
+      "image": {
+        "src": "./static/img/BassCoastboxing.svg"
+      },
+      "date": "March 2022 - May 2022"
+    },
+
+    {
+      "title": "Barista",
+      "subTitle": "Head barista",
+      "description": [
+        "Hospitality and Beverage Coordinaton",
+        "Proactive Supply Coordination",
+        "Espresso Equipment Specialist"
+      ],
+      "image": {
+        "src": "./static/img/folks.svg"
+      },
+      "date": "2016 - Feb 2022"
+    }
+  ]
+}
