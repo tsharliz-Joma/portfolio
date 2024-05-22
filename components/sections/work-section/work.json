@@ -1,34 +1,35 @@
 {
+  "colors": ["hsl(178, 52%, 73%)", "hsl(272, 66%, 84%)", "hsl(230, 100%, 79%)"],
   "Work": [
     {
-      "title": "Creative Technologist",
+      "title": "CHEP Network",
       "subTitle": "Junior Creative Technologist",
       "description": [
-        "Hospitality and Beverage Coordinaton",
-        "Proactive Supply Coordination",
-        "Espresso Equipment Specialist"
+        "Display ad banner development",
+        "Component build Support",
+        "Internal site updates and maintenance "
       ],
       "image": {
-        "src": "folks.svg"
+        "src": "./static/img/chep-network.svg"
       },
-      "date": "February 2022 - current"
+      "date": "February 2023 - current"
     },
     {
-      "title": "Trainer",
+      "title": "Bass Coast Boxing",
       "subTitle": "Boxing Coach",
       "description": [
-        "Train Competition Fighters",
-        "Supervise Competition sparring",
-        "Instruct Boxfit classes"
+        "Competition Fight trainer",
+        "Competition sparring supervisor",
+        "Boxfit classes instructor"
       ],
       "image": {
         "src": "./static/img/BassCoastboxing.svg"
       },
-      "date": "March 2022 - May 2022"
+      "date": "2018 - January 2022"
     },
 
     {
-      "title": "Barista",
+      "title": "Folks coffee",
       "subTitle": "Head barista",
       "description": [
         "Hospitality and Beverage Coordinaton",
@@ -38,7 +39,7 @@
       "image": {
         "src": "./static/img/folks.svg"
       },
-      "date": "2016 - Feb 2022"
+      "date": "2016 - February 2022"
     }
   ]
 }

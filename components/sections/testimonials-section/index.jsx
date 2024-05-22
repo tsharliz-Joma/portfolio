@@ -31,7 +31,7 @@ const TestimonialsSection = () => {
   }, []);
 
   return (
-    <section className="testimonials-container pt-[70px] border-black border-2 pb-10 bg-black relative top-[-40px] rounded-b-3xl z-[2]">
+    <section className="testimonials-container pt-[70px] border-black border-2 pb-10 bg-black relative top-[-40px] rounded-b-3xl z-[8]">
       <div className="container flex flex-col mx-auto justify-around  gap-7">
         <BasicCarousel items={items} />
       </div>

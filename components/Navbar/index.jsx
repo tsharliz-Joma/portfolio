@@ -11,15 +11,12 @@ import MenuItems from '../ui/menu-items';
 
 import { usePathname } from 'next/navigation';
 import Drawer from '@mui/material/Drawer';
-const drawerWidth = 240;
 
-const Navbar = (props) => {
+const Navbar = () => {
   const theme = useTheme();
   const nav_items = content.navItems;
-  // const { window } = props;
   const isMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [showBackground, setShowBackground] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [navbarClass, setNavbarClass] = useState('');
   const pathname = usePathname();
@@ -58,10 +55,10 @@ const Navbar = (props) => {
   };
 
   return (
-    <AppBar className={`${navbarClass} ${showBackground ? 'bg-gray-900' : 'bg-transparent'}`}>
+    <AppBar className={`${navbarClass} bg-transparent }`}>
       <Toolbar className='flex justify-between items-center'>
         <p id='Welcome' className='flex-grow font-bold text-3xl text-white'>
-          W E L C O M E
+          W E L C O M E ! ! !
         </p>
         {isMobile ? (
           <>

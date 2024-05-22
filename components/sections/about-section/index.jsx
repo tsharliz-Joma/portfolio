@@ -1,15 +1,15 @@
 "use client";
-import React, { forwardRef, useEffect, useRef, useState } from "react";
+import React, {forwardRef, useEffect, useRef, useState} from "react";
 import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import {useGSAP} from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import AboutCard from "../../ui/about-card"
+import AboutCard from "../../ui/about-card";
 import content from "./About.content.json";
 import CustomCard from "../../ui/custom-card";
-import { generateRandomColors } from "@/lib/helper";
+import {generateRandomColors} from "@/lib/helper";
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutSection = forwardRef(({ className, ...props }, ref) => {
+const AboutSection = forwardRef(({className, ...props}, ref) => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
   const [bgColors, setBgColors] = useState([]);
@@ -64,10 +64,10 @@ const AboutSection = forwardRef(({ className, ...props }, ref) => {
 
   return (
     <div
+      id="About"
       ref={containerRef}
-      className="section-container relative overflow-y-scroll w-full h-full z-[10]"
-    >
-      <div className="w-full relative h-screen">
+      className="min-h-screen section-container relative overflow-y-scroll w-full z-[20]">
+      <div className="w-full relative flex">
         <div className="flex flex-col justify-start items-start gap-7 w-full ">
           {content.About.map((item, index) => (
             <AboutCard

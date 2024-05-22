@@ -10,21 +10,21 @@
       }
     },
     {
-      "title": "Project 1",
-      "url": "www.example.com",
-      "repo": "#",
+      "title": "Brain Train",
+      "url": "https://the-brain-train.web.app/",
+      "repo": "https://github.com/Foyoman/brain-train-client",
       "image": {
-        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
-        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+        "desktopSrc": "/static/img/brain-train-mobile.svg",
+        "mobileSrc": "/static/img/brain-train-mobile.svg"
       }
     },
     {
-      "title": "Project 1",
+      "title": "Pugilist Express",
       "url": "www.example.com",
       "repo": "#",
       "image": {
-        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
-        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+        "desktopSrc": "/static/img/pugilist-express.svg",
+        "mobileSrc": "/static/img/pugilist-express.svg"
       }
     },
     {

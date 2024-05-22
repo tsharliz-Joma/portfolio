@@ -1,5 +1,5 @@
 "use client";
-import * as React from "react";
+import React from "react";
 import TechCard from "@/components/ui/tech-card";
 import content from "./TechStack.content.json";
 import gsap from "gsap";
@@ -28,15 +28,15 @@ const TechStack = () => {
   }, []);
 
   return (
-    <section className="tech-container text-center bg-white border-black border-2 py-10 relative top-[-57px] z-[1] rounded-b-3xl">
-      <div className="flex flex-col gap-12 max-w-7xl container">
-        <div>
-          <p className="text-5xl font-extrabold text-black tracking-[2.5px] uppercase">
+    <section className="tech-container text-center bg-white border-black border-2 py-12 relative top-[-57px] z-[7] rounded-b-3xl">
+      <div className="flex flex-col max-w-7xl container">
+       
+          <p className="text-5xl font-extrabold text-black tracking-[2.5px] uppercase mb-8">
             Tech Stack
           </p>
-        </div>
+      
 
-        <div className="flex flex-wrap  justify-around">
+        <div className="flex flex-wrap justify-around">
           {techStack.map((item, index) => (
             <div
               className="stagger w-1/2 sm:w-1/5 container flex justify-center"

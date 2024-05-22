@@ -19,14 +19,6 @@ const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
   const [spotify, setSpotify] = useState(!!content.spotify);
   const [video, setVideo] = useState(!!content.video);
 
-  if (content.spotify) {
-    console.log("spotify");
-  }
-
-  if (content.video) {
-    console.log("video");
-  }
-
   useEffect(() => {
     scrollPositionRef.current = window.scrollY;
   }, []);
@@ -44,10 +36,10 @@ const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
     <div
       ref={ref}
       style={{ backgroundColor: props.bg }}
-      className={`${className} fixed  flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`}
+      className={`${className} fixed flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`}
     >
       <div
-        className="flex items-center justify-center w-full"
+        className="cursor-pointer flex items-center justify-center w-full"
         onClick={openModal}
       >
         <h2 className="font-bold text-[4rem] tracking-[3.5px] uppercase">

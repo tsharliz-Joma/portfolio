@@ -1,14 +1,43 @@
 "use client";
-import * as React from "react";
+import React, {forwardRef, useEffect} from "react";
 import Link from "next/link";
+import gsap from "gsap";
+import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 
-const MenuItems = React.forwardRef(({className, item, ...props}, ref) => {
+gsap.registerPlugin(ScrollToPlugin);
+
+const MenuItems = forwardRef(({className, item, ...props}, ref) => {
+  const handleClick = (ev) => {
+    ev.preventDefault();
+    const targetId = ev.currentTarget.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+
+    if (targetElement) {
+      const yPosition =
+        targetElement.getBoundingClientRect().y +
+        targetElement.getBoundingClientRect().height;
+
+      const currentScrollPosition = window.scrollY;
+      const tolerance = 5;
+
+      if (Math.abs(currentScrollPosition - yPosition) > tolerance) {
+        gsap.to(window, {
+          scrollTo: {y: yPosition, offsetY: 0},
+          duration: 1,
+          ease: "power2.inOut",
+        });
+      }
+    }
+  };
+
   return (
-    <Link
-      href={`/${item.label}`}
-      className={`text-black tracking-[1.5px] text-xl font-extrabold py-2 px-4 inline-block transition-colors duration-200 hover:bg-gray-700`}>
+    <a
+      href={`#${item.label}`}
+      onClick={handleClick}
+      {...props}
+      className={`${className} rounded-md text-black hover:text-white tracking-[1px] text-xl font-extrabold py-2 px-4 inline-block transition-colors duration-200 hover:bg-gray-700`}>
       {item.label}
-    </Link>
+    </a>
   );
 });
 

@@ -12,15 +12,19 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row sm:items-center">
             <div className="sm:w-full flex flex-col gap-10 border-red-500 p-5">
               <div className="flex flex-col gap-5">
-                <p className="text-lg sm:text-2xl font-bold">Charles Joma</p>
+                <p className="text-lg sm:text-2xl sm:tracking-[1.5px] font-bold">
+                  Charles Joma
+                </p>
                 <div className="flex items-center mb-2">
                   <MailIcon className="mr-2 h-6 w-6" />
-                  <p className="text-xl">tsharlizjoma@yahoo.com</p>
+                  <p className="text-xl tracking-[0.5px]">
+                    tsharlizjoma@yahoo.com
+                  </p>
                 </div>
                 <div className="flex items-center">
                   <Linkedin className="mr-2 h-6 w-6" />{" "}
                   {/* Replace this with LinkedInIcon if available */}
-                  <p className="text-xl">LinkedIn</p>
+                  <p className="text-xl tracking-[0.5px]">LinkedIn</p>
                 </div>
               </div>
             </div>
