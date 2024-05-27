@@ -44,7 +44,6 @@ const AboutSection = forwardRef(({className, ...props}, ref) => {
 
     tl.from(".about-card", {
       yPercent: -100,
-      // opacity: 0,
       duration: 0.75,
       stagger: 1,
       ease: "power2.inOut",
