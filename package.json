@@ -29,6 +29,7 @@
     "react-dom": "^18",
     "react-responsive": "^10.0.0",
     "react-spotify-embed": "^2.0.4",
+    "sharp": "^0.33.4",
     "tailwind-merge": "^2.3.0"
   },
   "devDependencies": {

@@ -11,6 +11,7 @@ import { X } from "lucide-react";
 import Divider from "../divider";
 import Spotify from "../spotify";
 import VideoPlayer from "../video-player";
+import Typography from "../typography";
 
 const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
   const [open, setOpen] = useState(false);
@@ -18,6 +19,7 @@ const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
   const isDesktop = useMediaQuery({ minWidth: "640px" });
   const [spotify, setSpotify] = useState(!!content.spotify);
   const [video, setVideo] = useState(!!content.video);
+  const titleRef = useRef(null);
 
   useEffect(() => {
     scrollPositionRef.current = window.scrollY;
@@ -42,9 +44,12 @@ const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
         className="cursor-pointer flex items-center justify-center w-full"
         onClick={openModal}
       >
-        <h2 className="font-bold text-[4rem] tracking-[3.5px] uppercase">
+        <Typography
+          ref={titleRef}
+          className="font-bold text-[4rem] tracking-[3.5px] uppercase"
+        >
           {content.title}
-        </h2>
+        </Typography>
       </div>
 
       <Transition show={open} appear>
@@ -76,7 +81,7 @@ const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
                   <p className="font-bold tracking-[0.5px]">
                     {content.description_body}
                   </p>
-                  <div className={`sm:w-3/5`}>
+                  <div className={`w-full`}>
                     <div className={`${spotify ? "block" : "hidden"}`}>
                       <Spotify uri={content?.spotify?.uri} />
                     </div>
