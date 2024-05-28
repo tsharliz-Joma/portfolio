@@ -8,7 +8,7 @@ const Spotify = ({ uri }) => {
       const element = document.getElementById("spotify-embed");
       const options = {
         width: "100%",
-        height: "200",
+        height: "200px",
         uri: uri,
       };
       const callback = (EmbedController) => {};

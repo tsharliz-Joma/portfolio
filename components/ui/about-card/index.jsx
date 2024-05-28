@@ -1,6 +1,15 @@
 "use client";
 import React, { forwardRef, useState, useEffect, useRef } from "react";
 import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
+import {
   Dialog,
   Transition,
   DialogPanel,
@@ -74,7 +83,7 @@ const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
                   {content.title}
                 </Dialog.Title>
                 <Divider bg={"#000"} />
-                <Dialog.Description className="grid gap-[20px]">
+                <Dialog.Description className="grid gap-[10px] sm:gap-[20px]">
                   <p className="font-bold tracking-[0.5px]">
                     {content.description_intro}
                   </p>
