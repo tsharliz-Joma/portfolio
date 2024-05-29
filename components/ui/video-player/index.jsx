@@ -4,6 +4,7 @@ import React from "react";
 const VideoPlayer = ({ src, width, height }) => {
   return (
     <video
+    className="rounded-xl"
       src={src}
       width={width}
       height={height}

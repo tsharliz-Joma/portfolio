@@ -14,6 +14,7 @@ module.exports = {
       },
       backgroundColor: {
         "custom-transparent": "transarent",
+        "custom-black-transparent": "rgba(0, 0, 0, 0.5)"
       },
       backgroundImage: {
         "skytopia-mobile": 'url("/static/img/skytopia-mobile.jpeg")',
