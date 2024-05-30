@@ -28,4 +28,4 @@ const Spotify = ({ uri }) => {
   );
 };
 
-export default Spotify
+export default Spotify;

@@ -9,109 +9,108 @@ import {
   Button,
   useDisclosure,
 } from "@nextui-org/react";
-import {
-  Dialog,
-  Transition,
-  DialogPanel,
-  DialogTitle,
-} from "@headlessui/react";
 import { useMediaQuery } from "react-responsive";
 import { X } from "lucide-react";
 import Divider from "../divider";
 import Spotify from "../spotify";
 import VideoPlayer from "../video-player";
 import Typography from "../typography";
+import { cn } from "@/lib/helper";
 
 const AboutCard = forwardRef(({ content, className, ...props }, ref) => {
-  const [open, setOpen] = useState(false);
+  // const [open, setOpen] = useState(false);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const scrollPositionRef = useRef(null);
   const isDesktop = useMediaQuery({ minWidth: "640px" });
-  const [spotify, setSpotify] = useState(!!content.spotify);
-  const [video, setVideo] = useState(!!content.video);
+  const [spotify, setSpotify] = useState(!!content.spotify?.uri);
+  const [video, setVideo] = useState(!!content.video?.src);
   const titleRef = useRef(null);
 
   useEffect(() => {
     scrollPositionRef.current = window.scrollY;
   }, []);
 
-  const openModal = () => {
-    scrollPositionRef.current = window.scrollY;
-    setOpen(true);
-  };
-  const closeModal = () => {
-    setOpen(false);
-    window.scrollTo(0, scrollPositionRef.current);
-  };
-
   return (
     <div
       ref={ref}
       style={{ backgroundColor: props.bg }}
-      className={`${className} fixed flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`}
+      className={cn(
+        `fixed flex items-center justify-center border-black border-2 w-full min-h-full rounded-b-3xl`,
+        className
+      )}
     >
-      <div
-        className="cursor-pointer flex items-center justify-center w-full"
-        onClick={openModal}
+      <Button
+        className="cursor-pointer focus:outline-none flex items-center justify-center w-fit h-fit py-10"
+        onPress={onOpen}
       >
-        <Typography
-          ref={titleRef}
-          className="font-bold text-[4rem] tracking-[3.5px] uppercase"
+        <p
+          
+          className="font-bold text-5xl sm:text-[4rem] tracking-[3.5px] uppercase"
         >
           {content.title}
-        </Typography>
-      </div>
+        </p>
+      </Button>
 
-      <Transition show={open} appear>
-        <Dialog
-          open={open}
-          onClose={closeModal}
-          style={{
-            backgroundImage: isDesktop
-              ? `url('/static/img/${props.modalBg}-desktop.svg')`
-              : `url('/static/img/${props.modalBg}-mobile.svg')`,
-          }}
-          className={`bg-cover `}
-        >
-          {/* <Transition.Child>
-            <div className="fixed inset-0 bg-black/30" />
-          </Transition.Child> */}
+      <Modal
+        hideCloseButton
+        scrollBehavior="inside"
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        // Set the isDismissable property to false to prevent the modal from closing when clicking on the overlay.
+        isDismissable={true}
+        // Set the isKeyboardDismissDisabled property to true to prevent the modal from closing when pressing the Esc key.
+        isKeyboardDismissDisabled={true}
+        style={{
+          backgroundImage: isDesktop
+            ? `url('/static/img/${props.modalBg}-desktop.svg')`
+            : `url('/static/img/${props.modalBg}-mobile.svg')`,
+        }}
+        className={`bg-cover`}
+      >
+        <div className="flex fixed text-white sm:container w-full h-full  sm:h-screen z-[20]">
+          <ModalContent className="w-full h-full  sm:rounded-md p-6 sm:flex sm:flex-col sm:items-center sm:justify-center bg-opacity-20 backdrop-blur-md">
+            {(onClose) => (
+              <>
+                <div className="bg-custom-black-transparent shadow-custom-shadow flex flex-col sm:justify-center sm:items-center sm:w-4/6 ">
+                  <div className=" sm:w-[95%] py-6  gap-[10px] ">
+                    <ModalHeader className="sm:text-5xl font-bold tracking-[2px] uppercase">
+                      {content.title}
+                    </ModalHeader>
+                    <Divider bg={"#000"} />
+                    <ModalBody className="flex flex-col gap-[10px] font-bold text-[13.5px] sm:text-[18px] tracking-[0.5px] sm:gap-[20px]">
+                      <p className="tracking-[0.5px]">
+                        {content.description_intro}
+                      </p>
+                      <p className="tracking-[0.5px]">
+                        {content.description_body}
+                      </p>
 
-          <div className="flex items-center text-black justify-center sm:container w-full sm:h-screen sm:w-3/6">
-            <Dialog.Panel className="w-full h-auto sm:rounded-md p-6 sm:flex sm:flex-col bg-opacity-20 backdrop-blur-md">
-              <div className="flex flex-col gap-[10px]">
-                <Dialog.Title className="text-3xl font-extrabold tracking-[1px]">
-                  {content.title}
-                </Dialog.Title>
-                <Divider bg={"#000"} />
-                <Dialog.Description className="grid gap-[10px] sm:gap-[20px]">
-                  <p className="font-bold tracking-[0.5px]">
-                    {content.description_intro}
-                  </p>
-                  <p className="font-bold tracking-[0.5px]">
-                    {content.description_body}
-                  </p>
-                  <div className={`w-full`}>
-                    <div className={`${spotify ? "block" : "hidden"}`}>
-                      <Spotify uri={content?.spotify?.uri} />
-                    </div>
-                    <div className={`${video ? "block" : "hidden"}`}>
-                      <VideoPlayer src={content?.video?.src} width={"100%"} />
-                    </div>
+                      <div className={`${spotify ? "flex" : "hidden"}`}>
+                        <Spotify uri={content?.spotify?.uri} />
+                      </div>
+                      <div className={`${video ? "block " : "hidden"}`}>
+                        <VideoPlayer src={content?.video?.src} width={"50%"} height={200} />
+                      </div>
+
+                      <p className="tracking-[0.5px] relative ">
+                        {content.description_body2}
+                      </p>
+                    </ModalBody>
                   </div>
-                  <p className="font-bold tracking-[0.5px] relative sm:top-[-30px]">
-                    {content.description_body2}
-                  </p>
-                </Dialog.Description>
-              </div>
-              <div className="relative flex justify-start w-full h-auto">
-                <button className="rounded focus:outline-none hover:text-white">
-                  <X onClick={closeModal} />
-                </button>
-              </div>
-            </Dialog.Panel>
-          </div>
-        </Dialog>
-      </Transition>
+                  <div className="relative flex justify-end w-full h-auto  ">
+                    <Button
+                      onPress={onClose}
+                      className="rounded p-0 data-focus-none hover:text-white focus:outline-none hover:text-white"
+                    >
+                      <X className="sm:w-[40px] sm:h-[40px]" />
+                    </Button>
+                  </div>
+                </div>
+              </>
+            )}
+          </ModalContent>
+        </div>
+      </Modal>
     </div>
   );
 });
