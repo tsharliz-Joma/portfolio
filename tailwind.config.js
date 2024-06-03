@@ -1,4 +1,5 @@
-const { transform } = require("next/dist/build/swc");
+const {transform} = require("next/dist/build/swc");
+const {nextui} = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -6,6 +7,7 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -14,7 +16,7 @@ module.exports = {
       },
       backgroundColor: {
         "custom-transparent": "transarent",
-        "custom-black-transparent": "rgba(0, 0, 0, 0.5)"
+        "custom-black-transparent": "rgba(0, 0, 0, 0.5)",
       },
       backgroundImage: {
         "skytopia-mobile": 'url("/static/img/skytopia-mobile.jpeg")',
@@ -22,12 +24,12 @@ module.exports = {
       },
       keyframes: {
         slideDown: {
-          "0%": { transform: "translateY(-100%)" },
-          "100%": { transform: "translateY(0)" },
+          "0%": {transform: "translateY(-100%)"},
+          "100%": {transform: "translateY(0)"},
         },
         slideUp: {
-          "100%": { transform: "translateY(-100%)" },
-          "0%": { transform: "translateY(0)" },
+          "100%": {transform: "translateY(-100%)"},
+          "0%": {transform: "translateY(0)"},
         },
       },
       animation: {
@@ -90,5 +92,6 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  darkMode: "class",
+  plugins: [nextui()],
 };

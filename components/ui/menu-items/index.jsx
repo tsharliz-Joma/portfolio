@@ -3,10 +3,11 @@ import React, {forwardRef, useEffect} from "react";
 import Link from "next/link";
 import gsap from "gsap";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
+import {cn} from "@/lib/helper";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const MenuItems = forwardRef(({className, item, ...props}, ref) => {
+const MenuItems = forwardRef(({className, item, label, ...props}, ref) => {
   const handleClick = (ev) => {
     ev.preventDefault();
     const targetId = ev.currentTarget.getAttribute("href").substring(1);
@@ -32,11 +33,14 @@ const MenuItems = forwardRef(({className, item, ...props}, ref) => {
 
   return (
     <a
-      href={`#${item.label}`}
+      href={`#${label}`}
       onClick={handleClick}
       {...props}
-      className={`${className} rounded-md text-black hover:text-white tracking-[1px] text-xl font-extrabold py-2 px-4 inline-block transition-colors duration-200 hover:bg-gray-700`}>
-      {item.label}
+      className={cn(
+        `rounded-md text-black hover:text-white tracking-[1px] text-xl font-extrabold py-2 px-4 inline-block transition-colors duration-200 hover:bg-gray-700`,
+        className,
+      )}>
+      {label}
     </a>
   );
 });
