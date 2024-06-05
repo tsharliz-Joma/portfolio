@@ -36,7 +36,7 @@ const Footer = () => {
       </div>
       <div className="text-center p-3">
         <p>
-          All right reserved | &copy; Jsphere Pty Ltd, 2024. | 🚀 Power Tech
+          All right reserved | &copy; Jsphere Pty Ltd, 2024 | 🚀 Power Tech
         </p>
       </div>
     </div>

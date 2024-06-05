@@ -9,7 +9,7 @@ const ProjectCard = ({ title, url, repo, image }) => {
     <div className="w-full mx-auto h-auto">
       <div
         style={{ backgroundImage: `url(${image?.mobileSrc})` }}
-        className="w-full   relative overflow-hidden bg-[center_top]  bg-cover rounded-xl h-[356px] sm:h-[400px]"
+        className="w-full relative overflow-hidden bg-[center_top]  bg-cover rounded-xl h-[356px] sm:h-[400px]"
         onMouseEnter={() => setHover(true)}
         onMouseLeave={() => setHover(false)}
       >

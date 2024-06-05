@@ -31,7 +31,7 @@ const NextUiNav = () => {
           className="sm:hidden w-10 h-10 text-black"
         />
         <NavbarBrand className="w-full ">
-          <p className="text-3xl tracking-[1.5px] text-black  uppercase">
+          <p className="text-3xl tracking-[1.5px] text-black uppercase">
             Welcome
           </p>
         </NavbarBrand>
@@ -40,7 +40,7 @@ const NextUiNav = () => {
       <NavbarContent className="hidden sm:flex gap-4" justify="between">
         <NavbarItem>
           {navItems.map((item, index) => (
-            <MenuItems {...item} key={index} className="text-white" />
+            <MenuItems {...item} key={index} className="text-black" />
           ))}
         </NavbarItem>
       </NavbarContent>

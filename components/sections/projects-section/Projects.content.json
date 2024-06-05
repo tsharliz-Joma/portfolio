@@ -20,21 +20,30 @@
     },
     {
       "title": "Pugilist Express",
-      "url": "www.example.com",
-      "repo": "#",
+      "url": "https://pugilist-express.web.app/",
+      "repo": "https://github.com/tsharliz-Joma/Pugilist-Express",
       "image": {
         "desktopSrc": "/static/img/pugilist-express.svg",
         "mobileSrc": "/static/img/pugilist-express.svg"
       }
     },
     {
-      "title": "Project 1",
+      "title": "School of hard knocks",
       "url": "www.example.com",
-      "repo": "#",
+      "repo": "https://github.com/tsharliz-Joma/FlexedUp",
       "image": {
-        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
-        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+        "desktopSrc": "/static/img/school-of-hard-knocks.svg",
+        "mobileSrc": "/static/img/school-of-hard-knocks.svg"
       }
-    }
+    },
+     {
+       "title": "World of spheres",
+       "url": "www.example.com",
+       "repo": "#",
+       "image": {
+         "desktopSrc": "/static/img/world-of-spheres.svg",
+         "mobileSrc": "/static/img/world-of-spheres.svg"
+       }
+     }
   ]
 }
