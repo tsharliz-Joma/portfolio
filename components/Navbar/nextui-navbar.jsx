@@ -11,7 +11,6 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import MenuItems from "../ui/menu-items";
-import Hamburger from "../ui/hamburger";
 
 const navItems = content.navItems;
 
@@ -26,19 +25,19 @@ const NextUiNav = () => {
       <NavbarContent className="">
         <NavbarMenuToggle
           isSelected={isMenuOpen}
-          icon={<Hamburger isOpen={isMenuOpen} className="bg-black" />}
+          //   icon={<Hamburger isOpen={isMenuOpen} className="bg-black" />}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           onChange={(isOpen) => setIsMenuOpen(isOpen)}
-          className="sm:hidden w-10 h-10"
+          className="sm:hidden w-10 h-10 text-black"
         />
         <NavbarBrand className="w-full ">
-          <p className="text-3xl tracking-[2px] text-black font-extrabold uppercase">
+          <p className="text-3xl tracking-[1.5px] text-black  uppercase">
             Welcome
           </p>
         </NavbarBrand>
       </NavbarContent>
 
-      <NavbarContent className="hidden sm:flex gap-4" justify="center">
+      <NavbarContent className="hidden sm:flex gap-4" justify="between">
         <NavbarItem>
           {navItems.map((item, index) => (
             <MenuItems {...item} key={index} className="text-white" />

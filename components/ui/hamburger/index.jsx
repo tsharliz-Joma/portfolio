@@ -5,7 +5,7 @@ const Hamburger = forwardRef(
   ({className, isOpen, color, toggleMenu, ...props}, ref) => {
     return (
       <div
-        className={cn(`relative w-8 h-6 cursor:pointer`)}
+        className={cn(`relative w-full h-full cursor:pointer`)}
         onClick={toggleMenu}>
         <span
           className={cn(
