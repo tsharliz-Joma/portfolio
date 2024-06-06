@@ -1,6 +1,5 @@
 import React from "react";
 import { MailIcon } from "@heroicons/react/outline";
-import { Dialog } from "@headlessui/react";
 import { Linkedin } from "lucide-react";
 import ContactCard from "../ui/contact-card"; // Ensure ContactCard is exported from its file
 
