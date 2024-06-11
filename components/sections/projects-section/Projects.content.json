@@ -29,8 +29,8 @@
     },
     {
       "title": "School of hard knocks",
-      "url": "www.example.com",
-      "repo": "https://github.com/tsharliz-Joma/FlexedUp",
+      "url": "https://school-of-hard-knocks-1d07074ca8e2.herokuapp.com/",
+      "repo": "https://github.com/tsharliz-Joma/school-of-hard-knocks",
       "image": {
         "desktopSrc": "/static/img/school-of-hard-knocks.svg",
         "mobileSrc": "/static/img/school-of-hard-knocks.svg"
