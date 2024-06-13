@@ -38,8 +38,8 @@
     },
      {
        "title": "World of spheres",
-       "url": "www.example.com",
-       "repo": "#",
+       "url": "https://main--world-of-spheres.netlify.app/",
+       "repo": "https://github.com/tsharliz-Joma/World_of_Spheres",
        "image": {
          "desktopSrc": "/static/img/world-of-spheres.svg",
          "mobileSrc": "/static/img/world-of-spheres.svg"
