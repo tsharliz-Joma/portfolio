@@ -7,7 +7,7 @@ import {cn} from "@/lib/helper";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const MenuItems = forwardRef(({className, item, label, ...props}, ref) => {
+const MenuItems = forwardRef(({className, item, label, onClick, ...props}, ref) => {
   const handleClick = (ev) => {
     ev.preventDefault();
     const targetId = ev.currentTarget.getAttribute("href").substring(1);
@@ -28,6 +28,10 @@ const MenuItems = forwardRef(({className, item, label, ...props}, ref) => {
           ease: "power2.inOut",
         });
       }
+
+       if (onClick) {
+         onClick(ev);
+       }
     }
   };
 

@@ -1,5 +1,6 @@
+'use client'
 import {cn, getRandomFontClass, fonts} from "@/lib/helper";
-import React, {forwardRef} from "react";
+import React, {forwardRef, useEffect, useState} from "react";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -8,6 +9,15 @@ gsap.registerPlugin(ScrollTrigger);
 const Typography = forwardRef(({className, children, ...props}, ref) => {
   const hasSpace = children.includes(" ");
   const words = hasSpace ? children.split(" ") : [children];
+
+  const [fontClasses, setFontClasses] = useState([]);
+
+  // Set an initial font on first render just x1 time
+  useEffect(() => {
+    const initialFontClasses = words.map(() => getRandomFontClass());
+    setFontClasses(initialFontClasses);
+  }, []);
+
   useGSAP(() => {
     const elements = ref.current.querySelectorAll("span");
     elements.forEach((element, index) => {
@@ -22,14 +32,12 @@ const Typography = forwardRef(({className, children, ...props}, ref) => {
             end: "bottom 10%",
             scrub: true,
             onEnter: () => {
-              const randomFont =
-                fonts[Math.floor(Math.random() * fonts.length)];
-              element.className = randomFont;
+              const randomFont = getRandomFontClass();
+              element.style.fontClass = randomFont;
             },
             onLeaveBack: () => {
-              const randomFont =
-                fonts[Math.floor(Math.random() * fonts.length)];
-              element.className = randomFont;
+              const randomFont = getRandomFontClass();
+              element.style.fontClass = randomFont;
             },
           },
         },
@@ -42,7 +50,7 @@ const Typography = forwardRef(({className, children, ...props}, ref) => {
   return (
     <div ref={ref} className={cn(className)}>
       {words.map((word, index) => (
-        <span key={index} style={{fontFamily: `${getRandomFontClass()}`}}>
+        <span key={index} style={{fontFamily: fontClasses[index]}}>
           {word}
           {index < words.length - 1 ? " " : ""}
         </span>

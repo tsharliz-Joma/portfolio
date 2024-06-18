@@ -16,6 +16,9 @@ const navItems = content.navItems;
 
 const NextUiNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const handleMenuItemClick = () => {
+    setIsMenuOpen(false);
+  };
   return (
     <Navbar
       shouldHideOnScroll
@@ -24,7 +27,7 @@ const NextUiNav = () => {
       isMenuOpen={isMenuOpen}>
       <NavbarContent className="">
         <NavbarMenuToggle
-          isSelected={isMenuOpen}
+          // isSelected={isMenuOpen}
           //   icon={<Hamburger isOpen={isMenuOpen} className="bg-black" />}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           onChange={(isOpen) => setIsMenuOpen(isOpen)}
@@ -48,7 +51,13 @@ const NextUiNav = () => {
       <NavbarMenu className="bg-custom-black-transparent">
         {navItems.map((item, index) => (
           <NavbarMenuItem key={`${item}-${index}`}>
-            <MenuItems {...item} key={index} className="w-full" size="lg" />
+            <MenuItems
+              {...item}
+              key={index}
+              className="w-full"
+              size="lg"
+              onClick={handleMenuItemClick}
+            />
           </NavbarMenuItem>
         ))}
       </NavbarMenu>

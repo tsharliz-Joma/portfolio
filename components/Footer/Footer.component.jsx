@@ -1,6 +1,6 @@
 import React from "react";
-import { MailIcon } from "@heroicons/react/outline";
-import { Linkedin } from "lucide-react";
+import {MailIcon} from "@heroicons/react/outline";
+import {Linkedin} from "lucide-react";
 import ContactCard from "../ui/contact-card"; // Ensure ContactCard is exported from its file
 
 const Footer = () => {
@@ -17,13 +17,21 @@ const Footer = () => {
                 <div className="flex items-center mb-2">
                   <MailIcon className="mr-2 h-6 w-6" />
                   <p className="text-xl tracking-[0.5px]">
-                    tsharlizjoma@yahoo.com
+                    <a href="mailto:charlesjoma@yahoo.com">
+                      tsharlizjoma@yahoo.com
+                    </a>
                   </p>
                 </div>
                 <div className="flex items-center">
                   <Linkedin className="mr-2 h-6 w-6" />{" "}
                   {/* Replace this with LinkedInIcon if available */}
-                  <p className="text-xl tracking-[0.5px]">LinkedIn</p>
+                  <p className="text-xl tracking-[0.5px]">
+                    <a
+                      href="https://www.linkedin.com/in/charlesjoma/"
+                      target="_blank">
+                      LinkedIn
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
@@ -34,12 +42,10 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center p-3">
-        <p>
-          All right reserved | &copy; Jsphere Pty Ltd, 2024 | 🚀 Power Tech
-        </p>
+        <p>All right reserved | &copy; Jsphere Pty Ltd, 2024 | 🚀 Power Tech</p>
       </div>
     </div>
   );
 };
 Footer.displayName = "Footer";
-export default Footer
+export default Footer;

@@ -1,8 +1,8 @@
 {
   "Testimonials": [
     {
-      "title": "/ / Feedback from Island Fight Centre",
-      "description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
+      "title": "// Feedback from Island Fight Centre",
+      "description": "Working with Charles was a breeze. Professional, flexible, and nailed our website. Couldn't be happier with the result! Highly recommend him to anyone.",
       "author": "- Founder of IFC - Michael",
       "mobileImg": {
         "src": "/static/img/ifc-white-logo.png"
@@ -12,9 +12,9 @@
       }
     },
     {
-      "title": "/ / Feedback from users",
-      "description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
-      "author": "- TechInsight Magazine",
+      "title": "// Feedback from Niasha",
+      "description": "Although we never got to work together, Charles was incredibly pleasant to communicate with, flexible, and highly professional. I look forward to a future collaboration!",
+      "author": "- Music Artist",
       "mobileImg": {
         "src": "/static/img/ifc-white-logo.png"
       },
@@ -24,9 +24,9 @@
     }
     ,
     {
-      "title": "/ / Feedback from users",
-      "description": "Impressed by the coding skills showcased on CodeShowcase. Consistent growth and professionalism in every project.",
-      "author": "- TechInsight Magazine",
+      "title": "// Feedback from Me",
+      "description": "While i've only had 1 freelance project and 1 potential, i am on the lookout for more and i felt a carousel would feel wrong with only 2 slides",
+      "author": "- Charles Joma",
       "mobileImg": {
         "src": "/static/img/ifc-white-logo.png"
       },

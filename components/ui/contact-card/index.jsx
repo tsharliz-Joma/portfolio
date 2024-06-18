@@ -20,11 +20,13 @@ const ContactCard = () => {
       </div>
       <div className="flex items-center justify-between pt-4">
         <input
-          className="w-3/5 bg-white border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500"
+          className="w-3/5 bg-grey border border-gray-300 text-black rounded-md py-2 px-4 focus:outline-none focus:ring-2 focus:ring-red-500"
           type="email"
-          placeholder="Enter your email"
+          disabled
+          placeholder="This = terrible idea"
         />
         <button
+          disabled
           className="w-1/3 font-bold bg-white text-[18px] text-black rounded-[10px] tracking-[1.5px] py-2 px-4 hover:bg-black hover:text-white transition duration-300 ease-in-out focus:outline-none"
           onClick={onOpen}>
           Send

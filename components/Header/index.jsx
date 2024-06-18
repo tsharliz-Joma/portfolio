@@ -26,8 +26,7 @@ const Header = () => {
         <div className="flex flex-col gap-7 sm:container sm:w-4/5">
           <p className="text-center font-bold">{data.sub}</p>
           <p className="text-4xl font-bold">
-            An Junior Creative Technologist with energy and passion, spreading
-            Peace, Love and Soul
+            An Junior Creative Technologist with energy and passion, and a taste for front-end development
           </p>
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-transparent via-[rgba(255,255,255,0.1)] to-transparent pointer-events-none z-0"></div>

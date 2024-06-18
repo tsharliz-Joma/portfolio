@@ -1,28 +1,27 @@
 "use client";
-import React, { forwardRef } from "react";
+import React, {forwardRef} from "react";
 import Image from "next/image";
-import { cn } from "@/lib/helper";
+import {cn} from "@/lib/helper";
 
 const TestimonialCard = forwardRef(
   (
-    { className, title, description, author, desktopImg, mobileImg, ...props },
-    ref
+    {className, title, description, author, desktopImg, mobileImg, ...props},
+    ref,
   ) => {
     return (
       <div
         key={`${title}-index`}
         className={cn(
           "flex flex-col justify-center gap-[50px] font-bold",
-          className
+          className,
         )}
-        ref={ref}
-      >
+        ref={ref}>
         <div className="bg-[#FFF] mx-auto flex flex-col sm:gap-[30px] sm:w-4/6 rounded-xl p-5 text-xl text-black tracking-[2px] ">
-          <div className="mb-2">
-            <p className="text-base sm:text-xl sm:tracking-[1.5px]">{title}</p>
+          <div className="">
+            <p className="text-base sm:text-xl sm:tracking-[0.75px]">{title}</p>
           </div>
-          <div className="mb-5">
-            <p className="text-xl sm:text-2xl sm:font-bold tracking-[0.5px] sm:tracking-[1.5px]">
+          <div className="mb-2">
+            <p className="text-xl sm:text-2xl sm:font-bold tracking-[0.5px] sm:tracking-[1px]">
               {description}
             </p>
           </div>
@@ -51,8 +50,8 @@ const TestimonialCard = forwardRef(
         </div> */}
       </div>
     );
-  }
+  },
 );
 
 TestimonialCard.displayName = "TestimonialCard";
-export default TestimonialCard
+export default TestimonialCard;
