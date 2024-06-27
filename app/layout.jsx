@@ -28,7 +28,10 @@ export default function RootLayout({children}) {
           property="og:url"
           content="https://main.d1f03goblbdvnq.amplifyapp.com/"
         />{" "}
-        <meta property="og:image" content="/og-boxer.jpg" />{" "}
+        <meta
+          property="og:image"
+          content="https://main.d1f03goblbdvnq.amplifyapp.com/og-boxer.jpg"
+        />{" "}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
