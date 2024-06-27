@@ -1,14 +1,17 @@
-'use client'
-import {cn, getRandomFontClass, fonts} from "@/lib/helper";
-import React, {forwardRef, useEffect, useState} from "react";
+"use client";
+import {cn, getRandomFontClass} from "@/lib/helper";
+import React, {forwardRef, useEffect, useState, useMemo} from "react";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Typography = forwardRef(({className, children, ...props}, ref) => {
+const Typography = forwardRef(({className, children}, ref) => {
   const hasSpace = children.includes(" ");
-  const words = hasSpace ? children.split(" ") : [children];
+
+  const words = useMemo(() => {
+    return hasSpace ? children.split(" ") : [children];
+  }, [children, hasSpace]);
 
   const [fontClasses, setFontClasses] = useState([]);
 
@@ -16,7 +19,7 @@ const Typography = forwardRef(({className, children, ...props}, ref) => {
   useEffect(() => {
     const initialFontClasses = words.map(() => getRandomFontClass());
     setFontClasses(initialFontClasses);
-  }, []);
+  }, [words]);
 
   useGSAP(() => {
     const elements = ref.current.querySelectorAll("span");
