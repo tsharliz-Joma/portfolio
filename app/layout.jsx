@@ -24,20 +24,17 @@ export default function RootLayout({children}) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:url"
-          content="https://main.d1f03goblbdvnq.amplifyapp.com/"
-        />{" "}
+        <meta property="og:url" content="https://www.tsharliz.com" />{" "}
         <meta
           property="og:image"
-          content="https://main.d1f03goblbdvnq.amplifyapp.com/og-boxer.jpg"
+          content="https://www.tsharliz.com/og-boxer.jpg"
         />{" "}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta
           name="twitter:image"
-          content="https://main.d1f03goblbdvnq.amplifyapp.com/twitter-image.png"
+          content="https://www.tsharliz.com/twitter-image.png"
         />{" "}
         <title>{metadata.title}</title>
       </head>
