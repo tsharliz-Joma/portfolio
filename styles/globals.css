@@ -172,4 +172,20 @@ ol {
     src: url("/static/fonts/anta/anta-regular/Anta-Regular.woff2")
       format("woff2");
   }
+  @font-face {
+    font-family: "inter";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/static/fonts/inter/inter-regular/Inter-Regular.woff2")
+      format("woff2");
+  }
+  @font-face {
+    font-family: "inter";
+    font-style: bold;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/static/fonts/inter/inter-bold/Inter-Bold.woff2")
+      format("woff2");
+  }
 }

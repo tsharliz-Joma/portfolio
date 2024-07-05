@@ -77,8 +77,9 @@ module.exports = {
         "border-green": "#008000",
       },
       fontFamily: {
-        anta: ["Anta", "Jaro"],
-        exo: ["Exo", "Anta"],
+        inter: ["inter", "inter"],
+        anta: ["anta", "Jaro"],
+        exo: ["Exo", "anta"],
         jaro: ["Jaro", "Exo"],
         jersey: ["Jersey", "Yarndings"],
         permanentMaker: ["Permanent Marker", "Rock Salt"],

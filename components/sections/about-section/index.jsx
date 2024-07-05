@@ -42,13 +42,28 @@ const AboutSection = forwardRef(({className, ...props}, ref) => {
       },
     });
 
-    tl.from(".about-card", {
-      yPercent: -100,
-      duration: 0.75,
-      stagger: 1,
-      ease: "power2.inOut",
-    });
+    cardsRef.current.forEach((card, index) => {
+      let direction;
+      switch (index) {
+        case 0:
+          direction = {xPercent: -100, yPercent: 0};
+          break;
+        case 1:
+          direction = {xPercent: 0, yPercent: -100};
+          break;
+        case 2:
+          direction = {xPercent: 100, yPercent: 0};
+          break;
+        default:
+          direction = {xPercent: 0, yPercent: 100};
+      }
 
+      tl.from(card, {
+        ...direction,
+        duration: 0.75,
+        ease: "power2.inOut",
+      });
+    });
     // Make sure to refresh ScrollTrigger on resize or orientation changes which might affect layout
     ScrollTrigger.addEventListener("refreshInit", () => {
       document.body.style.overflow = "auto";
