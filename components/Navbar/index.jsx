@@ -56,7 +56,7 @@ const Navbar = () => {
 
   return (
     <AppBar className={`${navbarClass} bg-transparent }`}>
-      <Toolbar className='flex justify-between items-center'>
+      <Toolbar className='flex justify-around items-center'>
         <p id='Welcome' className='flex-grow font-bold text-4xl tracking-[3.75px] text-black'>
           WELCOME!!!
         </p>
