@@ -38,7 +38,7 @@ const ExperienceSection = forwardRef(({className, ...props}, ref) => {
           bgColors[Math.floor(Math.random() * colors.length)]
         }`,
       }}
-      className={`work-container z-[2] text-[#000] relative top-[-90px] py-20 rounded-b-3xl text-center`}>
+      className={`work-container z-[2] text-[#000] relative top-[-90px] py-20  text-center`}>
       <div className="container">
         <h1 className="text-4xl tracking-[2.5px] font-extrabold mb-8">
           Work Experience
