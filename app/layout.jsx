@@ -14,7 +14,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="w-full h-full scroll-smooth">
       <head>
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
         <meta charSet={metadata.charset} />
         <meta name="viewport" content={viewport} />
         <meta name="description" content={metadata.description} />
