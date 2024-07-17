@@ -1,24 +1,24 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import content from './Navbar.content.json';
-import AppBar from '@mui/material/AppBar';
-import IconButton from '@mui/material/IconButton';
-import Toolbar from '@mui/material/Toolbar';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import useTheme from '@mui/material/styles/useTheme';
-import MenuIcon from '@mui/icons-material/Menu';
-import MenuItems from '../ui/menu-items';
+"use client";
+import React, {useState, useEffect} from "react";
+import content from "./Navbar.content.json";
+import AppBar from "@mui/material/AppBar";
+import IconButton from "@mui/material/IconButton";
+import Toolbar from "@mui/material/Toolbar";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import useTheme from "@mui/material/styles/useTheme";
+import MenuIcon from "@mui/icons-material/Menu";
+import MenuItems from "../ui/menu-items";
 
-import { usePathname } from 'next/navigation';
-import Drawer from '@mui/material/Drawer';
+import {usePathname} from "next/navigation";
+import Drawer from "@mui/material/Drawer";
 
 const Navbar = () => {
   const theme = useTheme();
   const nav_items = content.navItems;
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [navbarClass, setNavbarClass] = useState('');
+  const [navbarClass, setNavbarClass] = useState("");
   const pathname = usePathname();
   const top_offset = 54;
 
@@ -26,16 +26,16 @@ const Navbar = () => {
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       if (currentScrollY >= lastScrollY) {
-        setNavbarClass('animate-slideUp');
+        setNavbarClass("animate-slideUp");
       } else {
-        setNavbarClass('animate-slideDown');
+        setNavbarClass("animate-slideDown");
       }
       setLastScrollY(currentScrollY);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, [lastScrollY]);
 
@@ -44,9 +44,9 @@ const Navbar = () => {
     return (event) => {
       if (
         event &&
-        event.type === 'keydown' &&
+        event.type === "keydown" &&
         // Because it is in brackets the evaluation of this expression if returned as a (single value) true of false
-        (event.key === 'Tab' || event.key === 'Shift')
+        (event.key === "Tab" || event.key === "Shift")
       ) {
         return;
       }
@@ -56,7 +56,8 @@ const Navbar = () => {
 
   return (
     <AppBar className={`${navbarClass} bg-transparent }`}>
-      <Toolbar className='flex justify-around items-center'>
+      Charles Joma
+      {/* <Toolbar className='flex justify-around items-center'>
         <p id='Welcome' className='flex-grow font-bold text-4xl tracking-[3.75px] text-black'>
           WELCOME!!!
         </p>
@@ -88,7 +89,7 @@ const Navbar = () => {
             ))}
           </div>
         )}
-      </Toolbar>
+      </Toolbar> */}
     </AppBar>
   );
 };

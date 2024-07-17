@@ -11,56 +11,28 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import MenuItems from "../ui/menu-items";
+import Brand from "../ui/brand";
 
 const navItems = content.navItems;
 
 const NextUiNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const handleMenuItemClick = () => {
     setIsMenuOpen(false);
   };
+
   return (
     <Navbar
+      className="w-screen bg-[#E5E5E5]"
       shouldHideOnScroll
       position={"sticky"}
       onMenuOpenChange={setIsMenuOpen}
-      isMenuOpen={isMenuOpen}>
-      <NavbarContent className="">
-        <NavbarMenuToggle
-          // isSelected={isMenuOpen}
-          //   icon={<Hamburger isOpen={isMenuOpen} className="bg-black" />}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-          onChange={(isOpen) => setIsMenuOpen(isOpen)}
-          className="sm:hidden w-10 h-10 text-black"
-        />
-        <NavbarBrand className="w-full ">
-          <p className="text-3xl tracking-[1.5px] text-black uppercase">
-            Welcome
-          </p>
-        </NavbarBrand>
-      </NavbarContent>
-
-      <NavbarContent className="hidden sm:flex gap-4" justify="between">
-        <NavbarItem>
-          {navItems.map((item, index) => (
-            <MenuItems {...item} key={index} className="text-black" />
-          ))}
-        </NavbarItem>
-      </NavbarContent>
-
-      <NavbarMenu className="bg-custom-black-transparent">
-        {navItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <MenuItems
-              {...item}
-              key={index}
-              className="w-full"
-              size="lg"
-              onClick={handleMenuItemClick}
-            />
-          </NavbarMenuItem>
-        ))}
-      </NavbarMenu>
+      isMenuOpen={isMenuOpen}
+      maxWidth="full">
+      <NavbarBrand className="flex">
+        <Brand />
+      </NavbarBrand>
     </Navbar>
   );
 };
