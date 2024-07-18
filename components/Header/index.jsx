@@ -14,7 +14,7 @@ const Header = () => {
   return (
     <div className="text-black flex flex-col sm:flex-row justify-center items-center h-screen w-full bg-cover bg-center bg-no-repeat bg-[url('/static/img/header.jpeg')]">
       <StreamerText className="w-full h-full overflow-hidden">
-        <span className="text-xl font-bold ">{data.head}</span>
+        <span className="text-xl font-bold" text={data.head}>{data.head}</span>
       </StreamerText>
 
       <div className="absolute flex flex-col sm:flex-row sm:justify-center sm:items-center ">

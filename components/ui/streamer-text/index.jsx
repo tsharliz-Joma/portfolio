@@ -10,9 +10,10 @@ import {cn} from "@/lib/helper";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin";
-import SplitText from "gsap-trial/SplitText";
+import Splitting from "splitting";
+import "splitting/dist/splitting.css";
 
-gsap.registerPlugin(MotionPathPlugin, SplitText);
+gsap.registerPlugin(MotionPathPlugin);
 
 const StreamerText = forwardRef(
   ({children, className, text, ...props}, ref) => {
@@ -63,13 +64,16 @@ const StreamerText = forwardRef(
       gsap.set(text, {xPercent: -50, yPercent: -50});
 
       if (pathElement) {
-        // Split the text into individual characters, including spaces
-        const split = new SplitText(text, {type: "words"});
-        const words = split.words;
+        // Split the text into individual words using Splitting.js
+        const results = Splitting({target: text, by: "words"});
+        const words = results[0].words;
 
         gsap.set(words, {xPercent: -50, yPercent: -50});
 
-        // Animate each character along the path
+        // Ensure the first word is positioned accurately
+        gsap.set(words[0], {xPercent: 0, yPercent: 0});
+
+
         // Animate each word along the path
         words.forEach((word, i) => {
           gsap.to(word, {
@@ -89,7 +93,7 @@ const StreamerText = forwardRef(
         gsap.to(text, {opacity: 1, duration: 0.5}); // Ensure the whole text container is visible
 
         // Maintain spaces between words
-        words.forEach((word, i) => {
+        words.forEach((word) => {
           gsap.set(word, {whiteSpace: "nowrap"});
         });
       }
