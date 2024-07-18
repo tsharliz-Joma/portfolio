@@ -1,16 +1,10 @@
 "use client";
-import React, {
-  forwardRef,
-  useEffect,
-  useLayoutEffect,
-  useRef,
-  useState,
-} from "react";
+import React, {forwardRef, useEffect, useRef, useState} from "react";
 import {cn} from "@/lib/helper";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin";
-import Splitting from "splitting";
+// import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 
 gsap.registerPlugin(MotionPathPlugin);
@@ -23,34 +17,37 @@ const StreamerText = forwardRef(
     const [duration, setDuration] = useState(0);
 
     useEffect(() => {
-      // setup Function to update delay
-      const updateDelay = () => {
-        if (window.innerWidth <= 768) {
-          setDelay(0.77);
-        } else {
-          setDelay(0.77);
-        }
-      };
-      //   Setup function to update duration
-      const updateDuration = () => {
-        if (window.innerWidth <= 768) {
-          setDuration(17.85);
-        } else {
-          setDuration(20);
-        }
-      };
+      // Dynamically import Splitting
+      import("splitting").then((Splitting) => {
+        // setup Function to update delay
+        const updateDelay = () => {
+          if (window.innerWidth <= 768) {
+            setDelay(0.77);
+          } else {
+            setDelay(0.77);
+          }
+        };
+        // Setup function to update duration
+        const updateDuration = () => {
+          if (window.innerWidth <= 768) {
+            setDuration(17.85);
+          } else {
+            setDuration(20);
+          }
+        };
 
-      // Set Duration
-      updateDuration();
-      window.addEventListener("resize", updateDelay);
-      // Set initial delay
-      updateDelay();
-      window.addEventListener("resize", updateDelay);
+        // Set Duration
+        updateDuration();
+        window.addEventListener("resize", updateDelay);
+        // Set initial delay
+        updateDelay();
+        window.addEventListener("resize", updateDelay);
 
-      return () => {
-        window.removeEventListener("resize", updateDuration);
-        window.removeEventListener("resize", updateDelay);
-      };
+        return () => {
+          window.removeEventListener("resize", updateDuration);
+          window.removeEventListener("resize", updateDelay);
+        };
+      });
     }, []);
 
     useGSAP(() => {
@@ -65,36 +62,37 @@ const StreamerText = forwardRef(
 
       if (pathElement) {
         // Split the text into individual words using Splitting.js
-        const results = Splitting({target: text, by: "words"});
-        const words = results[0].words;
+        import("splitting").then((Splitting) => {
+          const results = Splitting.default({target: text, by: "words"});
+          const words = results[0].words;
 
-        gsap.set(words, {xPercent: -50, yPercent: -50});
+          gsap.set(words, {xPercent: -50, yPercent: -50});
 
-        // Ensure the first word is positioned accurately
-        gsap.set(words[0], {xPercent: 0, yPercent: 0});
+          // Ensure the first word is positioned accurately
+          gsap.set(words[0], {xPercent: 0, yPercent: 0});
 
-
-        // Animate each word along the path
-        words.forEach((word, i) => {
-          gsap.to(word, {
-            motionPath: {
-              path: pathElement,
-              align: pathElement,
-              alignOrigin: [0.0, 0.0],
-              autoRotate: true,
-            },
-            duration: duration,
-            repeat: -1,
-            ease: "linear",
-            delay: i * delay, // Adjust the delay for a smoother transition
+          // Animate each word along the path
+          words.forEach((word, i) => {
+            gsap.to(word, {
+              motionPath: {
+                path: pathElement,
+                align: pathElement,
+                alignOrigin: [0.0, 0.0],
+                autoRotate: true,
+              },
+              duration: duration,
+              repeat: -1,
+              ease: "linear",
+              delay: i * delay, // Adjust the delay for a smoother transition
+            });
           });
-        });
 
-        gsap.to(text, {opacity: 1, duration: 0.5}); // Ensure the whole text container is visible
+          gsap.to(text, {opacity: 1, duration: 0.5}); // Ensure the whole text container is visible
 
-        // Maintain spaces between words
-        words.forEach((word) => {
-          gsap.set(word, {whiteSpace: "nowrap"});
+          // Maintain spaces between words
+          words.forEach((word) => {
+            gsap.set(word, {whiteSpace: "nowrap"});
+          });
         });
       }
     }, [textRef, containerRef, delay]);

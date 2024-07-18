@@ -1,11 +1,10 @@
 "use client";
-import React, {forwardRef, useEffect, useRef, useState} from "react";
+import React, {forwardRef,useRef, useState} from "react";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AboutCard from "../../ui/about-card";
 import content from "./About.content.json";
-import CustomCard from "../../ui/custom-card";
 import {generateRandomColors} from "@/lib/helper";
 gsap.registerPlugin(ScrollTrigger);
 

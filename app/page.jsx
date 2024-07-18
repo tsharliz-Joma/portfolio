@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+
 import Header from "@/components/Header";
 import HighlightStrip from "@/components/sections/highlight-section";
 import TestimonialsSection from "@/components/sections/testimonials-section";
@@ -11,11 +11,8 @@ import NextUiNav from "@/components/Navbar/nextui-navbar";
 import {NextUIProvider} from "@nextui-org/react";
 
 export default function Home() {
-  // setupAnimations()
   return (
-    // <NextUIProvider>
     <main className="w-full bg-black text-white ">
-      {/* <Navbar /> */}
       <NextUIProvider>
         <NextUiNav />
         <Header />
@@ -28,6 +25,5 @@ export default function Home() {
         <Footer />
       </NextUIProvider>
     </main>
-    // </NextUIProvider>
   );
 }
