@@ -4,7 +4,6 @@ import {cn} from "@/lib/helper";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import {MotionPathPlugin} from "gsap/MotionPathPlugin";
-// import Splitting from "splitting";
 import "splitting/dist/splitting.css";
 
 gsap.registerPlugin(MotionPathPlugin);
