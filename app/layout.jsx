@@ -2,8 +2,8 @@ import "../styles/globals.css";
 
 export const metadata = {
   title: "Charles Joma Portfolio",
-  description: "Explore the portfolio of a skilled junior web developer based in Sydney. Specializing in innovative web development projects, business solutions, and creative technology.",
-  keywords: "web developer, portfolio, junior web developer, Sydney, web development, business solutions, creative technology",
+  description: "Explore the portfolio of a skilled junior software engineer based in Sydney. Specializing in innovative web development projects, business solutions, and creative technology.",
+  keywords: "software engineer, portfolio, junior software engineer, Sydney, web development, business solutions, creative technology",
   author: "Charles Joma",
   charset: "UTF-8",
 };
@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.tsharliz.com" /> <meta property="og:image" content="https://www.tsharliz.com/og-boxer.jpg" />{" "}
-        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:card" content="https://www.tsharliz.com/og-boxer.jpg" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
         <meta name="twitter:image" content="https://www.tsharliz.com/twitter-image.png" /> <title>{metadata.title}</title>

@@ -1,15 +1,7 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import content from "./Navbar.content.json";
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenuToggle,
-  NavbarMenu,
-  NavbarMenuItem,
-} from "@nextui-org/navbar";
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenuToggle, NavbarMenu, NavbarMenuItem } from "@nextui-org/navbar";
 import MenuItems from "../ui/menu-items";
 import Brand from "../ui/brand";
 
@@ -23,17 +15,11 @@ const NextUiNav = () => {
   };
 
   return (
-    <Navbar
-      className="w-screen bg-[#E5E5E5]"
-      shouldHideOnScroll
-      position={"sticky"}
-      onMenuOpenChange={setIsMenuOpen}
-      isMenuOpen={isMenuOpen}
-      maxWidth="full">
-      <NavbarBrand className="flex">
+    <div className="h-0">
+      <div className="absolute right-6 top-5 sm:right-10 sm:top-9">
         <Brand />
-      </NavbarBrand>
-    </Navbar>
+      </div>
+    </div>
   );
 };
 export default NextUiNav;
