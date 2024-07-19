@@ -32,6 +32,11 @@
       "alt": "Node logo"
     },
     {
+      "Title": "AWS",
+      "src": "static/logos/AWS.svg",
+      "alt": "AWS logo"
+    },
+    {
       "Title": "Material UI",
       "src": "static/logos/mui.svg",
       "alt": "Matirial UI logo"

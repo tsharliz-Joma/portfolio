@@ -4,7 +4,7 @@ import { cn } from "@/lib/helper";
 import createGlobe from "cobe";
 import { useSpring } from "react-spring";
 
-const DragAutoCobe = ({ maxW, className, markers }) => {
+const DragAutoCobe = ({ className, markers }) => {
   const canvasRef = useRef();
   const pointerInteracting = useRef(null);
   const pointerInteractionMovement = useRef(0);

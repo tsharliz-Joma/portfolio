@@ -12,7 +12,7 @@ const TestimonialCard = forwardRef(
       <div
         key={`${title}-index`}
         className={cn(
-          "flex flex-col justify-center gap-[50px] font-bold",
+          "flex h-full justify-center items-center gap-[50px] font-bold",
           className,
         )}
         ref={ref}>

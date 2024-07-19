@@ -21,7 +21,7 @@ const Header = () => {
       </StreamerText>
 
       <div className="absolute w-full flex sm:flex-row sm:justify-center sm:items-center ">
-        <DragAutoCobe maxW={600} />
+        <DragAutoCobe />
       </div>
     </div>
   );

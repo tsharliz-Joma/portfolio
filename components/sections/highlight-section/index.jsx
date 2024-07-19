@@ -39,16 +39,10 @@ const HighlightStrip = () => {
         }}
         className="highlights-container relative top-[-20px] py-20 text-black z-[10]"
       >
-        <div className="highlights-inner container  sm:justify-items-center w-full grid grid-cols-1 md:grid-cols-4 gap-5">
-          {/* <BasicCarousel {...HighlightItems}/> */}
+        <div className="highlights-inner container sm:justify-items-center items-center w-full grid grid-cols-1 md:grid-cols-4 gap-5">
           {HighlightItems.map((item, index) => (
-            <div className="stagger" key={index}>
-              <HighlightCard
-                ref={highlightCardTextRef}
-                bg={bgColors[index]}
-                key={index}
-                {...item}
-              />
+            <div className="" key={index}>
+              <HighlightCard ref={highlightCardTextRef} bg={bgColors[index]} key={index} {...item} />
             </div>
           ))}
         </div>
