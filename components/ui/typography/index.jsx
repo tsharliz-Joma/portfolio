@@ -53,7 +53,7 @@ const Typography = forwardRef(({className, children}, ref) => {
   return (
     <div ref={ref} className={cn(className)}>
       {words.map((word, index) => (
-        <span key={index} style={{fontFamily: fontClasses[index]}}>
+        <span key={index} className="font-anta" >
           {word}
           {index < words.length - 1 ? " " : ""}
         </span>

@@ -1,6 +1,5 @@
 "use client";
 import React, { forwardRef, useRef } from "react";
-import Divider from "../divider";
 import Typography from "../typography";
 
 const HighlightCard = forwardRef(({ title, description, ...props }, ref) => {

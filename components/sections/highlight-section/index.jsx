@@ -37,7 +37,7 @@ const HighlightStrip = () => {
           backgroundColor: bgColors[1],
           border: `1px solid ${bgColors[4]}`,
         }}
-        className="highlights-container relative top-[-20px] py-20 text-black z-[10]"
+        className="highlights-container relative top-[-20px] py-10 text-black z-[10]"
       >
         <div className="highlights-inner container sm:justify-items-center items-center w-full grid grid-cols-1 md:grid-cols-4 gap-5">
           {HighlightItems.map((item, index) => (

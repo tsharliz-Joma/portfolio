@@ -5,7 +5,6 @@ import content from "./TechStack.content.json";
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {generateRandomColors} from "@/lib/helper";
 gsap.registerPlugin(ScrollTrigger);
 
 const TechStack = () => {
@@ -34,7 +33,7 @@ const TechStack = () => {
   return (
     <section className="tech-container text-center bg-white  py-12 relative top-[-57px] z-[7]">
       <div className="flex flex-col max-w-7xl container">
-        <p className="text-5xl font-extrabold text-black tracking-[2.5px] uppercase mb-8">
+        <p className="font-anta text-5xl font-extrabold text-black tracking-[2.5px] uppercase mb-8">
           Tech Stack
         </p>
 

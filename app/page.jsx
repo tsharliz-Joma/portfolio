@@ -12,7 +12,7 @@ import { NextUIProvider } from "@nextui-org/react";
 
 export default function Home() {
   return (
-    <main className="w-full bg-black text-white ">
+    <main className="w-full bg-black font-anta text-white ">
       <NextUIProvider>
         <Particles className="absolute inset-0 pointer-events-none" />
         <NextUiNav />
