@@ -1,12 +1,12 @@
 "use client";
-import {cn, getRandomFontClass} from "@/lib/helper";
-import React, {forwardRef, useEffect, useState, useMemo} from "react";
+import { cn, getRandomFontClass } from "@/lib/helper";
+import React, { forwardRef, useEffect, useState, useMemo } from "react";
 import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
-const Typography = forwardRef(({className, children}, ref) => {
+const Typography = forwardRef(({ className, children }, ref) => {
   const hasSpace = children.includes(" ");
 
   const words = useMemo(() => {
@@ -26,7 +26,7 @@ const Typography = forwardRef(({className, children}, ref) => {
     elements.forEach((element, index) => {
       gsap.fromTo(
         element,
-        {opacity: 0},
+        { opacity: 0 },
         {
           opacity: 1,
           scrollTrigger: {
@@ -43,7 +43,7 @@ const Typography = forwardRef(({className, children}, ref) => {
               element.style.fontClass = randomFont;
             },
           },
-        },
+        }
       );
     });
     return () => {
@@ -53,7 +53,7 @@ const Typography = forwardRef(({className, children}, ref) => {
   return (
     <div ref={ref} className={cn(className)}>
       {words.map((word, index) => (
-        <span key={index} style={{fontFamily: fontClasses[index]}}>
+        <span className="font-inter" key={index}>
           {word}
           {index < words.length - 1 ? " " : ""}
         </span>
