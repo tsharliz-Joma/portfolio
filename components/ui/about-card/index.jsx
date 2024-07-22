@@ -13,15 +13,12 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   useDisclosure,
 } from "@nextui-org/react";
 import {useMediaQuery} from "react-responsive";
 import {X} from "lucide-react";
 import Divider from "../divider";
-import Spotify from "../spotify";
-import VideoPlayer from "../video-player";
 import {cn} from "@/lib/helper";
 import gsap from "gsap";
 
@@ -105,8 +102,8 @@ const AboutCard = forwardRef(
           scrollBehavior="inside"
           isOpen={isOpen}
           onOpenChange={onOpenChange}
-          // Set the isDismissable property to false to prevent the modal from closing when clicking on the overlay.
-          isDismissable={true}
+          // Set the isDismissible property to false to prevent the modal from closing when clicking on the overlay.
+          isDismissible={true}
           // Set the isKeyboardDismissDisabled property to true to prevent the modal from closing when pressing the Esc key.
           isKeyboardDismissDisabled={true}
           style={{

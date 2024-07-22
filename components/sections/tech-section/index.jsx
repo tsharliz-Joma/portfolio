@@ -10,28 +10,28 @@ gsap.registerPlugin(ScrollTrigger);
 const TechStack = () => {
   const techStack = content.TechStack;
 
-  useGSAP(() => {
-    const tl = gsap.timeline({});
+  // useGSAP(() => {
+  //   const tl = gsap.timeline({});
 
-    tl.from(
-      ".tech-container",
-      {
-        yPercent: -100,
-        opacity: 0,
-        ease: "power2.inOut",
-        duration: 0.75,
-        scrollTrigger: {
-          trigger: ".tech-container",
-          start: "top+=500 center",
-          scrub: true,
-        },
-      },
-      "",
-    );
-  }, []);
+  //   tl.from(
+  //     ".tech-container",
+  //     {
+  //       yPercent: -100,
+  //       opacity: 0,
+  //       ease: "power2.inOut",
+  //       duration: 0.75,
+  //       scrollTrigger: {
+  //         trigger: ".tech-container",
+  //         start: "top+=500 center",
+  //         scrub: true,
+  //       },
+  //     },
+  //     "",
+  //   );
+  // }, []);
 
   return (
-    <section className="tech-container text-center bg-white  py-12 relative top-[-57px] z-[7]">
+    <section className="tech-container text-center bg-white  py-12 relative  z-[7]">
       <div className="flex flex-col max-w-7xl container">
         <p className="font-anta text-5xl font-extrabold text-black tracking-[2.5px] uppercase mb-8">
           Tech Stack
