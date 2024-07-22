@@ -4,42 +4,30 @@
     {
       "title": "CHEP Network",
       "subTitle": "Junior Creative Technologist",
-      "description": [
-        "Display ad banner development",
-        "Component build Support",
-        "Internal site updates and maintenance "
-      ],
+      "description": ["Display ad banner development", "Component build Support", "Internal site updates and maintenance "],
       "image": {
         "src": "./static/img/chep-network.svg"
       },
-      "date": "February 2023 - current"
+      "date": "February 2023"
     },
     {
       "title": "Bass Coast Boxing",
       "subTitle": "Boxing Coach",
-      "description": [
-        "Competition Fight trainer",
-        "Competition sparring supervisor",
-        "Boxfit classes instructor"
-      ],
+      "description": ["Competition Fight trainer", "Competition sparring supervisor", "Boxfit classes instructor"],
       "image": {
         "src": "./static/img/BassCoastboxing.svg"
       },
-      "date": "2018 - January 2022"
+      "date": "August 2018"
     },
 
     {
       "title": "Folks coffee",
       "subTitle": "Head barista",
-      "description": [
-        "Hospitality and Beverage Coordinaton",
-        "Proactive Supply Coordination",
-        "Espresso Equipment Specialist"
-      ],
+      "description": ["Hospitality and Beverage Coordinaton", "Proactive Supply Coordination", "Espresso Equipment Specialist"],
       "image": {
         "src": "./static/img/folks.svg"
       },
-      "date": "2016 - February 2022"
+      "date": "February 2016"
     }
   ]
 }
