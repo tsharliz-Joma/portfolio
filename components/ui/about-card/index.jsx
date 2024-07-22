@@ -5,24 +5,25 @@ import React, {
   useEffect,
   useRef,
   useCallback,
+  lazy,
+  Suspense,
 } from "react";
 import {
   Modal,
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   useDisclosure,
 } from "@nextui-org/react";
 import {useMediaQuery} from "react-responsive";
 import {X} from "lucide-react";
 import Divider from "../divider";
-import Spotify from "../spotify";
-import VideoPlayer from "../video-player";
-import Typography from "../typography";
 import {cn} from "@/lib/helper";
 import gsap from "gsap";
+
+const LazySpotify = lazy(() => import("../spotify"));
+const LazyVideoPlayer = lazy(() => import("../video-player"));
 
 const AboutCard = forwardRef(
   ({content, className, direction, cta, ...props}, ref) => {
@@ -67,6 +68,16 @@ const AboutCard = forwardRef(
         window.removeEventListener("mousemove", debouncedHandleMouseMove);
     }, [handleMouseMove]);
 
+    const handleOpen = () => {
+      onOpen();
+      if (spotify) {
+        import("../spotify");
+      }
+      if (video) {
+        import("../video-player");
+      }
+    };
+
     return (
       <div
         ref={ref}
@@ -78,8 +89,8 @@ const AboutCard = forwardRef(
         )}>
         <Button
           ref={btnRef}
-          className="font-inter cursor-pointer bg-transparent focus:outline-none flex items-center justify-center w-fit h-fit pb-1"
-          onPress={onOpen}>
+          className="font-anta cursor-pointer bg-transparent focus:outline-none flex items-center justify-center w-fit h-fit pb-1"
+          onPress={handleOpen}>
           <p className="font-bold text-xl sm:text-[2rem] uppercase">
             {content.title}
           </p>
@@ -91,8 +102,8 @@ const AboutCard = forwardRef(
           scrollBehavior="inside"
           isOpen={isOpen}
           onOpenChange={onOpenChange}
-          // Set the isDismissable property to false to prevent the modal from closing when clicking on the overlay.
-          isDismissable={true}
+          // Set the isDismissible property to false to prevent the modal from closing when clicking on the overlay.
+          isDismissible={true}
           // Set the isKeyboardDismissDisabled property to true to prevent the modal from closing when pressing the Esc key.
           isKeyboardDismissDisabled={true}
           style={{
@@ -126,14 +137,18 @@ const AboutCard = forwardRef(
                           {content.description_body}
                         </p>
                         <div className={`${spotify ? "block" : "hidden"}`}>
-                          <Spotify uri={content?.spotify?.uri} />
+                          <Suspense fallback={<div>Loading Spotify...</div>}>
+                            <LazySpotify uri={content?.spotify?.uri} />
+                          </Suspense>
                         </div>
                         <div className={`${video ? "block " : "hidden"}`}>
-                          <VideoPlayer
-                            src={content?.video?.src}
-                            width={"50%"}
-                            height={200}
-                          />
+                          <Suspense fallback={<div>Loading Video...</div>}>
+                            <LazyVideoPlayer
+                              src={content?.video?.src}
+                              width={"50%"}
+                              height={200}
+                            />
+                          </Suspense>
                         </div>
                         <p className="tracking-[0.25px] sm:top-[-40px] relative ">
                           {content.description_body2}
