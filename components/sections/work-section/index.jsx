@@ -7,7 +7,7 @@ const ExperienceSection = forwardRef(({ className, ...props }, ref) => {
   const colors = content.colors;
 
   return (
-    <section id="Work Experience" className={`z-[2]  text-white relative py-20 `}>
+    <section id="Work Experience" className={`z-[2] text-white relative py-20 `}>
       <div className="container ">
         <h1 className="text-4xl tracking-[2px]font-extrabold mb-8 text-center">Work Experience</h1>
         <VerticalTimelineV1 items={items} />
