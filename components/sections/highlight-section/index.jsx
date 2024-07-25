@@ -15,20 +15,6 @@ const HighlightStrip = () => {
   const highlightCardTextRef = useRef([]);
   const [bgColors, setBgColors] = useState([]);
 
-  // useGSAP(() => {
-  //   setBgColors(generateRandomColors(content, "Items"));
-  //   const tl = gsap.timeline({});
-
-  //   tl.from(".highlights-container", {
-  //     yPercent: -100,
-  //     ease: "power2.inOut",
-  //     scrollTrigger: {
-  //       trigger: ".highlights-container",
-  //       start: "top bottom",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, []);
 
   return (
 

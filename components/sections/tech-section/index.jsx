@@ -2,33 +2,9 @@
 import React from "react";
 import TechCard from "@/components/ui/tech-card";
 import content from "./TechStack.content.json";
-import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
-import ScrollTrigger from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 
 const TechStack = () => {
   const techStack = content.TechStack;
-
-  // useGSAP(() => {
-  //   const tl = gsap.timeline({});
-
-  //   tl.from(
-  //     ".tech-container",
-  //     {
-  //       yPercent: -100,
-  //       opacity: 0,
-  //       ease: "power2.inOut",
-  //       duration: 0.75,
-  //       scrollTrigger: {
-  //         trigger: ".tech-container",
-  //         start: "top+=500 center",
-  //         scrub: true,
-  //       },
-  //     },
-  //     "",
-  //   );
-  // }, []);
 
   return (
     <section className="tech-container text-center bg-white  py-12 relative  z-[7]">
