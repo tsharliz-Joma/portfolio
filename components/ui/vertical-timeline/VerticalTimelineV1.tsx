@@ -1,12 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Caveat } from "next/font/google";
 
-const caveat = Caveat({
-  subsets: ["latin"],
-  variable: "--font-caveat",
-  display: "swap",
-});
 interface ImgProps {
   src: string;
   alt: string;

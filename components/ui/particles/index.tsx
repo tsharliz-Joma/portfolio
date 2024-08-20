@@ -1,15 +1,31 @@
 "use client";
 
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import MousePosition from "../../../lib/mouse-position";
+import { cn } from "@/lib/utils";
 
 interface ParticlesProps {
   className?: string;
   quantity?: number;
   staticity?: number;
   ease?: number;
+  children?: React.ReactNode;
 }
-const Particles = ({ className = "", quantity = 30, staticity = 50, ease = 50 }: ParticlesProps) => {
+
+type Circle = {
+  x: number;
+  y: number;
+  translateX: number;
+  translateY: number;
+  size: number;
+  alpha: number;
+  targetAlpha: number;
+  dx: number;
+  dy: number;
+  magnetism: number;
+};
+
+const Particles = ({ className = "", quantity = 30, staticity = 50, ease = 50, children }: ParticlesProps) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -18,13 +34,16 @@ const Particles = ({ className = "", quantity = 30, staticity = 50, ease = 50 }:
   const mouse = useRef<{ x: number; y: number }>({ x: 0, y: 0 });
   const canvasSize = useRef<{ w: number; h: number }>({ w: 0, h: 0 });
   const dpr = typeof window !== "undefined" ? window.devicePixelRatio : 1;
+  const [rgbaObject, setRgbaObject] = useState(null);
 
   useEffect(() => {
     if (canvasRef.current) {
       context.current = canvasRef.current.getContext("2d");
     }
+
     initCanvas();
     animate();
+
     window.addEventListener("resize", initCanvas);
 
     return () => {
@@ -66,19 +85,6 @@ const Particles = ({ className = "", quantity = 30, staticity = 50, ease = 50 }:
       canvasRef.current.style.height = canvasSize.current.h + "px";
       context.current.scale(dpr, dpr);
     }
-  };
-
-  type Circle = {
-    x: number;
-    y: number;
-    translateX: number;
-    translateY: number;
-    size: number;
-    alpha: number;
-    targetAlpha: number;
-    dx: number;
-    dy: number;
-    magnetism: number;
   };
 
   const circleParams = (): Circle => {
@@ -179,8 +185,8 @@ const Particles = ({ className = "", quantity = 30, staticity = 50, ease = 50 }:
   };
 
   return (
-    <div className={className} ref={canvasContainerRef} aria-hidden="true">
-      <canvas ref={canvasRef} />
+    <div className={cn("w-full", className)} ref={canvasContainerRef} aria-hidden="true">
+      <canvas ref={canvasRef}>{children}</canvas>
     </div>
   );
 };

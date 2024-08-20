@@ -1,5 +1,5 @@
 "use client";
-import { cn, getRandomFontClass } from "@/lib/helper";
+import { cn, getRandomFontClass } from "@/lib/utils";
 import React, { forwardRef, useEffect, useState, useMemo } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -53,7 +53,7 @@ const Typography = forwardRef(({ className, children }, ref) => {
   return (
     <div ref={ref} className={cn(className)}>
       {words.map((word, index) => (
-        <span key={index} className="font-anta" >
+        <span key={index} className="font-anta">
           {word}
           {index < words.length - 1 ? " " : ""}
         </span>

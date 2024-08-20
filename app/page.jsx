@@ -9,17 +9,23 @@ import ExperienceSection from "@/components/sections/work-section";
 import NextUiNav from "@/components/Navbar/nextui-navbar";
 import Particles from "@/components/ui/particles";
 import { NextUIProvider } from "@nextui-org/react";
+import HighlightSection from "@/components/sections/highlight-section";
 
 export default function Home() {
+  const RGBA = { r: 0, g: 191, b: 255, a: 1 };
+
   return (
     <main className="w-full bg-black font-anta text-white ">
       <NextUIProvider>
-        <Particles className="absolute inset-0 pointer-events-none" />
         <NextUiNav />
+        <Particles className="absolute inset-0 pointer-events-none" />
         <Header />
         <AboutSection />
-        <HighlightStrip />
+        <Particles className="absolute pointer-events-none" />
+        <HighlightSection />
+        <Particles className="absolute pointer-events-none" />
         <TestimonialsSection />
+
         <TechStack />
         <ExperienceSection />
         <Projects />
