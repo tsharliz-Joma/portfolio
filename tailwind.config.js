@@ -1,5 +1,5 @@
-const {transform} = require("next/dist/build/swc");
-const {nextui} = require("@nextui-org/react");
+const { transform } = require("next/dist/build/swc");
+const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -11,6 +11,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      spacing: {
+        xxs: ".5rem",
+        xs: ".75rem",
+        sm: "1rem",
+        md: "2rem",
+        lg: "2.5rem",
+        xl: "3rem",
+        xxl: "4rem",
+        xxxl: "5rem",
+        xxxxl: "7.5rem",
+        xxxxxl: "10rem",
+        xxxxxxl: "12.5rem",
+        btn: "0.5rem 0.75rem",
+      },
       boxShadow: {
         "custom-shadow": "0px 5px 15px #00000026",
       },
@@ -24,12 +38,12 @@ module.exports = {
       },
       keyframes: {
         slideDown: {
-          "0%": {transform: "translateY(-100%)"},
-          "100%": {transform: "translateY(0)"},
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
         },
         slideUp: {
-          "100%": {transform: "translateY(-100%)"},
-          "0%": {transform: "translateY(0)"},
+          "100%": { transform: "translateY(-100%)" },
+          "0%": { transform: "translateY(0)" },
         },
       },
       animation: {

@@ -1,23 +1,19 @@
 import React from "react";
 import content from "./Projects.content.json";
-import {ProjectCarousel} from "@/components/ui/carousel/project-carousel";
+import { ProjectCarousel } from "@/components/ui/carousel/project-carousel";
+import Section from "@/components/ui/section";
+import SectionHeader from "@/components/ui/section-header";
 
 const Projects = () => {
   const items = content.Projects;
 
   return (
-    <section
-      id="Projects"
-      className="projects-container bg-black py-20 min-h-screen relative z-[0] rounded-b-3xl">
-      <div className="container py-20 flex flex-col gap-12">
-        <div className="">
-          <p className="text-white text-5xl tracking-[3.5px] font-bold uppercase">
-            Projects
-          </p>
-        </div>
+    <Section id="Projects Section">
+      <div className="container grid gap-14 py-20">
+        <SectionHeader className="">Projects</SectionHeader>
         <ProjectCarousel items={items} className="" />
       </div>
-    </section>
+    </Section>
   );
 };
 

@@ -8,6 +8,7 @@ import { generateRandomColors } from "@/lib/utils";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { BasicCarousel } from "@/components/ui/carousel";
 import Particles from "@/components/ui/particles";
+import Section from "@/components/ui/section";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -16,12 +17,14 @@ const TestimonialsSection = () => {
   const [bgColors, setBgColors] = useState([]);
 
   return (
-    <section className="testimonials-container pt-[70px] cursor-grab active:cursor-grabbing pb-10 bg-transparent relative">
-      <Particles className="absolute pointer-events-none" />
-      <div className="container-xl grid">
-        <BasicCarousel items={items} />
+    <Section id="Testimonials Section">
+      <div className="testimonials-container cursor-grab active:cursor-grabbing py-20">
+        <Particles className="absolute pointer-events-none" />
+        <div className="container-xl grid">
+          <BasicCarousel items={items} />
+        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

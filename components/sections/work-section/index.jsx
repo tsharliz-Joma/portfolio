@@ -1,18 +1,22 @@
 import React, { forwardRef } from "react";
 import content from "./work.json";
 import { VerticalTimelineV1 } from "@/components/ui/vertical-timeline";
+import Section from "@/components/ui/section";
+import SectionHeader from "@/components/ui/section-header";
 
 const ExperienceSection = forwardRef(({ className, ...props }, ref) => {
   const items = content.Work;
-  const colors = content.colors;
 
   return (
-    <section id="Work Experience" className={`z-[2] text-white relative py-20 `}>
-      <div className="container ">
-        <h1 className="text-4xl tracking-[2px]font-extrabold mb-8 text-center">Work Experience</h1>
+    <Section
+      id="Work Experience Section"
+      className={`text-white relative py-20 `}
+    >
+      <div className="container">
+        <SectionHeader>Work Experience</SectionHeader>
         <VerticalTimelineV1 items={items} />
       </div>
-    </section>
+    </Section>
   );
 });
 ExperienceSection.displayName = "Work Experience";

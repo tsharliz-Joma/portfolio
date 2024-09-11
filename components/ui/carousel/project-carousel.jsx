@@ -45,7 +45,7 @@ const ProjectCarousel = forwardRef(({ className, items, ...props }, ref) => {
         <CarouselContent className="flex">
           {chunkedItems.map((chunk, index) => (
             <CarouselItem key={index} className="flex-shrink-0 w-full sm:w-auto">
-              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 sm:grid-rows-2 gap-10">
                 {chunk.map((item, itemIndex) => (
                   <ProjectCard key={itemIndex} className={`${index * 4 + itemIndex === current ? "opacity-100" : "opacity-50"} transition-opacity duration-1000 ease-out`} {...item} />
                 ))}
