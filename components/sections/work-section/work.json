@@ -4,7 +4,7 @@
     {
       "title": "CHEP Network",
       "subTitle": "Junior Creative Technologist",
-      "description": ["Display ad banner development", "Component build Support", "Internal site updates and maintenance "],
+      "description": "Developed display ad banners, supported component builds, and handled internal site updates and maintenance to ensure smooth functionality and performance.",
       "image": {
         "src": "./static/img/chep-network.svg"
       },
@@ -13,7 +13,7 @@
     {
       "title": "Bass Coast Boxing",
       "subTitle": "Boxing Coach",
-      "description": ["Competition Fight trainer", "Competition sparring supervisor", "Boxfit classes instructor"],
+      "description": "Served as a competition fight trainer, supervised competition sparring, and instructed Boxfit classes to enhance athletic performance and fitness levels.",
       "image": {
         "src": "./static/img/BassCoastboxing.svg"
       },
@@ -23,7 +23,7 @@
     {
       "title": "Folks coffee",
       "subTitle": "Head barista",
-      "description": ["Hospitality and Beverage Coordinaton", "Proactive Supply Coordination", "Espresso Equipment Specialist"],
+      "description": "Coordinated hospitality and beverage services, managed proactive supply logistics, and specialized in espresso equipment to ensure smooth operations and quality service.",
       "image": {
         "src": "./static/img/folks.svg"
       },

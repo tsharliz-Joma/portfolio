@@ -18,7 +18,7 @@ const TestimonialsSection = () => {
 
   return (
     <Section id="Testimonials Section">
-      <div className="testimonials-container cursor-grab active:cursor-grabbing py-20">
+      <div className="testimonials-container cursor-grab active:cursor-grabbing py-28">
         <Particles className="absolute pointer-events-none" />
         <div className="container-xl grid">
           <BasicCarousel items={items} />

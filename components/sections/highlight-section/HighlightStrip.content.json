@@ -1,19 +1,8 @@
 {
   "Items": [
     {
-      "title": "Projects",
-      "description": "Projects Showcase",
-      "mobileImage": {
-        "src": ""
-      },
-      "desktopImage": {
-        "src": ""
-      }
-      
-    },
-    {
-      "title": "Tech Stack",
-      "description": "Languages and Frameworks",
+      "title": "Interactive Web Design",
+      "description": "Crafting immersive, user-focused digital experiences with modern design principles and technologies",
       "mobileImage": {
         "src": ""
       },
@@ -22,8 +11,8 @@
       }
     },
     {
-      "title": "Work",
-      "description": "Professional Work History",
+      "title": "Creative Coding",
+      "description": "Developing visually compelling and interactive web components through innovative programming techniques.",
       "mobileImage": {
         "src": ""
       },
@@ -32,8 +21,18 @@
       }
     },
     {
-      "title": "Contact",
-      "description": "Contact Details",
+      "title": "UX/UI Strategy",
+      "description": "Blending design and technology to create intuitive, user-centered interfaces that drive engagement",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
+    },
+    {
+      "title": "Cross-platform Development",
+      "description": "Building responsive web applications that seamlessly adapt across various devices and environments.",
       "mobileImage": {
         "src": ""
       },

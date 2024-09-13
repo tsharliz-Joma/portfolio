@@ -5,7 +5,7 @@ import ContactCard from "../ui/contact-card"; // Ensure ContactCard is exported 
 
 const Footer = () => {
   return (
-    <div className="bg-grey pt-10">
+    <div className="bg-transparent pt-10 ">
       <div className="container mx-auto text-white">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">
           <div className="flex flex-col sm:flex-row sm:items-center">
