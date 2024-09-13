@@ -2,7 +2,6 @@
 import React, {
   forwardRef,
   useState,
-  useEffect,
   useRef,
   useCallback,
   lazy,
@@ -19,8 +18,6 @@ import {
 } from "@nextui-org/react";
 import Spotify from "../spotify";
 import { useMediaQuery } from "react-responsive";
-import { X } from "lucide-react";
-import Divider from "../divider";
 import { cn } from "@/lib/utils";
 import gsap from "gsap";
 import Loading from "./loading";
@@ -60,15 +57,6 @@ const AboutCard = forwardRef(
         gsap.to(btnRef.current, { x: distance / 2, scale, ease: "power2.out" });
       }
     }, []);
-
-    // useEffect(() => {
-    //   scrollPositionRef.current = window.scrollY;
-    //   const debouncedHandleMouseMove = (e) => {
-    //     requestAnimationFrame(() => handleMouseMove(e));
-    //   };
-    //   window.addEventListener("mousemove", debouncedHandleMouseMove);
-    //   return () => window.removeEventListener("mousemove", debouncedHandleMouseMove);
-    // }, [handleMouseMove]);
 
     const handleOpen = () => {
       onOpen();

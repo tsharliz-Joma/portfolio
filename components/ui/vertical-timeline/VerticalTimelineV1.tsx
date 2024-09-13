@@ -13,12 +13,12 @@ interface TimelineItemProps {
   image: ImgProps;
 }
 
-const VerticalTimelineV1 = ({ items }: { items: TimelineItemProps[] }) => {
+const VerticalTimelineV1 = ({items}: {items: TimelineItemProps[]}) => {
   return (
     <section id="VerticalTimelineV1">
       {items.map((item, index) => (
         <>
-          <div key={index} className="relative pl-8 sm:pl-32 py-20 group">
+          <div key={index} className="relative pl-8 sm:pl-32 py-16 group">
             {/* Purple label */}
 
             {/* Time + Title */}
@@ -26,12 +26,22 @@ const VerticalTimelineV1 = ({ items }: { items: TimelineItemProps[] }) => {
               <time className="sm:absolute left-0 translate-y-0.5 flex items-center justify-center text-xs font-semibold w-[100px] h-6 mb-3 sm:mb-0 text-emerald-600 bg-emerald-100 rounded-full">
                 {item.date}
               </time>
-              <div className="text-xl relative left-5 font-bold text-white-500 dark:text-white">{item.title}</div>
+              <div className="text-xl relative left-5 font-bold text-white-500 dark:text-white">
+                {item.title}
+              </div>
             </div>
             {/* Description */}
-            <div className="text-slate-500 relative left-5 pb-10">{item.description}</div>
+            <div className="text-slate-500 relative left-5 pb-10 w-1/2">
+              {item.description}
+            </div>
             <div className="relative left-5 w-1/2">
-              <Image width={0} height={0} style={{ height: "auto", width: "100%" }} alt={item.image.alt} src={item.image.src} />
+              <Image
+                width={0}
+                height={0}
+                style={{height: "auto", width: "100%"}}
+                alt={item.image.alt}
+                src={item.image.src}
+              />
             </div>
           </div>
         </>
@@ -41,4 +51,4 @@ const VerticalTimelineV1 = ({ items }: { items: TimelineItemProps[] }) => {
 };
 
 VerticalTimelineV1.displayName = "Vertical Timeline 1 - Journey Timeline";
-export { VerticalTimelineV1 };
+export {VerticalTimelineV1};
