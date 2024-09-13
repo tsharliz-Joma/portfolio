@@ -1,18 +1,13 @@
-"use client"
-import * as React from 'react'
-import { useRouter } from 'next/navigation'
-import { X } from 'lucide-react'
-import { cn } from '@/lib/helper'
+"use client";
+import * as React from "react";
+import { useRouter } from "next/navigation";
+import { X } from "lucide-react";
+import { cn } from "@/lib/utils";
 
-
-const BackX = React.forwardRef(({ className, children, ...props}, ref) => {
-    const router = useRouter();
-    return (
-        <div>
-
-        </div>
-    )
-})
+const BackX = React.forwardRef(({ className, children, ...props }, ref) => {
+  const router = useRouter();
+  return <div></div>;
+});
 // const Back = React.forwardRef(({ className, children, ...props }, ref) => {
 //   const router = useRouter();
 //   return (

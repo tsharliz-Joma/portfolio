@@ -14,8 +14,8 @@ const DrawerItems = ({ handleDrawerToggle }) => {
       </Typography>
       <Divider />
       <List>
-        {navItems.map((item) => (
-          <ListItem key={item} disablePadding>
+        {navItems.map((item, index) => (
+          <ListItem key={index} disablePadding>
             <ListItemButton sx={{ textAlign: 'center' }}>
               <ListItemText primary={item} />
             </ListItemButton>

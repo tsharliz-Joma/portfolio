@@ -1,14 +1,15 @@
 "use client";
-import React, {forwardRef,useRef, useState} from "react";
+import React, { forwardRef, useRef, useState } from "react";
 import gsap from "gsap";
-import {useGSAP} from "@gsap/react";
+import { useGSAP } from "@gsap/react";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import AboutCard from "../../ui/about-card";
 import content from "./About.content.json";
-import {generateRandomColors} from "@/lib/helper";
+import { generateRandomColors } from "@/lib/utils";
+import Section from "@/components/ui/section";
 gsap.registerPlugin(ScrollTrigger);
 
-const AboutSection = forwardRef(({className, ...props}, ref) => {
+const AboutSection = forwardRef(({ className, ...props }, ref) => {
   const containerRef = useRef(null);
   const cardsRef = useRef([]);
   const [bgColors, setBgColors] = useState([]);
@@ -42,23 +43,8 @@ const AboutSection = forwardRef(({className, ...props}, ref) => {
     });
 
     cardsRef.current.forEach((card, index) => {
-      let direction;
-      switch (index) {
-        case 0:
-          direction = {xPercent: -100, yPercent: 0};
-          break;
-        case 1:
-          direction = {xPercent: 0, yPercent: -100};
-          break;
-        case 2:
-          direction = {xPercent: 100, yPercent: 0};
-          break;
-        default:
-          direction = {xPercent: 0, yPercent: 100};
-      }
-
       tl.from(card, {
-        ...direction,
+        xPercent: 100,
         duration: 0.75,
         ease: "power2.inOut",
       });
@@ -76,10 +62,11 @@ const AboutSection = forwardRef(({className, ...props}, ref) => {
   }, []);
 
   return (
-    <div
-      id="About"
+    <Section
+      id="About Section"
       ref={containerRef}
-      className="min-h-screen section-container relative overflow-y-scroll w-full z-[20]">
+      className="min-h-screen section-container relative overflow-y-scroll w-full z-[20]"
+    >
       <div className="w-full relative flex">
         <div className="flex flex-col justify-start items-start gap-7 w-full ">
           {content.About.map((item, index) => (
@@ -95,7 +82,7 @@ const AboutSection = forwardRef(({className, ...props}, ref) => {
           ))}
         </div>
       </div>
-    </div>
+    </Section>
   );
 });
 

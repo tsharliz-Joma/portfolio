@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
-import { cn } from "@/lib/helper";
+import { cn } from "@/lib/utils";
 import createGlobe from "cobe";
 
 const LocationCobe = ({ location, className, ...props }) => {
@@ -61,13 +61,16 @@ const LocationCobe = ({ location, className, ...props }) => {
   }, []);
 
   return (
-    <div style={{
-      width: '100%',
-      maxWidth: 600,
-      aspectRatio: 1,
-      margin: 'auto',
-      position: 'relative',
-    }} className={cn(`relative w-full max-w-[600px] ratio-square m-auto`, className)}>
+    <div
+      style={{
+        width: "100%",
+        maxWidth: 600,
+        aspectRatio: 1,
+        margin: "auto",
+        position: "relative",
+      }}
+      className={cn(`relative w-full max-w-[600px] ratio-square m-auto`, className)}
+    >
       <canvas
         ref={canvasRef}
         className="w-full h-full"

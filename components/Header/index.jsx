@@ -12,6 +12,7 @@ const Header = () => {
     sub: "",
   };
 
+
   return (
     <div className="text-black flex flex-col sm:flex-row justify-center items-center h-screen w-full bg-cover bg-center bg-no-repeat bg-black">
       <StreamerText className="w-full h-full overflow-hidden">
@@ -21,7 +22,7 @@ const Header = () => {
       </StreamerText>
 
       <div className="absolute w-full flex sm:flex-row sm:justify-center sm:items-center ">
-        <DragAutoCobe />
+        <DragAutoCobe  />
       </div>
     </div>
   );

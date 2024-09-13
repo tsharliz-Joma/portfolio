@@ -1,7 +1,7 @@
 "use client";
 import React, { forwardRef, useEffect, useState } from "react";
 import { Carousel, CarouselContent, CarouselItem } from "./carousel-ui";
-import { cn } from "@/lib/helper";
+import { cn } from "@/lib/utils";
 import { useMediaQuery } from "react-responsive";
 import TestimonialCard from "../testimonial-card";
 
@@ -32,16 +32,8 @@ const BasicCarousel = forwardRef(({ className, items, ...props }, ref) => {
       >
         <CarouselContent>
           {items?.map((item, index) => (
-            <CarouselItem
-              key={index}
-              className='max-w-[336px] sm:max-w-[900px]'
-            >
-              <TestimonialCard
-                className={`${
-                  index === current ? "opacity-100" : "opacity-50"
-                } transition-opacity duration-1000 ease-out`}
-                {...item}
-              />
+            <CarouselItem key={index} className="max-w-[336px] sm:max-w-[900px]">
+              <TestimonialCard className={`${index === current ? "opacity-100" : "opacity-50"} transition-opacity duration-1000 ease-out`} {...item} />
             </CarouselItem>
           ))}
         </CarouselContent>

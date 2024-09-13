@@ -1,12 +1,14 @@
 "use client";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import gsap from "gsap";
 import content from "./Testimonials.content.json";
 import TestimonialCard from "@/components/ui/testimonial-card";
-import {useGSAP} from "@gsap/react";
-import {generateRandomColors} from "@/lib/helper";
+import { useGSAP } from "@gsap/react";
+import { generateRandomColors } from "@/lib/utils";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {BasicCarousel} from "@/components/ui/carousel";
+import { BasicCarousel } from "@/components/ui/carousel";
+import Particles from "@/components/ui/particles";
+import Section from "@/components/ui/section";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,28 +16,15 @@ const TestimonialsSection = () => {
   const items = content.Testimonials;
   const [bgColors, setBgColors] = useState([]);
 
-  // useGSAP(() => {
-  //   setBgColors(generateRandomColors(content, "Testimonials"));
-  //   const tl = gsap.timeline({});
-
-  //   tl.from(".testimonials-container", {
-  //     yPercent: -100,
-  //     opacity: 0,
-  //     ease: "power2.inOut",
-  //     scrollTrigger: {
-  //       trigger: ".testimonials-container",
-  //       start: "top center",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, []);
-
   return (
-    <section className="testimonials-container pt-[70px] cursor-grab active:cursor-grabbing pb-10 bg-black relative  z-[8]">
-      <div className="container-xl flex flex-col mx-auto justify-around  gap-7">
-        <BasicCarousel items={items} />
+    <Section id="Testimonials Section">
+      <div className="testimonials-container cursor-grab active:cursor-grabbing py-20">
+        <Particles className="absolute pointer-events-none" />
+        <div className="container-xl grid">
+          <BasicCarousel items={items} />
+        </div>
       </div>
-    </section>
+    </Section>
   );
 };
 

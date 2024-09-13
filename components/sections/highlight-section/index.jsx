@@ -1,56 +1,40 @@
 "use client";
-import React, {useRef, useState} from "react";
+import React, { useRef, useState } from "react";
 import content from "./HighlightStrip.content.json";
 import HighlightCard from "../../ui/highlight-card";
-import Divider from "../../ui/divider";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import {useGSAP} from "@gsap/react";
-import {generateRandomColors} from "@/lib/helper";
-import {BasicCarousel} from "@/components/ui/carousel";
+import { useGSAP } from "@gsap/react";
+import { generateRandomColors } from "@/lib/utils";
+import { BasicCarousel } from "@/components/ui/carousel";
+import Section from "@/components/ui/section";
+import SectionHeader from "@/components/ui/section-header";
 gsap.registerPlugin(ScrollTrigger);
 
-const HighlightStrip = () => {
+const HighlightSection = () => {
   const HighlightItems = content.Items;
   const highlightCardTextRef = useRef([]);
   const [bgColors, setBgColors] = useState([]);
 
-  // useGSAP(() => {
-  //   setBgColors(generateRandomColors(content, "Items"));
-  //   const tl = gsap.timeline({});
-
-  //   tl.from(".highlights-container", {
-  //     yPercent: -100,
-  //     ease: "power2.inOut",
-  //     scrollTrigger: {
-  //       trigger: ".highlights-container",
-  //       start: "top bottom",
-  //       scrub: true,
-  //     },
-  //   });
-  // }, []);
-
   return (
-
-    <section id="Highlights" className="w-full">
-      <div className="highlights-container relative py-10 ">
-
-        <div className="highlights-inner container sm:justify-items-center items-center w-full grid grid-cols-1 md:grid-cols-4 gap-5">
+    <Section id="Highlights Section">
+      <div className="highlights-container relative container grid gap-20 py-10">
+        <SectionHeader>Skills</SectionHeader>
+        <div className="highlights-inner container sm:justify-items-center items-center max-w-6xl grid grid-cols-1 md:grid-cols-4">
           {HighlightItems.map((item, index) => (
             <div className="" key={index}>
               <HighlightCard
                 ref={highlightCardTextRef}
                 bg={bgColors[index]}
-                key={index}
                 {...item}
               />
             </div>
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 };
 
-HighlightStrip.displayName = "Highlight strip";
-export default HighlightStrip;
+HighlightSection.displayName = "Highlight Section";
+export default HighlightSection;
