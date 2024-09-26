@@ -20,7 +20,7 @@ const HighlightSection = () => {
     <Section id="Highlights Section">
       <div className="highlights-container relative container grid gap-24 py-24">
         <SectionHeader>Skills</SectionHeader>
-        <div className="highlights-inner container sm:justify-items-center items-center max-w-7xl grid gap-x-20 grid-cols-1 md:grid-cols-4">
+        <div className="highlights-inner container sm:justify-items-center items-center max-w-7xl grid gap-20 grid-cols-1 md:grid-cols-4">
           {HighlightItems.map((item, index) => (
             <div className="" key={index}>
               <HighlightCard
