@@ -18,7 +18,7 @@ const HighlightSection = () => {
 
   return (
     <Section id="Highlights Section">
-      <div className="highlights-container relative container grid gap-24 py-24">
+      <div className="highlights-container relative container grid gap-24 py-16">
         <SectionHeader>Skills</SectionHeader>
         <div className="highlights-inner container sm:justify-items-center items-center max-w-7xl grid gap-20 grid-cols-1 md:grid-cols-4">
           {HighlightItems.map((item, index) => (

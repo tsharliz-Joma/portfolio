@@ -12,7 +12,7 @@ const TechStack = () => {
     <Section id="Tech Stack Section">
       <div className="tech-container bg-transparent py-48 relative">
         <div className="container">
-          <SectionHeader>Tech Stack</SectionHeader>
+          <SectionHeader className="py-16">Tech Stack</SectionHeader>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 justify-items-center">
             {techStack.map((item, index) => (
               <TechCard key={index} content={item} />

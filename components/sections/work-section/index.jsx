@@ -13,7 +13,7 @@ const ExperienceSection = forwardRef(({ className, ...props }, ref) => {
       className={`text-white relative py-20 `}
     >
       <div className="container">
-        <SectionHeader>Work Experience</SectionHeader>
+        <SectionHeader className="py-16">Work Experience</SectionHeader>
         <VerticalTimelineV1 items={items} />
       </div>
     </Section>
