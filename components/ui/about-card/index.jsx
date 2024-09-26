@@ -43,7 +43,7 @@ const AboutCard = forwardRef(
           scale: 1.2,
           yoyo: true,
           repeat: -1,
-          duration: 0.6,
+          duration: 0.35,
           ease: "power1.inOut",
           paused: true,
         },

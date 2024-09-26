@@ -1,14 +1,13 @@
 "use client";
-import React, { forwardRef, useEffect, useState } from "react";
-import { Carousel, CarouselContent, CarouselItem } from "./carousel-ui";
-import { cn } from "@/lib/utils";
-import { useMediaQuery } from "react-responsive";
+import React, {forwardRef, useEffect, useState} from "react";
+import {Carousel, CarouselContent, CarouselItem} from "./carousel-ui";
+import {cn} from "@/lib/utils";
+import {useMediaQuery} from "react-responsive";
 import TestimonialCard from "../testimonial-card";
 
-const BasicCarousel = forwardRef(({ className, items, ...props }, ref) => {
+const BasicCarousel = forwardRef(({className, items, ...props}, ref) => {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
-  const isDesktop = useMediaQuery({ minWidth: "640px" });
 
   useEffect(() => {
     if (!api) {
@@ -29,20 +28,19 @@ const BasicCarousel = forwardRef(({ className, items, ...props }, ref) => {
           align: "center",
           loop: true,
         }}
-        setApi={setApi}
-      >
-        <CarouselContent className="flex">
+        setApi={setApi}>
+        <CarouselContent>
           {items?.map((item, index) => (
             <CarouselItem
               key={index}
-              className={cn(
-                "transition-opacity duration-1000 ease-out",
-                index === current ? "opacity-100" : "opacity-50",
-                // Use different widths for mobile and desktop
-                isDesktop ? "max-w-[900px]" : "w-[80vw] max-w-[336px]"
-              )}
-            >
-              <TestimonialCard {...item} />
+              className={cn("max-w-[336px] sm:max-w-[900px]")}>
+              <TestimonialCard
+                className={cn(
+                  index === current ? "opacity-100" : "opacity-50",
+                  "transition-opacity duration-1000 ease-out",
+                )}
+                {...item}
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -53,4 +51,4 @@ const BasicCarousel = forwardRef(({ className, items, ...props }, ref) => {
 
 BasicCarousel.displayName = "Basic Carousel";
 
-export { BasicCarousel };
+export {BasicCarousel};
