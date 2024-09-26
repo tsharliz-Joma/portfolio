@@ -20,8 +20,9 @@ const BasicCarousel = forwardRef(({ className, items, ...props }, ref) => {
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
+
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <Carousel
         className={cn("w-full", className)}
         opts={{
@@ -30,10 +31,18 @@ const BasicCarousel = forwardRef(({ className, items, ...props }, ref) => {
         }}
         setApi={setApi}
       >
-        <CarouselContent>
+        <CarouselContent className="flex">
           {items?.map((item, index) => (
-            <CarouselItem key={index} className="max-w-[336px] sm:max-w-[900px]">
-              <TestimonialCard className={`${index === current ? "opacity-100" : "opacity-50"} transition-opacity duration-1000 ease-out`} {...item} />
+            <CarouselItem
+              key={index}
+              className={cn(
+                "transition-opacity duration-1000 ease-out",
+                index === current ? "opacity-100" : "opacity-50",
+                // Use different widths for mobile and desktop
+                isDesktop ? "max-w-[900px]" : "w-[80vw] max-w-[336px]"
+              )}
+            >
+              <TestimonialCard {...item} />
             </CarouselItem>
           ))}
         </CarouselContent>
