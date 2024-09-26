@@ -3,9 +3,9 @@ import React, {
   forwardRef,
   useState,
   useRef,
-  useCallback,
   lazy,
   Suspense,
+  useEffect,
 } from "react";
 import {
   Modal,
@@ -21,6 +21,7 @@ import {useMediaQuery} from "react-responsive";
 import {cn} from "@/lib/utils";
 import gsap from "gsap";
 import Loading from "./loading";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 const LazyVideoPlayer = lazy(() => import("../video-player"));
 
@@ -32,19 +33,38 @@ const AboutCard = forwardRef(
     const [video, setVideo] = useState(!!content.video?.src);
     const btnRef = useRef(null);
 
-    const handleMouseMove = useCallback((e) => {
-      if (btnRef.current) {
-        const rect = btnRef.current.getBoundingClientRect();
-        const distance = Math.hypot(
-          e.clientX - (rect.left + rect.width / 2),
-          e.clientY - (rect.top + rect.height / 2),
-        );
+    useEffect(() => {
+      gsap.registerPlugin(ScrollTrigger);
 
-        const scale = Math.max(1, 1.8 - (distance / 800) * 0.8);
+      const bounceAnimation = gsap.fromTo(
+        btnRef.current,
+        {scale: 1},
+        {
+          scale: 1.2,
+          yoyo: true,
+          repeat: -1,
+          duration: 0.6,
+          ease: "power1.inOut",
+          paused: true,
+        },
+      );
 
-        gsap.to(btnRef.current, {x: distance / 2, scale, ease: "power2.out"});
-      }
-    }, []);
+      const scrollTrigger = ScrollTrigger.create({
+        trigger: ref.current,
+        start: "top center",
+        onEnter: () => {
+          bounceAnimation.play();
+        },
+        onLeave: () => {
+          bounceAnimation.pause();
+        },
+      });
+
+      return () => {
+        scrollTrigger.kill();
+        bounceAnimation.kill();
+      };
+    }, [ref]);
 
     const handleOpen = () => {
       onOpen();
@@ -63,8 +83,7 @@ const AboutCard = forwardRef(
         <Button
           ref={btnRef}
           className="font-anta cursor-pointer bg-transparent focus:outline-none flex items-start justify-start w-fit h-fit p-5"
-          onPress={handleOpen}
-          onMouseMove={handleMouseMove}>
+          onPress={handleOpen}>
           <p className="font-bold text-xl sm:text-2xl uppercase">
             {content.title}
           </p>
