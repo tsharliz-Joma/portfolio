@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="container mx-auto text-white">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">
           <div className="flex flex-col sm:flex-row sm:items-center">
-            <div className="sm:w-full flex flex-col gap-10 border-red-500 p-5">
+            <div className="sm:w-full flex flex-col gap-10 p-5">
               <div className="flex flex-col gap-5">
                 <p className="text-lg sm:text-2xl sm:tracking-[1.5px] font-bold">
                   Charles Joma
