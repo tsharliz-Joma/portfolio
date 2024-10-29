@@ -11,6 +11,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        mobile: "430px",
+        desktop: "1280px",
+        tablet: "640px",
+        laptop: "1024px",
+        "2xl": "1400px",
+      },
       spacing: {
         xxs: ".5rem",
         xs: ".75rem",

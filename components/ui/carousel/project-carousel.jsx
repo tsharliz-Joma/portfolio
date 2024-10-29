@@ -8,7 +8,6 @@ import ProjectCard from "../project-card";
 const ProjectCarousel = forwardRef(({ className, items, ...props }, ref) => {
   const [api, setApi] = useState();
   const [current, setCurrent] = useState(0);
-  const isDesktop = useMediaQuery({ minWidth: "640px" });
 
   useEffect(() => {
     if (!api) {
@@ -54,12 +53,12 @@ const ProjectCarousel = forwardRef(({ className, items, ...props }, ref) => {
           ))}
         </CarouselContent>
       </Carousel>
-      <div className="absolute top-1/2 left-0 hidden sm:block transform -translate-y-1/2 z-10">
+      <div className="absolute top-1/2 left-0 hidden sm:block transform -translate-y-1/2 ">
         <button onClick={() => api && api.scrollPrev()} className="p-2 relative bg-transparent hover:left-[-2px] text-white rounded-full shadow-lg">
           &#8592;
         </button>
       </div>
-      <div className="absolute top-1/2 right-0  hidden sm:block  transform -translate-y-1/2 z-10">
+      <div className="absolute top-1/2 right-0  hidden sm:block  transform -translate-y-1/2 ">
         <button onClick={() => api && api.scrollNext()} className="p-2 relative hover:right-[-2px] bg-transparent text-white rounded-full shadow-lg">
           &#8594;
         </button>

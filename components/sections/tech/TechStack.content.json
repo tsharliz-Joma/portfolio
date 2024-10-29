@@ -3,60 +3,71 @@
     {
       "Title": "Javascript",
       "src": "static/logos/javascript.svg",
-      "alt": "Javascript logo"
+      "alt": "Javascript logo",
+      "blackFilter": false
     },
     {
       "Title": "React",
       "src": "static/logos/react.svg",
-      "alt": "React logo"
+      "alt": "React logo",
+      "blackFilter": false
     },
     {
-      "Title": "Next",
+      "Title": "Next Js",
       "src": "static/logos/next.svg",
-      "alt": "Next logo"
+      "alt": "Next logo",
+      "blackFilter": false
     },
-    
+
     {
       "Title": "Contentful",
       "src": "static/logos/contentful.svg",
-      "alt": "Contentful logo"
+      "alt": "Contentful logo",
+      "blackFilter": false
     },
     {
       "Title": "Netlify CMS",
       "src": "static/logos/netlify.svg",
-      "alt": "Netlify logo"
+      "alt": "Netlify logo",
+      "blackFilter": false
     },
     {
       "Title": "Node Js",
       "src": "static/logos/node.svg",
-      "alt": "Node logo"
+      "alt": "Node logo",
+      "blackFilter": false
     },
     {
       "Title": "AWS",
       "src": "static/logos/AWS.svg",
-      "alt": "AWS logo"
+      "alt": "AWS logo",
+      "blackFilter": false
     },
     {
       "Title": "Material UI",
       "src": "static/logos/mui.svg",
-      "alt": "Matirial UI logo"
+      "alt": "Matirial UI logo",
+      "blackFilter": false
     },
     {
       "Title": "Scss",
       "src": "static/logos/scss.svg",
-      "alt": "Scss logo"
+      "alt": "Scss logo",
+      "blackFilter": false
     },
-    
+
     {
       "Title": "Tailwind",
       "src": "static/logos/tailwind.svg",
-      "alt": "Tailwind logo"
+      "alt": "Tailwind logo",
+      "blackFilter": false
     },
 
     {
       "Title": "Firebase",
       "src": "static/logos/firebase.svg",
-      "alt": "Firebase logo"
+      "alt": "Firebase logo",
+      "blackFilter": false
     }
   ]
 }

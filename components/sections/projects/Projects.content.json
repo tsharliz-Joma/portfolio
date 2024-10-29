@@ -4,28 +4,24 @@
       "title": "Island fight Centre",
       "url": "https://www.islandfightcentre.com.au/",
       "repo": "https://github.com/tsharliz-Joma/island_fight_centre",
-      "image": {
-        "desktopSrc": "/static/img/island-fight-centre-desktop.png",
-        "mobileSrc": "/static/img/island-fight-centre-mobile.png"
+      "img": {
+        "src": "/static/img/island-fight-centre-desktop.png"
       }
     },
     {
       "title": "Brain Train",
       "url": "https://the-brain-train.web.app/",
       "repo": "https://github.com/Foyoman/brain-train-client",
-      "image": {
-        "desktopSrc": "/static/img/brain-train-mobile.svg",
-        "mobileSrc": "/static/img/brain-train-mobile.svg"
+      "img": {
+        "src": "/static/img/brain-train-mobile.svg"
       }
     },
-
     {
       "title": "World of spheres",
       "url": "https://main--world-of-spheres.netlify.app/",
       "repo": "https://github.com/tsharliz-Joma/World_of_Spheres",
-      "image": {
-        "desktopSrc": "/static/img/world-of-spheres.svg",
-        "mobileSrc": "/static/img/world-of-spheres.svg"
+      "img": {
+        "src": "/static/img/world-of-spheres.svg"
       }
     }
   ]
