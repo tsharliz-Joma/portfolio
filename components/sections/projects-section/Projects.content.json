@@ -18,7 +18,24 @@
         "mobileSrc": "/static/img/brain-train-mobile.svg"
       }
     },
-
+    {
+      "title": "School of hard knocks",
+      "url": "https://school-of-hard-knocks-b3add9c8488e.herokuapp.com/",
+      "repo": "https://github.com/tsharliz-Joma/school-of-hard-knocks",
+      "image": {
+        "desktopSrc": "/static/img/school-of-hard-knocks.svg",
+        "mobileSrc": "/static/img/school-of-hard-knocks.svg"
+      }
+    },
+    {
+      "title": "Pugilist Express",
+      "url": "https://pugilist-express.web.app/",
+      "repo": "https://github.com/tsharliz-Joma/Pugilist-Express",
+      "image": {
+        "desktopSrc": "/static/img/pugilist-express.svg",
+        "mobileSrc": "/static/img/pugilist-express.svg"
+      }
+    },
     {
       "title": "World of spheres",
       "url": "https://main--world-of-spheres.netlify.app/",

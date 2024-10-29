@@ -1,12 +1,9 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, {useRef, useState} from "react";
 import content from "./HighlightStrip.content.json";
 import HighlightCard from "../../ui/highlight-card";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import { generateRandomColors } from "@/lib/utils";
-import { BasicCarousel } from "@/components/ui/carousel";
 import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
 gsap.registerPlugin(ScrollTrigger);
