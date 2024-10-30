@@ -1,7 +1,7 @@
 import React from "react";
-import {MailIcon} from "@heroicons/react/outline";
-import {Linkedin} from "lucide-react";
-import ContactCard from "../ui/contact-card"; // Ensure ContactCard is exported from its file
+import { MailIcon } from "@heroicons/react/outline";
+import { Linkedin } from "lucide-react";
+import ContactCard from "../ui/contact-card";
 
 const Footer = () => {
   return (
@@ -11,24 +11,17 @@ const Footer = () => {
           <div className="flex flex-col sm:flex-row sm:items-center">
             <div className="sm:w-full flex flex-col gap-10 p-5">
               <div className="flex flex-col gap-5">
-                <p className="text-lg sm:text-2xl sm:tracking-[1.5px] font-bold">
-                  Charles Joma
-                </p>
+                <p className="text-lg sm:text-2xl sm:tracking-[1.5px] font-bold">Charles Joma</p>
                 <div className="flex items-center mb-2">
                   <MailIcon className="mr-2 h-6 w-6" />
                   <p className="text-xl tracking-[0.5px]">
-                    <a href="mailto:charlesjoma@yahoo.com">
-                      tsharlizjoma@yahoo.com
-                    </a>
+                    <a href="mailto:charlesjoma@yahoo.com">tsharlizjoma@yahoo.com</a>
                   </p>
                 </div>
                 <div className="flex items-center">
-                  <Linkedin className="mr-2 h-6 w-6" />{" "}
-                  {/* Replace this with LinkedInIcon if available */}
+                  <Linkedin className="mr-2 h-6 w-6" /> {/* Replace this with LinkedInIcon if available */}
                   <p className="text-xl tracking-[0.5px]">
-                    <a
-                      href="https://www.linkedin.com/in/charlesjoma/"
-                      target="_blank">
+                    <a href="https://www.linkedin.com/in/charlesjoma/" target="_blank">
                       LinkedIn
                     </a>
                   </p>

@@ -1,0 +1,44 @@
+{
+  "Testimonials": [
+    {
+      "name": "Michael - Founder of IFC",
+      "message": "Working with Charles was a breeze. Professional, flexible, and nailed our website. Couldn't be happier with the result! Highly recommend him to anyone.",
+      "author": "",
+      "image": "",
+      "rating": "5",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    },
+    {
+      "name": "Niasha - Music Artist ",
+      "message": "Charles is a visionary! I brought my idea about having an interactive website that was true to my brand nd personal expression and he showed his dedication thorough diligent research and presented a visually captivating concept for my website. If you're looking professionalism, creativity, collaborative design then Charles is the one.",
+      "author": "",
+      "image": "",
+      "rating": "5",
+
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    },
+    {
+      "name": "Me - Charles Joma",
+      "message": "While i've only had 1 freelance project and 1 potential, i am on the lookout for more and i felt a card display would look wrong with only 2 cards.",
+      "author": "",
+      "image": "",
+      "rating": "5",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    }
+  ]
+}

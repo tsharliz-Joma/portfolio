@@ -1,17 +1,17 @@
 import Header from "@/components/Header";
-import TestimonialsSection from "@/components/sections/testimonials-section";
-import Projects from "@/components/sections/projects-section";
+import TestimonialsSection from "@/components/sections/testimonials";
+import Projects from "@/components/sections/projects";
 import Footer from "@/components/Footer/Footer.component";
-import AboutSection from "@/components/sections/about-section";
-import TechStack from "@/components/sections/tech-section";
+import AboutSection from "@/components/sections/about";
+import TechStack from "@/components/sections/tech";
 import ExperienceSection from "@/components/sections/work-section";
 import NextUiNav from "@/components/Navbar/nextui-navbar";
 import Particles from "@/components/ui/particles";
-import {NextUIProvider} from "@nextui-org/react";
-import HighlightSection from "@/components/sections/highlight-section";
+import { NextUIProvider } from "@nextui-org/react";
+import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {
-  const RGBA = {r: 0, g: 191, b: 255, a: 1};
+  const RGBA = { r: 0, g: 191, b: 255, a: 1 };
 
   return (
     <main className="w-full bg-black font-anta text-white ">
@@ -24,18 +24,10 @@ export default function Home() {
           <HighlightSection />
           <TestimonialsSection />
         </Particles>
-        <Particles backgroundColor="white" blendMode blendBottom blendTop>
-          <TechStack />
-        </Particles>
-        <Particles>
-          <ExperienceSection />
-        </Particles>
-        <Particles backgroundColor="black" blendMode blendBottom>
-          <Projects />
-        </Particles>
-        <Particles blendTop blendMode>
-          <Footer />
-        </Particles>
+        <TechStack />
+        <ExperienceSection />
+        <Projects />
+        <Footer />
       </NextUIProvider>
     </main>
   );
