@@ -11,22 +11,26 @@ import { NextUIProvider } from "@nextui-org/react";
 import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {
-  const RGBA = { r: 0, g: 191, b: 255, a: 1 };
-
   return (
-    <main className="w-full bg-black font-anta text-white ">
+    <main className="w-full bg-gray-100 dark:bg-gray-900 font-anta text-gray-800 dark:text-white">
       <NextUIProvider>
-        <NextUiNav />
-        <Particles className="absolute inset-0 pointer-events-none" />
         <Header />
-        <AboutSection />
-        <Particles blendMode>
-          <HighlightSection />
+        <section className="container mx-auto px-5 py-10">
+          <AboutSection />
+        </section>
+        <HighlightSection />
+        <section className="container mx-auto px-5 py-10">
           <TestimonialsSection />
-        </Particles>
-        <TechStack />
-        <ExperienceSection />
-        <Projects />
+        </section>
+        <section className="container mx-auto px-5 py-10">
+          <TechStack />
+        </section>
+        <section className="container mx-auto px-5 py-10">
+          <ExperienceSection />
+        </section>
+        <section className="container mx-auto px-5 py-10">
+          <Projects />
+        </section>
         <Footer />
       </NextUIProvider>
     </main>

@@ -38,11 +38,11 @@ const affiliation = [
 const Testimonials = () => {
   const { Testimonials } = TestimonialsData;
   return (
-    <div id="review" className=" w-[80%] md:w-[90%] mx-auto flex flex-col justify-around text-center py-20">
+    <div id="review" className="w-full flex flex-col justify-around text-center">
       <p className="text-[#2c54cc] font-semibold text-center sm:text-start">TESTIMONIAL</p>
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-center sm:text-start">Client</h1>
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold pb-10 text-center sm:text-start">Thoughts</h1>
-      <div className=" reviews    gap-12 ">
+      <div className="reviews gap-12 ">
         <Swiper
           autoplay={{
             delay: 2500,
@@ -73,13 +73,13 @@ const Testimonials = () => {
         >
           {Testimonials?.map((item, index) => (
             <div key={index}>
-              <SwiperSlide className=" justify-center flex items-center">
-                <div className={`relative rounded-lg  ${" swiper-slide active "}`}>
+              <SwiperSlide className="justify-center flex items-center">
+                <div className={`relative rounded-lg ${"swiper-slide active"}`}>
                   <div className="p-6 overflow-auto bg-[#41548E] text-white min-h-[300px] max-h-[350px] rounded-md">
                     <div className="flex justify-center">
                       <Image src={item?.mobileImg.src} width={1000} height={1000} alt="profileimage" className="h-16 w-16 object-cover rounded-full" />
                     </div>
-                    <div className="grid grid-cols-3">
+                    <div className="grid">
                       <div className="flex justify-center items-center flex-col">
                         <p className={` font-semibold mt-2 flex justify-center items-center whitespace-nowrap ${"text-white"}`}>{item.name}</p>
                         <div className="flex justify-center items-center py-2">

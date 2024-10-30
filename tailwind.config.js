@@ -1,21 +1,16 @@
-const {transform} = require("next/dist/build/swc");
-const {nextui} = require("@nextui-org/react");
+const { transform } = require("next/dist/build/swc");
+const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       screens: {
         mobile: "430px",
-        desktop: "1280px",
         tablet: "640px",
         laptop: "1024px",
+        desktop: "1280px",
         "2xl": "1400px",
       },
       spacing: {
@@ -36,21 +31,21 @@ module.exports = {
         "custom-shadow": "0px 5px 15px #00000026",
       },
       backgroundColor: {
-        "custom-transparent": "transarent",
+        "custom-transparent": "transparent",
         "custom-black-transparent": "rgba(0, 0, 0, 0.5)",
       },
       backgroundImage: {
         "skytopia-mobile": 'url("/static/img/skytopia-mobile.jpeg")',
-        "skytopia-desktop": 'url"(/static/img/skytopia-desktop.jpeg")',
+        "skytopia-desktop": 'url("/static/img/skytopia-desktop.jpeg")',
       },
       keyframes: {
         slideDown: {
-          "0%": {transform: "translateY(-100%)"},
-          "100%": {transform: "translateY(0)"},
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
         },
         slideUp: {
-          "100%": {transform: "translateY(-100%)"},
-          "0%": {transform: "translateY(0)"},
+          "100%": { transform: "translateY(-100%)" },
+          "0%": { transform: "translateY(0)" },
         },
       },
       animation: {
@@ -61,17 +56,17 @@ module.exports = {
         center: true,
         padding: {
           DEFAULT: "1rem",
-          sm: "0.625em",
-          sm: "2rem",
+          sm: "0.625rem",
+          md: "2rem",
           lg: "4rem",
           xl: "0.625rem",
           "2xl": "0.625rem",
         },
         screens: {
           mobile: "430px",
-          desktop: "1280px",
           tablet: "640px",
           laptop: "1024px",
+          desktop: "1280px",
           "2xl": "1400px",
         },
       },
@@ -80,9 +75,6 @@ module.exports = {
       },
       padding: {
         base: "25px",
-      },
-      spacing: {
-        base: "1rem", // Adjust based on your theme's base spacing
       },
       margin: {
         base: "25px",
@@ -101,14 +93,14 @@ module.exports = {
         "border-green": "#008000",
       },
       fontFamily: {
-        inter: ["inter", "inter"],
-        anta: ["anta", "Jaro"],
-        exo: ["Exo", "anta"],
-        jaro: ["Jaro", "Exo"],
-        jersey: ["Jersey", "Yarndings"],
-        permanentMaker: ["Permanent Marker", "Rock Salt"],
-        RockSalt: ["Rock Salt", "Permanent Marker"],
-        Yarndings: ["Yarndings", "Jersey"],
+        inter: ["Inter", "sans-serif"],
+        anta: ["Anta", "sans-serif"],
+        exo: ["Exo", "sans-serif"],
+        jaro: ["Jaro", "sans-serif"],
+        jersey: ["Jersey", "sans-serif"],
+        permanentMaker: ["Permanent Marker", "cursive"],
+        rockSalt: ["Rock Salt", "cursive"],
+        yarndings: ["Yarndings", "sans-serif"],
       },
       fontWeight: {
         normal: 400,

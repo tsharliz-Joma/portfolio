@@ -7,8 +7,10 @@ import Testimonials from "./Testimonials";
 
 const TestimonialsSection = () => {
   return (
-    <Section id="Testimonials Section">
-      <Testimonials />
+    <Section id="Testimonials Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto`}>
+      <div className="p-16">
+        <Testimonials />
+      </div>
     </Section>
   );
 };

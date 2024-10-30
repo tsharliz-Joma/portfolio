@@ -1,32 +1,17 @@
-"use client";
-import React, {useRef, useState} from "react";
-import content from "./HighlightStrip.content.json";
-import HighlightCard from "../../ui/highlight-card";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import React from "react";
 import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
-gsap.registerPlugin(ScrollTrigger);
 
 const HighlightSection = () => {
-  const HighlightItems = content.Items;
-  const highlightCardTextRef = useRef([]);
-  const [bgColors, setBgColors] = useState([]);
-
   return (
-    <Section id="Highlights Section">
-      <div className="highlights-container relative container grid gap-24 py-16">
-        <SectionHeader>Skills</SectionHeader>
-        <div className="highlights-inner container sm:justify-items-center items-center max-w-7xl grid gap-20 grid-cols-1 md:grid-cols-4">
-          {HighlightItems.map((item, index) => (
-            <div className="" key={index}>
-              <HighlightCard
-                ref={highlightCardTextRef}
-                bg={bgColors[index]}
-                {...item}
-              />
-            </div>
-          ))}
+    <Section id="Highlights Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto`}>
+      <div className="grid grid-cols-2 gap-24 p-16 relative">
+        <div className="">
+          <SectionHeader className={`uppercase`}>Resume</SectionHeader>
+        </div>
+        <div className="absolute inset-y-6 left-1/2 transform -translate-x-1/2 w-[1px] bg-black"></div>
+        <div className="">
+          <SectionHeader className={`uppercase`}>Map here</SectionHeader>
         </div>
       </div>
     </Section>
