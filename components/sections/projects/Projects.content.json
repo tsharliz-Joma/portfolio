@@ -6,7 +6,8 @@
       "repo": "https://github.com/tsharliz-Joma/island_fight_centre",
       "img": {
         "src": "/static/img/island-fight-centre-desktop.png"
-      }
+      },
+      "description": ""
     },
     {
       "title": "Brain Train",
@@ -14,7 +15,8 @@
       "repo": "https://github.com/Foyoman/brain-train-client",
       "img": {
         "src": "/static/img/brain-train-mobile.svg"
-      }
+      },
+      "description": ""
     },
     {
       "title": "World of spheres",
@@ -22,25 +24,26 @@
       "repo": "https://github.com/tsharliz-Joma/World_of_Spheres",
       "img": {
         "src": "/static/img/world-of-spheres.svg"
-      }
+      },
+      "description": ""
     },
     {
       "title": "School of hard knocks",
       "url": "https://school-of-hard-knocks-b3add9c8488e.herokuapp.com/",
       "repo": "https://github.com/tsharliz-Joma/school-of-hard-knocks",
-      "image": {
-        "desktopSrc": "/static/img/school-of-hard-knocks.svg",
-        "mobileSrc": "/static/img/school-of-hard-knocks.svg"
-      }
+      "img": {
+        "src": "/static/img/school-of-hard-knocks.svg"
+      },
+      "description": ""
     },
     {
       "title": "Pugilist Express",
       "url": "https://pugilist-express.web.app/",
       "repo": "https://github.com/tsharliz-Joma/Pugilist-Express",
-      "image": {
-        "desktopSrc": "/static/img/pugilist-express.svg",
-        "mobileSrc": "/static/img/pugilist-express.svg"
-      }
+      "img": {
+        "src": "/static/img/pugilist-express.svg"
+      },
+      "description": ""
     }
   ]
 }
