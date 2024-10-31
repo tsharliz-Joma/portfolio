@@ -4,7 +4,7 @@ import SectionHeader from "@/components/ui/section-header";
 
 const HighlightSection = () => {
   return (
-    <Section id="Highlights Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto`}>
+    <Section id="Highlights Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto shadow-custom-blur`}>
       <div className="grid grid-cols-2 gap-24 p-16 relative">
         <div className="">
           <SectionHeader className={`uppercase`}>Resume</SectionHeader>

@@ -7,7 +7,7 @@ import Testimonials from "./Testimonials";
 
 const TestimonialsSection = () => {
   return (
-    <Section id="Testimonials Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto`}>
+    <Section id="Testimonials Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto shadow-custom-blur`}>
       <div className="p-16">
         <Testimonials />
       </div>

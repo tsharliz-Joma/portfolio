@@ -5,12 +5,10 @@ import LogoBar from "./logobar";
 
 const TechStack = () => {
   return (
-    <Section id="Tech Stack Section">
-      <div className="tech-container bg-transparent py-48 relative">
-        <div className="w-[80%] md:w-[90%] mx-auto flex flex-col justify-around text-center py-20">
-          <SectionHeader className="py-8 mobile:py-12">Tech Stack I Use</SectionHeader>
-          <LogoBar />
-        </div>
+    <Section id="Tech Stack Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto shadow-custom-blur`}>
+      <div className="p-16">
+        <SectionHeader className="2">Tech Stack I Use</SectionHeader>
+        <LogoBar />
       </div>
     </Section>
   );

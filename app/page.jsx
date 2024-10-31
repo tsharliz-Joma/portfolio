@@ -18,7 +18,9 @@ export default function Home() {
         <section className="container mx-auto px-5 py-10">
           <AboutSection />
         </section>
-        <HighlightSection />
+        <section className="container mx-auto px-5 py-10">
+          <HighlightSection />
+        </section>
         <section className="container mx-auto px-5 py-10">
           <TestimonialsSection />
         </section>

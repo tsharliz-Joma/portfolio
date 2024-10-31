@@ -33,7 +33,7 @@ const LogoBar = () => {
   }, []);
 
   return (
-    <div className="w-full py-12 overflow-hidden bg-white dark:bg-gray-900">
+    <div className="w-full  overflow-hidden bg-transparent dark:bg-gray-900">
       <div className="mx-auto w-full px-4 md:px-8">
         {/* <h2 className="text-center text-2xl font-semibold mb-8 text-gray-800 dark:text-gray-200">Trusted by Industry Leaders</h2> */}
         <div className="relative">

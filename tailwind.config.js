@@ -29,6 +29,7 @@ module.exports = {
       },
       boxShadow: {
         "custom-shadow": "0px 5px 15px #00000026",
+        "custom-blur": "0px 5px 15px rgba(0, 0, 0, 0.1)",
       },
       backgroundColor: {
         "custom-transparent": "transparent",
