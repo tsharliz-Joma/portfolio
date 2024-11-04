@@ -1,0 +1,271 @@
+{
+  "About": [
+    {
+      "title": "Creative",
+      "description1": "I've titled this section 'Creative Thinking Freetime,' a term I adopted from a high school teacher who may have been a genius—or perhaps he just found a clever way to give us some space. Regardless, the phrase struck a chord with me. I'm a firm believer that true creativity flourishes within boundaries. By navigating these limits, we can tap into a deeper level of innovation and expression. In short, creativity is something I deeply value and continuously explore.",
+      "description2": "Music holds a special place in my heart, serving as a steadfast companion through both trials and tribulations. If you haven't yet experienced the soul-stirring track 'Maggot Brain' by Funkadelic, I highly recommend giving it a listen. Do yourself a favor........",
+      "description3": "Live music is absolutely mind-blowing! The idea of individuals coming together, each playing different instruments, yet harmoniously creating something beautiful without trying to outplay or outsing one another, is truly astonishing. It's a powerful display of unity and artistry that never fails to amaze me.",
+      "image": {
+        "src": ""
+      },
+      "spotify": {
+        "uri": "https://open.spotify.com/track/5WJU527RQNyMLuKecjsL8V?si=561ddcf0edaa42e7"
+      },
+      "bg": "skytopia"
+    },
+    {
+      "title": "Thinking",
+      "description1": "For me, thinking and boxing are the same thing. I can't do one without the other. Boxing is my hero and my muse. Every time I step into the ring, I feel a thrilling rush of adrenaline and a profound focus. It's not just about the physical challenge; it's the mental discipline, strategy, and resilience that captivate me. Nothing makes me feel more alive than boxing. It has taught me respect and humility. Boxing isn't just part of my life; it defines who I am.",
+      "description2": "There's somthing meditative to me about boxing that transends the physicality of the sport. I have always come to my most profound moments of clarity while punching the bag alone in the gym. So many times ive been hit with revelations about life during rounds on the bag, stopping me mid punch to jot them down. i could go on forever.",
+      "image": {
+        "src": ""
+      },
+
+      "video": {
+        "src": "/static/img/charlesVsMatt.mp4"
+      },
+      "bg": "fightnight"
+    },
+    {
+      "title": "Freetime",
+      "description1": "Skating has been a cherished pasttime of mine since year 8, skate road trips with my close friends, laughter , food and injuries, so  many moments in time that we will always remember. i do not skate as much as i would like to now but i still manage to skate the office a few times a month which keeps the urges at bay. A relished memory of mine is coming in second in a skate competition in year 9 in my local town of Wonthaggi!",
+      "description2": "",
+      "image": {
+        "src": ""
+      },
+
+      "bg": "streetleague"
+    }
+  ],
+  "Hightlights": [
+    {
+      "title": "Interactive Web Design",
+      "description": "Crafting immersive, user-focused digital experiences with modern design principles and technologies",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
+    },
+    {
+      "title": "Creative Coding",
+      "description": "Developing visually compelling and interactive web components through innovative programming techniques.",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
+    },
+    {
+      "title": "UX/UI Strategy",
+      "description": "Blending design and technology to create intuitive, user-centered interfaces that drive engagement",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
+    },
+    {
+      "title": "Cross-platform Development",
+      "description": "Building responsive web applications that seamlessly adapt across various devices and environments.",
+      "mobileImage": {
+        "src": ""
+      },
+      "desktopImage": {
+        "src": ""
+      }
+    }
+  ],
+  "Projects": [
+    {
+      "title": "Island fight Centre",
+      "url": "https://www.islandfightcentre.com.au/",
+      "repo": "https://github.com/tsharliz-Joma/island_fight_centre",
+      "img": {
+        "src": "/static/img/island-fight-centre-desktop.png"
+      },
+      "description": ""
+    },
+    {
+      "title": "Brain Train",
+      "url": "https://the-brain-train.web.app/",
+      "repo": "https://github.com/Foyoman/brain-train-client",
+      "img": {
+        "src": "/static/img/brain-train-mobile.svg"
+      },
+      "description": ""
+    },
+    {
+      "title": "World of spheres",
+      "url": "https://main--world-of-spheres.netlify.app/",
+      "repo": "https://github.com/tsharliz-Joma/World_of_Spheres",
+      "img": {
+        "src": "/static/img/world-of-spheres.svg"
+      },
+      "description": ""
+    },
+    {
+      "title": "School of hard knocks",
+      "url": "https://school-of-hard-knocks-b3add9c8488e.herokuapp.com/",
+      "repo": "https://github.com/tsharliz-Joma/school-of-hard-knocks",
+      "img": {
+        "src": "/static/img/school-of-hard-knocks.svg"
+      },
+      "description": ""
+    },
+    {
+      "title": "Pugilist Express",
+      "url": "https://pugilist-express.web.app/",
+      "repo": "https://github.com/tsharliz-Joma/Pugilist-Express",
+      "img": {
+        "src": "/static/img/pugilist-express.svg"
+      },
+      "description": ""
+    }
+  ],
+  "TechStack": [
+    {
+      "Title": "Javascript",
+      "src": "static/logos/javascript.svg",
+      "alt": "Javascript logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "React",
+      "src": "static/logos/react.svg",
+      "alt": "React logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Next Js",
+      "src": "static/logos/next.svg",
+      "alt": "Next logo",
+      "blackFilter": false
+    },
+
+    {
+      "Title": "Contentful",
+      "src": "static/logos/contentful.svg",
+      "alt": "Contentful logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Netlify CMS",
+      "src": "static/logos/netlify.svg",
+      "alt": "Netlify logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Node Js",
+      "src": "static/logos/node.svg",
+      "alt": "Node logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "AWS",
+      "src": "static/logos/AWS.svg",
+      "alt": "AWS logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Material UI",
+      "src": "static/logos/mui.svg",
+      "alt": "Matirial UI logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Scss",
+      "src": "static/logos/scss.svg",
+      "alt": "Scss logo",
+      "blackFilter": false
+    },
+
+    {
+      "Title": "Tailwind",
+      "src": "static/logos/tailwind.svg",
+      "alt": "Tailwind logo",
+      "blackFilter": false
+    },
+
+    {
+      "Title": "Firebase",
+      "src": "static/logos/firebase.svg",
+      "alt": "Firebase logo",
+      "blackFilter": false
+    }
+  ],
+  "Testimonials": [
+    {
+      "name": "Michael - Founder of IFC",
+      "message": "Working with Charles was a breeze. Professional, flexible, and nailed our website. Couldn't be happier with the result! Highly recommend him to anyone.",
+      "author": "",
+      "image": "",
+      "rating": "5",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    },
+    {
+      "name": "Niasha - Music Artist ",
+      "message": "Charles is a visionary! I brought my idea about having an interactive website that was true to my brand nd personal expression and he showed his dedication thorough diligent research and presented a visually captivating concept for my website. If you're looking professionalism, creativity, collaborative design then Charles is the one.",
+      "author": "",
+      "image": "",
+      "rating": "5",
+
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    },
+    {
+      "name": "Me - Charles Joma",
+      "message": "While i've only had 1 freelance project and 1 potential, i am on the lookout for more and i felt a card display would look wrong with only 2 cards.",
+      "author": "",
+      "image": "",
+      "rating": "5",
+      "mobileImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      },
+      "desktopImg": {
+        "src": "/static/img/ifc-white-logo.png"
+      }
+    }
+  ],
+  "Work": [
+    {
+      "title": "CHEP Network",
+      "subTitle": "Junior Creative Technologist",
+      "description": "Developed display ad banners, supported component builds, and handled internal site updates and maintenance to ensure smooth functionality and performance.",
+      "image": {
+        "src": "./static/img/chep-network.svg"
+      },
+      "date": "February 2023"
+    },
+    {
+      "title": "Bass Coast Boxing",
+      "subTitle": "Boxing Coach",
+      "description": "Served as a competition fight trainer, supervised competition sparring, and instructed Boxfit classes to enhance athletic performance and fitness levels.",
+      "image": {
+        "src": "./static/img/BassCoastboxing.svg"
+      },
+      "date": "August 2018"
+    },
+    {
+      "title": "Folks coffee",
+      "subTitle": "Head barista",
+      "description": "Coordinated hospitality and beverage services, managed proactive supply logistics, and specialized in espresso equipment to ensure smooth operations and quality service.",
+      "image": {
+        "src": "./static/img/folks.svg"
+      },
+      "date": "February 2016"
+    }
+  ]
+}

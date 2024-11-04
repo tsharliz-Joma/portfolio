@@ -5,32 +5,30 @@ import Footer from "@/components/Footer/Footer.component";
 import AboutSection from "@/components/sections/about";
 import TechStack from "@/components/sections/tech";
 import ExperienceSection from "@/components/sections/work-section";
-import NextUiNav from "@/components/Navbar/nextui-navbar";
-import Particles from "@/components/ui/particles";
 import { NextUIProvider } from "@nextui-org/react";
 import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {
   return (
-    <main className="w-full bg-gray-100 dark:bg-gray-900 font-anta text-gray-800 dark:text-white">
+    <main className="w-full bg-black dark:bg-gray-900 font-anta text-white dark:text-white">
       <NextUIProvider>
         <Header />
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto px-5 py-5">
           <AboutSection />
         </section>
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto px-5 py-5">
           <HighlightSection />
         </section>
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto px-5 py-5">
           <TestimonialsSection />
         </section>
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto px-5 py-5">
           <TechStack />
         </section>
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto px-5 py-5">
           <ExperienceSection />
         </section>
-        <section className="container mx-auto px-5 py-10">
+        <section className="container mx-auto px-5 py-5">
           <Projects />
         </section>
         <Footer />

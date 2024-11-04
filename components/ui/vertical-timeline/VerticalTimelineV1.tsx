@@ -15,7 +15,7 @@ interface TimelineItemProps {
 
 const VerticalTimelineV1 = ({ items }: { items: TimelineItemProps[] }) => {
   return (
-    <section id="VerticalTimelineV1" className="py-8">
+    <section id="VerticalTimelineV1" className="p-8">
       {items.map((item, index) => (
         <div key={index} className="relative pl-8 tablet:pl-32 group mb-10">
           {/* Time + Title */}

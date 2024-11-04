@@ -5,9 +5,9 @@ import PortfolioGrid from "./Projects";
 
 const Projects = () => {
   return (
-    <Section id="Projects Section">
-      <div className="container grid gap-14 py-20">
-        <SectionHeader className="py-16">Projects</SectionHeader>
+    <Section id="Projects Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto shadow-custom-blur`}>
+      <div className="p-16">
+        <SectionHeader>Projects</SectionHeader>
         <PortfolioGrid />
       </div>
     </Section>
