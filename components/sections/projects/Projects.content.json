@@ -44,6 +44,16 @@
         "src": "/static/img/pugilist-express.svg"
       },
       "description": ""
+    },
+
+    {
+      "title": "Coffee up",
+      "url": "https://ikhofiphezulu.web.app/",
+      "repo": "https://github.com/tsharliz-Joma/ikhofiPhezulu",
+      "img": {
+        "src": "/static/img/pugilist-express.svg"
+      },
+      "description": ""
     }
   ]
 }

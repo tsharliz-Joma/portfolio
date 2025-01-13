@@ -3,17 +3,17 @@ import React, { createContext, useContext, forwardRef, useState, useCallback, us
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter } from "@nextui-org/modal";
 import { cn } from "@/lib/utils";
 
-const ModalContext = createContext(null);
+// const ModalContext = createContext(null);
 
-const useModal = () => {
-  const context = useContext(ModalContext);
+// const useModal = () => {
+//   const context = useContext(ModalContext);
 
-  if (!context) {
-    throw new Error("useModal must be used within a <Modal /> tag");
-  }
+//   if (!context) {
+//     throw new Error("useModal must be used within a <Modal /> tag");
+//   }
 
-  return context;
-};
+//   return context;
+// };
 
 const NextUiModal = forwardRef(({ className, ...props }, ref) => {
   return (
