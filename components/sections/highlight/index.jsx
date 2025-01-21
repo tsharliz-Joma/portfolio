@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import Box from "@mui/material/Box";
 import Section from "@/components/ui/section";
 import SectionHeader from "@/components/ui/section-header";
@@ -25,7 +26,9 @@ const HighlightSection = ({ ...props }) => {
             </a>
           </Box>
           <Box className=" w-full h-96 rounded-[50px] overflow-hidden">
-            <img
+            <Image
+              width={0}
+              height={0}
               src={resume.resume.url}
               alt="resume image"
               className="w-full h-full object-cover"

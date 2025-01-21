@@ -1,7 +1,6 @@
 import React from "react";
 import { MailIcon } from "@heroicons/react/outline";
 import { Linkedin } from "lucide-react";
-import ContactCard from "../ui/contact-card";
 
 const Footer = () => {
   return (
