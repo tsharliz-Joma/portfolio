@@ -3,15 +3,19 @@ const { nextui } = require("@nextui-org/react");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./app/**/*.{js,ts,jsx,tsx,mdx}", "./pages/**/*.{js,ts,jsx,tsx,mdx}", "./components/**/*.{js,ts,jsx,tsx,mdx}", "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
     extend: {
       screens: {
-        mobile: "430px",
-        tablet: "640px",
-        laptop: "1024px",
-        desktop: "1280px",
-        "2xl": "1400px",
+        mobile: { max: "430px" },
+        tablet: { max: "640px" },
+        desktop: { min: "1280px" },
+        "2xl": { min: "1400px" },
       },
       spacing: {
         xxs: ".5rem",
@@ -30,6 +34,7 @@ module.exports = {
       boxShadow: {
         "custom-shadow": "0px 5px 15px #00000026",
         "custom-blur": "0px 5px 25px rgba(255, 255, 255, 0.3)",
+        "footer-blur": "0px 0px 55px rgba(255, 255, 255, 0.3)",
       },
       backgroundColor: {
         "custom-transparent": "transparent",

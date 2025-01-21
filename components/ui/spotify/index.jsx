@@ -17,14 +17,14 @@ const Spotify = ({ uri }) => {
   }, [uri]);
 
   return (
-    <>
+    <div className="">
       <Script
         src="https://open.spotify.com/embed/iframe-api/v1"
         strategy="afterInteractive"
         async
       />
       <div id="spotify-embed"></div>
-    </>
+    </div>
   );
 };
 

@@ -1,6 +1,5 @@
-"use client"
-import React, { useEffect, useContext, createContext } from "react";
-import Script from "next/script";
+"use client";
+import { useContext, createContext } from "react";
 
 const SpotifyContext = createContext(null);
 
@@ -13,5 +12,3 @@ function useSpotify() {
 
   return context;
 }
-
-

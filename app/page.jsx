@@ -13,22 +13,22 @@ export default function Home() {
     <main className="w-full bg-black dark:bg-gray-900 font-anta text-white dark:text-white">
       <NextUIProvider>
         <Header />
-        <section className="container mx-auto px-5 py-5">
+        <section className="container mx-auto px-5 py-24">
           <AboutSection />
         </section>
-        <section className="container mx-auto px-5 py-5">
+        <section className="container mx-auto px-5 py-24">
           <HighlightSection />
         </section>
-        <section className="container mx-auto px-5 py-5">
+        <section className="container mx-auto px-5 py-24">
           <TestimonialsSection />
         </section>
-        <section className="container mx-auto px-5 py-5">
+        <section className="container mx-auto px-5 py-24">
           <TechStack />
         </section>
-        <section className="container mx-auto px-5 py-5">
+        <section className="container mx-auto px-5 py-24">
           <ExperienceSection />
         </section>
-        <section className="container mx-auto px-5 py-5">
+        <section className="container mx-auto px-5 py-24">
           <Projects />
         </section>
         <Footer />

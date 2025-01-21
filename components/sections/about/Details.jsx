@@ -2,19 +2,20 @@ import React from "react";
 import Spotify from "../../ui/spotify";
 import Data from "./About.content.json";
 
-const Details = () => {
-  const { About } = Data;
+const Details = ({ About, index }) => {
+  // const { About } = Data;
 
   return (
-    <div className="grid grid-cols-2 gap-[20px] p-[20px]">
-      {About.map((item, index) => (
-        <div key={`${index}-description`} className={`${index === 2 ? "col-span-3" : ""} border-[0.5px] border-black p-10 rounded-[50px]`}>
-          <p className="text-3xl font-bold tracking-wide">{item.title}</p>
-          <div>{item.description1}</div>
-          <div>{item.description2}</div>
-          {item.spotify && <Spotify uri={item.spotify.uri} />}
-        </div>
-      ))}
+    <div
+      key={`${About}-description`}
+      className={`${
+        index === 2 ? "col-span-3" : "col-span-1 mobile:col-span-2"
+      }  border-[0.5px] p-10 grid border-black rounded-[50px]`}
+    >
+      <p className="text-3xl font-bold tracking-wide">{About.title}</p>
+      <div>{About.description1}</div>
+      <div>{About.description2}</div>
+      <div >{About.spotify && <Spotify uri={About.spotify.uri} />}</div>
     </div>
   );
 };

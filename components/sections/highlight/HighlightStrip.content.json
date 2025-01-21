@@ -40,5 +40,9 @@
         "src": ""
       }
     }
-  ]
+  ],
+  "resume": {
+    "text": "View Resume",
+    "url": "/static/img/resume.svg"
+  }
 }
