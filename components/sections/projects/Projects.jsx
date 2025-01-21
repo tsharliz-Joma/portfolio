@@ -12,7 +12,9 @@ export default function PortfolioGrid() {
       <div className="container mx-auto px-5">
         <div className="my-10 text-center">
           <h1 className="text-3xl font-bold text-gray-800 dark:text-white">My Projects</h1>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">Projects that I am proud of and have built using full stack skills</p>
+          <p className="mt-4 text-gray-600 dark:text-gray-300">
+            Projects that I am proud of and have built using full stack skills
+          </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {Projects.map((project, index) => (
@@ -24,7 +26,13 @@ export default function PortfolioGrid() {
             >
               {/* Image with a slight hover scale effect */}
               <motion.div className="h-72 w-full">
-                <Image src={project.img.src} alt={project.title} height={600} width={1200} className="h-full w-full object-cover transition-transform duration-500 ease-in-out rounded-t-xl" />
+                <Image
+                  src={project.img.src}
+                  alt={project.title}
+                  height={600}
+                  width={1200}
+                  className="h-full w-full object-cover transition-transform duration-500 ease-in-out rounded-t-xl"
+                />
               </motion.div>
 
               {/* Project Info Overlay */}
@@ -35,7 +43,9 @@ export default function PortfolioGrid() {
 
               {/* Icon at the bottom right */}
               <div className="absolute bottom-5 right-5 p-3 bg-black/70 rounded-full text-white transition-transform duration-500 ease-in-out group-hover:scale-125">
-                <MoveUpRight className="w-6 h-6" />
+                <a href={project.url} target="_blank" rel="noreferrer">
+                  <MoveUpRight className="w-6 h-6" />
+                </a>
               </div>
             </motion.article>
           ))}
