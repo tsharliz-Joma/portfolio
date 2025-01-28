@@ -36,9 +36,16 @@ export default function PortfolioGrid() {
               </motion.div>
 
               {/* Project Info Overlay */}
-              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
-                <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                <p className="text-sm text-gray-300 mt-2">{project.description}</p>
+              <div className="flex flex-col absolute h-full bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
+                <div className="grow grid grid-cols-3 justify-items-center items-center  gap-2">
+                  {project.tech?.map((img, index) => (
+                    <Image key={index} src={img.src} width={55} height={55} alt="" />
+                  ))}
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                  <p className="text-sm text-gray-300 mt-2">{project.description}</p>
+                </div>
               </div>
 
               {/* Icon at the bottom right */}

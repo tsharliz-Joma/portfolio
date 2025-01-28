@@ -7,6 +7,13 @@
       "img": {
         "src": "/static/img/coffeeup.svg"
       },
+      "tech": [
+        { "name": "React", "src": "static/logos/react.svg" },
+        { "name": "MUI", "src": "static/logos/mui.svg" },
+        { "name": "Node", "src": "static/logos/node.svg" },
+        { "name": "Mongo DB", "src": "static/logos/mongodb.svg" },
+        { "name": "Square", "src": "static/logos/square.svg" }
+      ],
       "description": ""
     },
     {
@@ -34,6 +41,10 @@
       "img": {
         "src": "/static/img/world-of-spheres.svg"
       },
+      "tech": [
+        { "name": "Aframe", "src": "static/logos/aframe.svg" },
+        { "name": "Netlify", "src": "static/logos/netlify.svg" }
+      ],
       "description": ""
     },
     {
@@ -43,6 +54,12 @@
       "img": {
         "src": "/static/img/school-of-hard-knocks.svg"
       },
+      "tech": [
+        { "name": "Ruby", "src": "static/logos/ruby.svg" },
+        { "name": "Heroku", "src": "static/logos/heroku.svg" },
+        { "name": "css", "src": "static/logos/css.svg" },
+        { "name": "html", "src": "static/logos/html.svg" }
+      ],
       "description": ""
     },
     {

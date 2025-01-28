@@ -7,6 +7,36 @@
       "blackFilter": false
     },
     {
+      "Title": "Mongo DB",
+      "src": "static/logos/mongodb.svg",
+      "alt": "Mongo DB logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "HTML 5",
+      "src": "static/logos/html.svg",
+      "alt": "html logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Ruby",
+      "src": "static/logos/ruby.svg",
+      "alt": "ruby logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Square",
+      "src": "static/logos/square.svg",
+      "alt": "Square logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "heroku",
+      "src": "static/logos/heroku.svg",
+      "alt": "heroku logo",
+      "blackFilter": false
+    },
+    {
       "Title": "React",
       "src": "static/logos/react.svg",
       "alt": "React logo",
