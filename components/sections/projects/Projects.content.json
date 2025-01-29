@@ -23,6 +23,13 @@
       "img": {
         "src": "/static/img/island-fight-centre-desktop.png"
       },
+      "tech": [
+        { "name": "React", "src": "static/logos/react.svg" },
+        { "name": "Firebase", "src": "static/logos/firebase.svg" },
+        { "name": "GSAP", "src": "static/logos/gsap.svg" },
+        { "name": "Scss", "src": "static/logos/scss.svg" },
+        { "name": "Mui", "src": "static/logos/mui.svg" }
+      ],
       "description": ""
     },
     {
@@ -32,6 +39,12 @@
       "img": {
         "src": "/static/img/brain-train-mobile.svg"
       },
+      "tech": [
+        { "name": "React", "src": "static/logos/react.svg" },
+        { "name": "Firebase", "src": "static/logos/firebase.svg" },
+        { "name": "Node", "src": "static/logos/node.svg" },
+        { "name": "Bootstrap", "src": "static/logos/bootstrap.svg" }
+      ],
       "description": ""
     },
     {
@@ -43,7 +56,9 @@
       },
       "tech": [
         { "name": "Aframe", "src": "static/logos/aframe.svg" },
-        { "name": "Netlify", "src": "static/logos/netlify.svg" }
+        { "name": "Netlify", "src": "static/logos/netlify.svg" },
+        { "name": "Html", "src": "static/logos/html.svg" },
+        { "name": "javascript", "src": "static/logos/javascript.svg" }
       ],
       "description": ""
     },
@@ -69,6 +84,11 @@
       "img": {
         "src": "/static/img/pugilist-express.svg"
       },
+      "tech": [
+        { "name": "React", "src": "static/logos/react.svg" },
+        { "name": "Firebase", "src": "static/logos/firebase.svg" },
+        { "name": "Bootstrap", "src": "static/logos/bootstrap.svg" }
+      ],
       "description": ""
     }
   ]

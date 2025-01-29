@@ -11,8 +11,8 @@ export default function PortfolioGrid() {
     <section className="bg-black dark:bg-gray-900 py-10">
       <div className="container mx-auto px-5">
         <div className="my-10 text-center">
-          <h1 className="text-3xl font-bold text-gray-800 dark:text-white">My Projects</h1>
-          <p className="mt-4 text-gray-600 dark:text-gray-300">
+          <h1 className="text-3xl font-bold text-gray-500 dark:text-white">My Projects</h1>
+          <p className="mt-4  dark:text-gray-300">
             Projects that I am proud of and have built using full stack skills
           </p>
         </div>

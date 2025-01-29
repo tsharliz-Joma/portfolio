@@ -19,7 +19,7 @@ const HighlightSection = ({ ...props }) => {
           <Box className="px-10 py-4 flex justify-between">
             <SectionHeader className={`uppercase`}>Resume</SectionHeader>
             <a
-              href="https://charlesj-portfolio-assets.s3.ap-southeast-2.amazonaws.com/files/Charles+Joma_Resume.docx"
+              href="https://charlesj-portfolio-assets.s3.ap-southeast-2.amazonaws.com/files/Charles%2BJoma+resume.docx"
               download
             >
               <MdSimCardDownload className="h-10 w-10" />

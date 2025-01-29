@@ -37,9 +37,15 @@
       "blackFilter": false
     },
     {
-      "Title": "React",
-      "src": "static/logos/react.svg",
-      "alt": "React logo",
+      "Title": "Bootstrap",
+      "src": "static/logos/bootstrap.svg",
+      "alt": "Bootstrap logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "Aframe",
+      "src": "static/logos/aframe.svg",
+      "alt": "Aframe logo",
       "blackFilter": false
     },
     {
@@ -48,7 +54,18 @@
       "alt": "Next logo",
       "blackFilter": false
     },
-
+    {
+      "Title": "React",
+      "src": "static/logos/react.svg",
+      "alt": "React logo",
+      "blackFilter": false
+    },
+    {
+      "Title": "GSAP",
+      "src": "static/logos/gsap.svg",
+      "alt": "GSAP logo",
+      "blackFilter": false
+    },
     {
       "Title": "Contentful",
       "src": "static/logos/contentful.svg",
