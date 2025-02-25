@@ -48,6 +48,19 @@
       "description": ""
     },
     {
+      "title": "Crypto Tracker - Crypto Clause",
+      "url": "https://main.d16q04ehxwkji7.amplifyapp.com/",
+      "repo": "https://github.com/tsharliz-Joma/cryptostomach",
+      "img": {
+        "src": "/static/img/crypto-tracker.svg"
+      },
+      "tech": [
+        { "name": "React", "src": "static/logos/react.svg" },
+        { "name": "Amplify", "src": "static/logos/aws.svg" },
+        { "name": "Tailwind", "src": "static/logos/tailwind.svg" }
+      ]
+    },
+    {
       "title": "World of spheres",
       "url": "https://main--world-of-spheres.netlify.app/",
       "repo": "https://github.com/tsharliz-Joma/World_of_Spheres",

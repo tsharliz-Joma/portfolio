@@ -1,5 +1,5 @@
 import React from "react";
-import Brand from "../ui/brand";
+import Brand from "../../components/ui/brand";
 
 const NextUiNav = () => {
   return (

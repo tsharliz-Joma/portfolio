@@ -1,0 +1,10 @@
+{
+  "Hero": {
+    "Headshot": {
+      "src": "/static/img/headshot.png",
+      "alt": ""
+    }
+  },
+  "titles": ["Charles Joma", "a Software Developer", "a Tech Enthusiast", "a Coffee Lover"],
+  "profile": "I'm a software developer with a passion for technology and coffee. I love learning new things and sharing my knowledge with others. I'm always looking for new opportunities to grow, improve my skills and do meaningful work."
+}
