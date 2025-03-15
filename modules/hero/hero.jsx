@@ -3,8 +3,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Eye, Download, Mail } from "lucide-react";
 import content from "./hero.json";
-import StreamerText from "../../components/ui/streamer-text";
-import { DragAutoCobe } from "../../components/ui/cobe";
+import InfoCard from "@/components/infoCard/InfoCard";
+import Button from "@/components/ui/button";
 
 const Hero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -52,18 +52,29 @@ const Hero = () => {
                 {content.profile}
               </p>
               <div className="flex flex-row gap-3 desktop:gap-14">
-                <button className="gap-4 inline-flex items-center text-sm px-6 border-[1px] border-slate-500 rounded-md font-semibold py-3">
-                  My work <Eye className="w-4 h-4" />
-                </button>
-                <button className="gap-4 inline-flex items-center text-sm bg-gray-900 text-white px-6 rounded-md font-semibold py-3 ">
-                  My resume <Download className="w-4 h-4" />
-                </button>
-                <button className="gap-4 inline-flex items-center text-sm px-6 border-[1px] border-slate-500 rounded-md font-semibold py-3">
-                  My Email <Mail className="w-4 h-4" />
-                </button>
+                <Button
+                  copy={"My work"}
+                  icon={Eye}
+                  bgColor={"transparent"}
+                  border={"border-slate-500"}
+                />
+                <Button
+                  copy={"My resume"}
+                  icon={Download}
+                  bgColor={"bg-gray-900"}
+                  textColor={"text-white"}
+                />
+                <Button
+                  copy={"My Email"}
+                  icon={Mail}
+                  bgColor={"transparent"}
+                  border={"border-slate-500"}
+                />
               </div>
             </div>
-            <div>Hey</div>
+            <div className="m-10">
+              <InfoCard type={content.Developer.type} data={content.Developer} />
+            </div>
           </div>
         </div>
       </div>
