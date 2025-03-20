@@ -1,9 +1,19 @@
 import React from "react";
-import Logo from "../../../public/static/img/brand.svg";
+import Logo from "../../../public/og-boxer.jpg";
 import Image from "next/image";
 
-const Brand = () => {
-  return <Image width={100} src={Logo} alt="" />;
+const Brand = ({onClick}) => {
+  return (
+    <div onClick={() => onClick()} className="cursor-pointer">
+      <Image
+        className="rounded-xl"
+        width={50}
+        height={"auto"}
+        src={Logo}
+        alt="Logo"
+      />
+    </div>
+  );
 };
 
 export default Brand;

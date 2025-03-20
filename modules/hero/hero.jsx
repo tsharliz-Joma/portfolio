@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
-import { Eye, Download, Mail } from "lucide-react";
+import React, {useEffect, useMemo, useState} from "react";
+import {motion} from "framer-motion";
+import {Eye, Download, Mail} from "lucide-react";
 import content from "./hero.json";
 import InfoCard from "@/components/infoCard/InfoCard";
 import Button from "@/components/ui/button";
@@ -23,11 +23,11 @@ const Hero = () => {
 
   return (
     <div className="w-full">
-      <div className="container mx-auto">
+      <div className="">
         <div className="flex flex-col items-center justify-center gap-8 py-20 lg:py-40">
           <div className="grid grid-cols-2">
-            <div className="grid gap-10 w-full">
-              <h1 className="text-4xl desktop:text-6xl tracking-tighter text-left max-w-3xl">
+            <div className="grid gap-y-10 w-full cols-span-2">
+              <h1 className="text-4xl  desktop:text-5xl tracking-tighter text-left max-w-3xl">
                 <span className="text-spektr-cyan-50">Hi, I am</span>
                 <span className="w-full flex relative text-left justify-start overflow-hidden md:pb-4 md:pt-1">
                   &nbsp;
@@ -35,14 +35,13 @@ const Hero = () => {
                     <motion.span
                       key={index}
                       className="absolute font-semibold"
-                      initial={{ opacity: 0, y: -100 }}
-                      transition={{ type: "spring", stiffness: 50 }}
+                      initial={{opacity: 0, y: -100}}
+                      transition={{type: "spring", stiffness: 50}}
                       animate={
                         titleNumber === index
-                          ? { y: 0, opacity: 1 }
-                          : { y: titleNumber > index ? -150 : 150, opacity: 0 }
-                      }
-                    >
+                          ? {y: 0, opacity: 1}
+                          : {y: titleNumber > index ? -150 : 150, opacity: 0}
+                      }>
                       {title}
                     </motion.span>
                   ))}
