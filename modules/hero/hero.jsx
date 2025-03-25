@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
+import Section from "@/components/ui/section";
 import { motion } from "framer-motion";
 import { Eye, Download, Mail } from "lucide-react";
 import content from "./hero.json";
@@ -22,9 +23,9 @@ const Hero = () => {
   }, [titleNumber, titles]);
 
   return (
-    <div className="w-full">
+    <Section id="Hero" className="w-full">
       <div className="flex flex-col items-center justify-center gap-8 ">
-        <div className="grid grid-cols-2 gap-10 ">
+        <div className="grid grid-cols-2 mobile:grid-cols-1 gap-10 ">
           <div className="grid gap-y-5 w-full cols-span-2">
             <h1 className="text-4xl  desktop:text-5xl tracking-tighter text-left max-w-3xl">
               <span className="text-spektr-cyan-50">Hi, I am</span>
@@ -70,7 +71,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </Section>
   );
 };
 

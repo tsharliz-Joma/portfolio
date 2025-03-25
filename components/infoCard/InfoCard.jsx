@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaCode, FaPlay } from "react-icons/fa";
 
-
 const InfoCard = ({ type, data }) => {
   const isDeveloper = type === "developer";
   const isProject = type === "project";
