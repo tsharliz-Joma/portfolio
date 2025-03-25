@@ -24,12 +24,12 @@ export default function RootLayout({ children }) {
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.tsharliz.com" />{" "}
-        <meta property="og:image" content="https://www.tsharliz.com/og-boxer.jpg" />{" "}
+        <meta property="og:url" content="https://www.tsharliz.com" />
+        <meta property="og:image" content="https://www.tsharliz.com/og-boxer.jpg" />
         <meta name="twitter:card" content="https://www.tsharliz.com/og-boxer.jpg" />
         <meta name="twitter:title" content={metadata.title} />
         <meta name="twitter:description" content={metadata.description} />
-        <meta name="twitter:image" content="https://www.tsharliz.com/twitter-image.png" />{" "}
+        <meta name="twitter:image" content="https://www.tsharliz.com/twitter-image.png" />
       </head>
       <body className="overflow-y-scroll bg-white">{children}</body>
     </html>

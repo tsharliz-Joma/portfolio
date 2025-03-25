@@ -1,10 +1,11 @@
 import React from "react";
+import Section from "@/components/ui/section";
 import { MailIcon } from "@heroicons/react/outline";
 import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="bg-transparent border-t border-black rounded-tr-2xl rounded-tl-2xl shadow-footer-blur">
+    <Section className="bg-transparent shadow-xl  ">
       <div className="container mx-auto text-black">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">
           <div className="flex flex-col sm:flex-row sm:items-center">
@@ -29,7 +30,7 @@ const Footer = () => {
       <div className="text-center p-3">
         <p>All right reserved | Rocker Power Tech 🚀 | &copy; Jsphere Pty Ltd, 2024 </p>
       </div>
-    </div>
+    </Section>
   );
 };
 Footer.displayName = "Footer";

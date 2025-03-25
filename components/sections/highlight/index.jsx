@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Box from "@mui/material/Box";
 import Section from "@/components/ui/section";
-import SectionHeader from "@/components/ui/section-header";
+import { SectionHeader } from "@/components/ui/section-header/index";
 import resume from "./HighlightStrip.content.json";
 import GoogleMapComponent from "@/components/ui/google-maps/GoogleMap.component";
 import { MdSimCardDownload } from "react-icons/md";

@@ -17,20 +17,30 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
       )}
       {...props}
     >
-      <div className="w-full h-full bg-black bg-opacity-50">
-  
-      </div>
+      <div className="w-full h-full bg-black bg-opacity-50"></div>
+
       {index === activeItem && (
         <>
           <div className="absolute bottom-4 left-4 min-w-fit text-white md:bottom-8 md:left-8">
             <div className="text-2xl font-bold md:text-4xl">{item.title}</div>
             <div className="mt-2 text-sm md:mt-4 md:text-lg opacity-90">{item.description}</div>
           </div>
-          {item.spotify && (
-            <div className="absolute right-0 inset-0">
+
+          {/* Dynamic media rendering */}
+          {item.spotify?.uri ? (
+            <div className="absolute w-full h-auto right-0 inset-0">
               <Spotify uri={item.spotify.uri} />
             </div>
-          )}
+          ) : item.video?.src ? (
+            <div className="absolute right-0 bottom-0 -z-10 w-full h-full">
+              <video
+                src={item.video.src}
+                autoPlay
+                controls
+                className="w-full h-full object-cover  rounded-md"
+              />
+            </div>
+          ) : null}
         </>
       )}
     </div>
@@ -42,9 +52,7 @@ const FlashUiCarousel = ({ list, autoPlay = true, className, ...props }: any) =>
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    if (!autoPlay) {
-      return;
-    }
+    if (!autoPlay) return;
 
     const interval = setInterval(() => {
       if (!isHovering) {

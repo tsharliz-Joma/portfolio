@@ -1,6 +1,7 @@
+
 import React from "react";
 import Section from "@/components/ui/section";
-import SectionHeader from "@/components/ui/section-header";
+import { SectionHeader } from "@/components/ui/section-header";
 import LogoBar from "./logobar";
 
 const TechStack = () => {

@@ -1,5 +1,5 @@
 import React from "react";
-import { MarqueeProps } from "./marqueeProps";
+import { MarqueeProps } from "./marquee.Props";
 import { cn } from "@/lib/utils";
 
 const Marquee = ({

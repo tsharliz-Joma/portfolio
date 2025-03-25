@@ -24,7 +24,7 @@ const Hero = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col items-center justify-center gap-8 ">
-        <div className="grid grid-cols-2 gap-10 p-5">
+        <div className="grid grid-cols-2 gap-10 ">
           <div className="grid gap-y-5 w-full cols-span-2">
             <h1 className="text-4xl  desktop:text-5xl tracking-tighter text-left max-w-3xl">
               <span className="text-spektr-cyan-50">Hi, I am</span>
@@ -51,25 +51,15 @@ const Hero = () => {
               {content.profile}
             </p>
             <div className="flex flex-row gap-3 desktop:gap-14">
-              <Button className="flex gap-2" bgColor={"transparent"} border={"border-slate-500"}>
+              <Button className="flex gap-2" border={"border-slate-500"}>
                 <Eye className="w-6 h-6" />
                 My Work
               </Button>
-              <Button
-                className="flex gap-2"
-                copy={"My resume"}
-                bgColor={"bg-gray-900"}
-                textColor={"text-black"}
-              >
+              <Button className="flex gap-2" copy={"My resume"} textColor={"text-black"}>
                 <Download className="w-6 h-6" />
                 Resume
               </Button>
-              <Button
-                className="flex gap-2"
-                copy={"My Email"}
-                bgColor={"transparent"}
-                border={"border-slate-500"}
-              >
+              <Button className="flex gap-2" copy={"My Email"} border={"border-slate-500"}>
                 <Mail className="w-6 h-6" />
                 Email
               </Button>

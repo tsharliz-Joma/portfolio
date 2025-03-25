@@ -27,7 +27,7 @@ const Navbar = () => {
     <div className="flex justify-between items-center h-auto">
       {/* Nav menu */}
       <div
-        className={`bg-card text-card-foreground p-3 m-auto w-full shadow-sm md:rounded-lg flex flex-col md:flex-row justify-between items-center z-50`}
+        className={`bg-card text-card-foreground p-3 m-auto w-full shadow-md md:rounded-lg flex flex-col md:flex-row justify-between items-center z-50`}
       >
         <Brand onClick={() => navigateTo("/")} />
 
