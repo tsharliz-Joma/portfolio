@@ -5,11 +5,10 @@ import PortfolioGrid from "./Projects";
 
 const Projects = () => {
   return (
-    <Section id="Projects Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto shadow-custom-blur`}>
-      <div className="p-16">
-        <SectionHeader>Projects</SectionHeader>
-        <PortfolioGrid />
-      </div>
+    <Section id="Projects Section" className={`container shadow-custom-blur`}>
+      <SectionHeader className='pb-sm'>Projects</SectionHeader>
+      <p className="dark:text-gray-300 pb-md">A few of my prized possessions.</p>
+      <PortfolioGrid />
     </Section>
   );
 };

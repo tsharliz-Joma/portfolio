@@ -4,8 +4,8 @@ import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <div className="bg-transparent  mt-56 border-[0.5px] border-black shadow-footer-blur">
-      <div className="container mx-auto text-white">
+    <div className="bg-transparent border-t border-black rounded-tr-2xl rounded-tl-2xl shadow-footer-blur">
+      <div className="container mx-auto text-black">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">
           <div className="flex flex-col sm:flex-row sm:items-center">
             <div className="sm:w-full flex flex-col  p-3">
@@ -27,7 +27,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center p-3">
-        <p>All right reserved | &copy; Jsphere Pty Ltd, 2024 | 🚀 Power Tech</p>
+        <p>All right reserved | Rocker Power Tech 🚀 | &copy; Jsphere Pty Ltd, 2024 </p>
       </div>
     </div>
   );

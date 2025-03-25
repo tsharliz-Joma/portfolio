@@ -8,14 +8,8 @@ import Data from "./Projects.content";
 export default function PortfolioGrid() {
   const { Projects } = Data;
   return (
-    <section className="bg-black dark:bg-gray-900 py-10">
-      <div className="container mx-auto px-5">
-        <div className="my-10 text-center">
-          <h1 className="text-3xl font-bold text-gray-500 dark:text-white">My Projects</h1>
-          <p className="mt-4  dark:text-gray-300">
-            Projects that I am proud of and have built using full stack skills
-          </p>
-        </div>
+    <section className="">
+      <div className="container mx-auto ">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {Projects.map((project, index) => (
             <motion.article

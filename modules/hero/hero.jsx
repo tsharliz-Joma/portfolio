@@ -1,10 +1,10 @@
 "use client";
-import React, {useEffect, useMemo, useState} from "react";
-import {motion} from "framer-motion";
-import {Eye, Download, Mail} from "lucide-react";
+import React, { useEffect, useMemo, useState } from "react";
+import { motion } from "framer-motion";
+import { Eye, Download, Mail } from "lucide-react";
 import content from "./hero.json";
 import InfoCard from "@/components/infoCard/InfoCard";
-import Button from "@/components/ui/button";
+import { Button } from "@/components/ui/button/button";
 
 const Hero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -23,57 +23,60 @@ const Hero = () => {
 
   return (
     <div className="w-full">
-      <div className="">
-        <div className="flex flex-col items-center justify-center gap-8 py-20 lg:py-40">
-          <div className="grid grid-cols-2">
-            <div className="grid gap-y-10 w-full cols-span-2">
-              <h1 className="text-4xl  desktop:text-5xl tracking-tighter text-left max-w-3xl">
-                <span className="text-spektr-cyan-50">Hi, I am</span>
-                <span className="w-full flex relative text-left justify-start overflow-hidden md:pb-4 md:pt-1">
-                  &nbsp;
-                  {titles.map((title, index) => (
-                    <motion.span
-                      key={index}
-                      className="absolute font-semibold"
-                      initial={{opacity: 0, y: -100}}
-                      transition={{type: "spring", stiffness: 50}}
-                      animate={
-                        titleNumber === index
-                          ? {y: 0, opacity: 1}
-                          : {y: titleNumber > index ? -150 : 150, opacity: 0}
-                      }>
-                      {title}
-                    </motion.span>
-                  ))}
-                </span>
-              </h1>
-              <p className="text-lg desktop:text-1xl leading-6 tracking-tight text-left max-w-3xl">
-                {content.profile}
-              </p>
-              <div className="flex flex-row gap-3 desktop:gap-14">
-                <Button
-                  copy={"My work"}
-                  icon={Eye}
-                  bgColor={"transparent"}
-                  border={"border-slate-500"}
-                />
-                <Button
-                  copy={"My resume"}
-                  icon={Download}
-                  bgColor={"bg-gray-900"}
-                  textColor={"text-white"}
-                />
-                <Button
-                  copy={"My Email"}
-                  icon={Mail}
-                  bgColor={"transparent"}
-                  border={"border-slate-500"}
-                />
-              </div>
+      <div className="flex flex-col items-center justify-center gap-8 ">
+        <div className="grid grid-cols-2 gap-10 p-5">
+          <div className="grid gap-y-5 w-full cols-span-2">
+            <h1 className="text-4xl  desktop:text-5xl tracking-tighter text-left max-w-3xl">
+              <span className="text-spektr-cyan-50">Hi, I am</span>
+              <span className="w-full flex relative text-left justify-start overflow-hidden md:pb-4 md:pt-1">
+                &nbsp;
+                {titles.map((title, index) => (
+                  <motion.span
+                    key={index}
+                    className="absolute font-semibold"
+                    initial={{ opacity: 0, y: -100 }}
+                    transition={{ type: "spring", stiffness: 50 }}
+                    animate={
+                      titleNumber === index
+                        ? { y: 0, opacity: 1 }
+                        : { y: titleNumber > index ? -150 : 150, opacity: 0 }
+                    }
+                  >
+                    {title}
+                  </motion.span>
+                ))}
+              </span>
+            </h1>
+            <p className="text-lg desktop:text-1xl leading-6 tracking-tight text-left max-w-3xl">
+              {content.profile}
+            </p>
+            <div className="flex flex-row gap-3 desktop:gap-14">
+              <Button className="flex gap-2" bgColor={"transparent"} border={"border-slate-500"}>
+                <Eye className="w-6 h-6" />
+                My Work
+              </Button>
+              <Button
+                className="flex gap-2"
+                copy={"My resume"}
+                bgColor={"bg-gray-900"}
+                textColor={"text-black"}
+              >
+                <Download className="w-6 h-6" />
+                Resume
+              </Button>
+              <Button
+                className="flex gap-2"
+                copy={"My Email"}
+                bgColor={"transparent"}
+                border={"border-slate-500"}
+              >
+                <Mail className="w-6 h-6" />
+                Email
+              </Button>
             </div>
-            <div className="m-10">
-              <InfoCard type={content.Developer.type} data={content.Developer} />
-            </div>
+          </div>
+          <div className="">
+            <InfoCard type={content.Developer.type} data={content.Developer} />
           </div>
         </div>
       </div>

@@ -10,17 +10,16 @@ import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {
   return (
-    <main className="border-2 border-black">
-      <div className="container max-w-6xl mx-auto px-10 border-2">
+    <main className="">
+      <div className="container max-w-6xl mx-auto px-10 grid gap-[12rem]">
         <Navbar />
         <Hero />
-        {/* <AboutSection />
-        <HighlightSection />
-        <TestimonialsSection />
+        <AboutSection />
+        {/* <HighlightSection /> */}
         <TechStack />
-        <ExperienceSection />
+        {/* <ExperienceSection /> */}
         <Projects />
-        <Footer /> */}
+        <Footer />
       </div>
     </main>
   );

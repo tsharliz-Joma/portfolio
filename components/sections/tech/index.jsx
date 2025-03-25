@@ -5,9 +5,10 @@ import LogoBar from "./logobar";
 
 const TechStack = () => {
   return (
-    <Section id="Tech Stack Section" className={`container border-[0.5px] border-black rounded-[50px] max-w-6xl mx-auto shadow-custom-blur`}>
-      <div className="p-16">
-        <SectionHeader>Tech Stack I Use</SectionHeader>
+    <Section id="Tech Stack Section" className={`container  max-w-6xl mx-auto shadow-custom-blur`}>
+      <div className="">
+        <SectionHeader className="pb-sm">Tech Stack</SectionHeader>
+        <p className="pb-sm">Technology stack that i have learnt, used and am comfortable with.</p>
         <LogoBar />
       </div>
     </Section>

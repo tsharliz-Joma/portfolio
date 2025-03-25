@@ -1,29 +1,35 @@
 {
   "About": [
     {
-      "title": "Creative",
-      "description1": "I've titled this section 'Creative Thinking Freetime,' a term I adopted from a high school teacher who may have been a genius—or perhaps he just found a clever way to give us some space. Regardless, the phrase struck a chord with me. I'm a firm believer that true creativity flourishes within boundaries. By navigating these limits, we can tap into a deeper level of innovation and expression. In short, creativity is something I deeply value and continuously explore.",
-      "description2": "Music holds a special place in my heart, serving as a steadfast companion through both trials and tribulations. If you haven't yet experienced the soul-stirring track 'Maggot Brain' by Funkadelic, I highly recommend giving it a listen. Do yourself a favor........",
-      "description3": "Live music is absolutely mind-blowing! The idea of individuals coming together, each playing different instruments, yet harmoniously creating something beautiful without trying to outplay or outsing one another, is truly astonishing. It's a powerful display of unity and artistry that never fails to amaze me.",
+      "title": "Vocation",
+      "description": "I've titled this section 'Creative Thinking Freetime,' a term I adopted from a high school teacher who may have been a genius—or perhaps he just found a clever way to give us some space. Regardless, the phrase struck a chord with me. I'm a firm believer that true creativity flourishes within boundaries. By navigating these limits, we can tap into a deeper level of innovation and expression. In short, creativity is something I deeply value and continuously explore. Music holds a special place in my heart, serving as a steadfast companion through both trials and tribulations. If you haven't yet experienced the soul-stirring track 'Maggot Brain' by Funkadelic, I highly recommend giving it a listen. Do yourself a favor........ \n Live music is absolutely mind-blowing! The idea of individuals coming together, each playing different instruments, yet harmoniously creating something beautiful without trying to outplay or outsing one another, is truly astonishing. It's a powerful display of unity and artistry that never fails to amaze me.",
+      "image": {
+        "src": ""
+      },
+      "video": {
+        "src": "/static/img/charlesVsMatt.mp4"
+      },
+
+      "bg": "skytopia"
+    },
+    {
+      "title": "Passion",
+      "description": "For me, thinking and boxing are the same thing. I can't do one without the other. Boxing is my hero and my muse. Every time I step into the ring, I feel a thrilling rush of adrenaline and a profound focus. It's not just about the physical challenge; it's the mental discipline, strategy, and resilience that captivate me. Nothing makes me feel more alive than boxing. It has taught me respect and humility. Boxing isn't just part of my life; it defines who I am. \n There's somthing meditative to me about boxing that transends the physicality of the sport. I have always come to my most profound moments of clarity while punching the bag alone in the gym. So many times ive been hit with revelations about life during rounds on the bag, stopping me mid punch to jot them down. i could go on forever.",
       "image": {
         "src": ""
       },
       "spotify": {
         "uri": "https://open.spotify.com/track/5WJU527RQNyMLuKecjsL8V?si=561ddcf0edaa42e7"
       },
-      "bg": "skytopia"
+      "bg": "fightnight"
     },
     {
-      "title": "Thinking",
-      "description1": "For me, thinking and boxing are the same thing. I can't do one without the other. Boxing is my hero and my muse. Every time I step into the ring, I feel a thrilling rush of adrenaline and a profound focus. It's not just about the physical challenge; it's the mental discipline, strategy, and resilience that captivate me. Nothing makes me feel more alive than boxing. It has taught me respect and humility. Boxing isn't just part of my life; it defines who I am.",
-      "description2": "There's somthing meditative to me about boxing that transends the physicality of the sport. I have always come to my most profound moments of clarity while punching the bag alone in the gym. So many times ive been hit with revelations about life during rounds on the bag, stopping me mid punch to jot them down. i could go on forever.",
+      "title": "Profession",
+      "description": "For me, thinking and boxing are the same thing. I can't do one without the other. Boxing is my hero and my muse. Every time I step into the ring, I feel a thrilling rush of adrenaline and a profound focus. It's not just about the physical challenge; it's the mental discipline, strategy, and resilience that captivate me. Nothing makes me feel more alive than boxing. It has taught me respect and humility. Boxing isn't just part of my life; it defines who I am. \n There's somthing meditative to me about boxing that transends the physicality of the sport. I have always come to my most profound moments of clarity while punching the bag alone in the gym. So many times ive been hit with revelations about life during rounds on the bag, stopping me mid punch to jot them down. i could go on forever.",
       "image": {
         "src": ""
       },
 
-      "video": {
-        "src": "/static/img/charlesVsMatt.mp4"
-      },
       "bg": "fightnight"
     }
   ]
