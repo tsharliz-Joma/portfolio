@@ -5,7 +5,7 @@ import Projects from "@/components/sections/projects";
 import Footer from "@/modules/footer/footer";
 import AboutSection from "@/components/sections/about";
 import TechStack from "@/components/sections/tech";
-import ExperienceSection from "@/components/sections/work-section";
+import ExperienceSection from "@/components/sections/work";
 import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {

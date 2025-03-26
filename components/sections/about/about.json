@@ -1,0 +1,36 @@
+{
+  "About": [
+    {
+      "title": "Vocation",
+      "description": "Boxing isn’t just my sport—it’s where my mind sharpens and my spirit finds calm. I've found more clarity throwing punches alone in the gym than anywhere else in life. It humbles me, challenges me, centers me. As Ali said, “Float like a butterfly, sting like a bee”—and in that rhythm, I found who I’m meant to be.",
+      "image": {
+        "src": ""
+      },
+      "video": {
+        "src": "/static/img/charlesVsMatt.mp4"
+      },
+
+      "bg": "fightnight"
+    },
+    {
+      "title": "Passion",
+      "description": "Coffee’s always been more than just a job for me — it’s kind of my zone. There’s something about the rhythm of dialing in a shot, steaming milk just right, and hitting flow in the middle of a busy rush that feels… good. Like muscle memory meets mindfulness. I’ve made coffee in packed events and sleepy weekday shifts, and no matter the setting, I’ve always loved the moment someone takes that first sip and nods in approval. That’s the win. It’s calm, it’s chaos, and somehow, it’s home.",
+      "image": {
+        "src": ""
+      },
+      "spotify": {
+        "uri": "https://open.spotify.com/track/5WJU527RQNyMLuKecjsL8V?si=561ddcf0edaa42e7"
+      },
+      "bg": "skytopia"
+    },
+    {
+      "title": "Profession",
+      "description": "For me, thinking and boxing are the same thing. I can't do one without the other. Boxing is my hero and my muse. Every time I step into the ring, I feel a thrilling rush of adrenaline and a profound focus. It's not just about the physical challenge; it's the mental discipline, strategy, and resilience that captivate me. Nothing makes me feel more alive than boxing. It has taught me respect and humility. Boxing isn't just part of my life; it defines who I am. \n There's somthing meditative to me about boxing that transends the physicality of the sport. I have always come to my most profound moments of clarity while punching the bag alone in the gym. So many times ive been hit with revelations about life during rounds on the bag, stopping me mid punch to jot them down. i could go on forever.",
+      "image": {
+        "src": ""
+      },
+
+      "bg": "fightnight"
+    }
+  ]
+}

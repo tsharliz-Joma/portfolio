@@ -67,8 +67,8 @@ const InfoCard = ({ type, data }) => {
               <span className="text-orange-400">{String(data.quickLearner)}</span>,
             </div>
             <div>
-              <span className="ml-4 lg:ml-8 mr-2 text-white">problemSolver:</span>
-              <span className="text-orange-400">{String(data.problemSolver)}</span>,
+              <span className="ml-4 lg:ml-8 mr-2 text-white">creativeThinker:</span>
+              <span className="text-orange-400">{String(data.creativeThinker)}</span>,
             </div>
 
             <div>

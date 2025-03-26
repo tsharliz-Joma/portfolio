@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import Brand from "../../components/ui/brand";
+import Section from "@/components/ui/section";
 import { Button } from "@/components/ui/button/button";
 import { cn } from "@/lib/utils";
 import { Home, Briefcase, Mail, Presentation, Menu, X } from "lucide-react";
@@ -16,9 +17,14 @@ const Navbar = () => {
     router.push(path);
   };
 
-  const NavButton = ({ path, icon, copy, className }) => {
+  const NavButton = ({ path, icon, copy, className, variant, neonColor }) => {
     return (
-      <Button className={cn("flex gap-2", className)} onClick={() => navigateTo(path)}>
+      <Button
+        variant={variant}
+        neonColor={neonColor}
+        className={cn("flex gap-2", className)}
+        onClick={() => navigateTo(path)}
+      >
         {icon}
         {copy}
       </Button>
@@ -26,10 +32,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="flex justify-between items-center h-auto">
+    <Section id="Navbar">
       {/* Nav menu */}
       <div
-        className={`bg-card text-card-foreground p-3 m-auto w-full shadow-md md:rounded-lg flex flex-col md:flex-row justify-between items-center z-50`}
+        className={cn(
+          `m-auto w-full flex flex-col md:flex-row justify-between items-center`,
+          `border shadow-xl rounded-2xl backdrop-blur-md border-neutral-300/40`,
+          `p-3 z-50 translate-y-6`
+        )}
       >
         <div className="flex justify-between items-center w-full md:w-auto">
           <Brand onClick={() => navigateTo("/")} />
@@ -44,14 +54,34 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex gap-5 items-center">
-          <NavButton path="/" icon={<Home className="h-4 w-4" />} copy="Home" />
           <NavButton
+            variant="neon"
+            neonColor="neonPink"
+            path="/"
+            icon={<Home className="h-4 w-4" />}
+            copy="Home"
+          />
+          <NavButton
+            variant="neon"
+            neonColor="neonPurple"
             path="/#projects"
             icon={<Presentation className="h-4 w-4" />}
             copy="Projects"
           />
-          <NavButton path="/#work" icon={<Briefcase className="h-4 w-4" />} copy="Work" />
-          <NavButton path="/#contact" icon={<Mail className="h-4 w-4" />} copy="Contact" />
+          <NavButton
+            variant="neon"
+            neonColor="neonBlue"
+            path="/#work"
+            icon={<Briefcase className="h-4 w-4" />}
+            copy="Work"
+          />
+          <NavButton
+            variant="neon"
+            neonColor="neonCyan"
+            path="/#contact"
+            icon={<Mail className="h-4 w-4" />}
+            copy="Contact"
+          />
         </div>
 
         {/* Mobile Menu */}
@@ -70,7 +100,7 @@ const Navbar = () => {
 
         {/* <ModeToggle /> */}
       </div>
-    </div>
+    </Section>
   );
 };
 export default Navbar;

@@ -6,7 +6,7 @@ import LogoBar from "./logobar";
 const TechStack = () => {
   return (
     <Section
-      id="Tech Stack Section"
+      id="tech"
       className={`container  max-w-6xl mobile:max-w-md mx-auto shadow-custom-blur`}
     >
       <div className="">

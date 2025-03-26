@@ -5,7 +5,10 @@ import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <Section id="Footer" className="bg-transparent shadow-xl w-full">
+    <Section
+      id="contact"
+      className="w-full mx-auto -translate-y-6 px-4 py-4 border-neutral-300/40 transition-all duration-300 ease-in-out hover:shadow-2xl hover:translate-y-1 dark:border-white/10 shadow-xl border rounded-2xl background-blur-md"
+    >
       <div className="container mx-auto text-black">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">
           <div className="flex flex-col sm:flex-row sm:items-center">

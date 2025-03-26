@@ -111,6 +111,15 @@ module.exports = {
         secondary_charcoal: "#282828",
         paper: "#424242",
         "border-green": "#008000",
+        neonCyan: "#00fff7",
+        neonPink: "#ff00d4",
+        neonLime: "#aaff00",
+        neonOrange: "#ff6b00",
+        neonPurple: "#ae00ff",
+        neonBlue: "#00b7ff",
+
+        onNeonDark: "#000000",
+        onNeonLight: "#ffffff",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

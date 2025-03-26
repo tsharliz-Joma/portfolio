@@ -40,7 +40,6 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
               <video
                 src={item.video.src}
                 autoPlay
-                controls
                 className="w-full h-full object-cover  rounded-md"
               />
             </div>

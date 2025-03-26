@@ -52,15 +52,33 @@ const Hero = () => {
               {content.profile}
             </p>
             <div className="grid grid-cols-3 gap-3 desktop:gap-14">
-              <Button className="flex gap-2" border={"border-slate-500"}>
+              <Button
+                variant="neon"
+                neonColor="neonBlue"
+                className="flex gap-2"
+                border={"border-slate-500"}
+              >
                 <Eye className="w-6 h-6" />
                 My Work
               </Button>
-              <Button className="flex gap-2" copy={"My resume"} textColor={"text-black"}>
+              <Button
+                variant="neon"
+                neonColor="neonLime"
+                className="flex gap-2"
+                copy={"My resume"}
+                textColor={"text-black"}
+              >
                 <Download className="w-6 h-6" />
                 Resume
               </Button>
-              <Button className="flex gap-2" copy={"My Email"} border={"border-slate-500"}>
+              <Button
+              variant="neon"
+                neonColor="neonOrange"
+                className="flex gap-2"
+                copy={"My Email"}
+                border={"border-slate-500"}
+                
+              >
                 <Mail className="w-6 h-6" />
                 Email
               </Button>
