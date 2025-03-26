@@ -9,21 +9,25 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
   return (
     <div
       className={cn(
-        "relative flex h-full w-20 min-w-10 cursor-pointer overflow-hidden rounded-md transition-all delay-0 duration-300 ease-in-out",
+        "relative flex h-full w-20 mobile:w-full min-w-10 cursor-pointer overflow-x-hidden rounded-md transition-all delay-0 duration-300 ease-in-out",
         {
           "flex-grow": index === activeItem,
+          "mobile:h-[80vh]": index === activeItem, // Active = tall
+          "mobile:h-10": index !== activeItem, // Inactive = shorter
         },
         className
       )}
       {...props}
     >
-      <div className="w-full h-full bg-black bg-opacity-50"></div>
+      <div className="w-full h-[80vh] bg-black bg-opacity-50"></div>
 
       {index === activeItem && (
         <>
           <div className="absolute bottom-4 left-4 min-w-fit text-white md:bottom-8 md:left-8">
             <div className="text-2xl font-bold md:text-4xl">{item.title}</div>
-            <div className="mt-2 text-sm md:mt-4 md:text-lg opacity-90">{item.description}</div>
+            <p className="mt-2 leading-3 text-sm md:mt-4 md:text-lg opacity-90">
+              {item.description}
+            </p>
           </div>
 
           {/* Dynamic media rendering */}
@@ -64,23 +68,27 @@ const FlashUiCarousel = ({ list, autoPlay = true, className, ...props }: any) =>
   }, [autoPlay, list.length, isHovering]);
 
   return (
-    <div className={cn("flex h-[80vh] w-full gap-1", className)}>
-      {list.map((item: any, index: any) => (
-        <List
-          key={item.title}
-          item={item}
-          index={index}
-          activeItem={activeItem}
-          onMouseEnter={() => {
-            setActiveItem(index);
-            setIsHovering(true);
-          }}
-          onMouseLeave={() => {
-            setIsHovering(false);
-          }}
-        />
-      ))}
-    </div>
+    <>
+      {/*  Desktop */}
+      <div className={cn("flex mobile:grid mobile:gap-2  w-full gap-1", className)}>
+        {list.map((item: any, index: any) => (
+          <List
+            key={item.title}
+            item={item}
+            index={index}
+            activeItem={activeItem}
+            onMouseEnter={() => {
+              setActiveItem(index);
+              setIsHovering(true);
+            }}
+            onMouseLeave={() => {
+              setIsHovering(false);
+            }}
+          />
+        ))}
+      </div>
+      {/*  */}
+    </>
   );
 };
 

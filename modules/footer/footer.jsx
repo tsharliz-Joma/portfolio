@@ -5,12 +5,12 @@ import { Linkedin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <Section className="bg-transparent shadow-xl  ">
+    <Section id="Footer" className="bg-transparent shadow-xl w-full">
       <div className="container mx-auto text-black">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">
           <div className="flex flex-col sm:flex-row sm:items-center">
-            <div className="sm:w-full flex flex-col  p-3">
-              <div className="flex gap-14">
+            <div className="sm:w-full flex flex-col ">
+              <div className="grid grid-cols-3 mobile:grid-cols-1 mobile:gap-y-2 gap-14">
                 <p className="text-lg sm:text-2xl sm:tracking-[1.5px] font-bold">Charles Joma</p>
                 <div className="flex items-center">
                   <MailIcon className="mr-2 h-6 w-6" />

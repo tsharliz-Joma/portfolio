@@ -23,7 +23,7 @@ const Hero = () => {
   }, [titleNumber, titles]);
 
   return (
-    <Section id="Hero" className="w-full">
+    <Section id="Hero" className="w-full ">
       <div className="flex flex-col items-center justify-center gap-8 ">
         <div className="grid grid-cols-2 mobile:grid-cols-1 gap-10 ">
           <div className="grid gap-y-5 w-full cols-span-2">
@@ -51,7 +51,7 @@ const Hero = () => {
             <p className="text-lg desktop:text-1xl leading-6 tracking-tight text-left max-w-3xl">
               {content.profile}
             </p>
-            <div className="flex flex-row gap-3 desktop:gap-14">
+            <div className="grid grid-cols-3 gap-3 desktop:gap-14">
               <Button className="flex gap-2" border={"border-slate-500"}>
                 <Eye className="w-6 h-6" />
                 My Work
@@ -66,7 +66,7 @@ const Hero = () => {
               </Button>
             </div>
           </div>
-          <div className="">
+          <div className="w-full">
             <InfoCard type={content.Developer.type} data={content.Developer} />
           </div>
         </div>

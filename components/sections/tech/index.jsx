@@ -7,7 +7,7 @@ const TechStack = () => {
   return (
     <Section
       id="Tech Stack Section"
-      className={`container  max-w-6xl mobile:max-w-lg mx-auto shadow-custom-blur`}
+      className={`container  max-w-6xl mobile:max-w-md mx-auto shadow-custom-blur`}
     >
       <div className="">
         <SectionHeader className="pb-sm">Tech Stack</SectionHeader>

@@ -16,7 +16,8 @@ const AboutSection = forwardRef(({ className, ...props }, ref) => {
     <Section
       id="About Section"
       ref={containerRef}
-      className={`container rounded-[2rem] max-w-6xl mx-auto shadow-custom-blur`}
+      className={`container rounded-[2rem] 
+        mx-auto shadow-custom-blur`}
     >
       <FlashUiCarousel list={About} />
     </Section>

@@ -10,8 +10,8 @@ import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {
   return (
-    <main className="">
-      <div className="container max-w-6xl mx-auto grid gap-[12rem] mobile-gap-[6rem]">
+    <main className="container max-w-5xl">
+      <div className="w-full grid grid-cols-1 mobile:gap-y-[5rem] desktop:gap-y-[10rem] ">
         <Navbar />
         <Hero />
         <AboutSection />
