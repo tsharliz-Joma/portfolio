@@ -1,9 +1,9 @@
 "use client";
 import React from "react";
 import { useEffect, useState } from "react";
-import Spotify from "../spotify";
+import Spotify from "../../components/ui/spotify";
 import { cn } from "@/lib/utils";
-import Section from "../section";
+import Section from "../../components/ui/section";
 
 const List = ({ item, className, index, activeItem, ...props }: any) => {
   const isActive = index === activeItem;
@@ -39,7 +39,7 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
 
           {/* Dynamic media rendering */}
           {item.spotify?.uri ? (
-            <div className="absolute w-full h-auto right-0 inset-0">
+            <div className="relative w-full h-auto right-0 inset-0">
               <Spotify uri={item.spotify.uri} />
             </div>
           ) : item.video?.src ? (
