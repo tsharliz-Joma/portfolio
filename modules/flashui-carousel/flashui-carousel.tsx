@@ -39,10 +39,11 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
 
           {/* Dynamic media rendering */}
           {item.spotify?.uri ? (
-            <div className="relative w-full h-auto right-0 inset-0">
-              <Spotify uri={item.spotify.uri} />
-            </div>
-          ) : item.video?.src ? (
+            <></>
+          ) : // <div className="relative w-full h-auto right-0 inset-0">
+          //   <Spotify uri={item.spotify.uri} />
+          // </div>
+          item.video?.src ? (
             <div className="absolute right-0 bottom-0 -z-10 w-full h-full">
               <video
                 src={item.video.src}
