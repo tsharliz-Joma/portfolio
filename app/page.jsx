@@ -10,8 +10,12 @@ import HighlightSection from "@/components/sections/highlight";
 
 export default function Home() {
   return (
-    <main className="container max-w-5xl">
-      <div className="w-full grid grid-cols-1 mobile:gap-y-[5rem] desktop:gap-y-[10rem] ">
+    <main
+      className="relative before:absolute before:top-0 before:left-0 before:w-full
+     before:h-full before:content-[''] before:opacity-[0.05] before:-z-5 before:pointer-events-none
+     before:bg-[url('/static/img/noise.gif')]"
+    >
+      <div className="container max-w-5xl w-full grid grid-cols-1 mobile:gap-y-[5rem] desktop:gap-y-[10rem] ">
         <Navbar />
         <Hero />
         <AboutSection />

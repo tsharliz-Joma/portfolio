@@ -57,9 +57,12 @@ const Hero = () => {
                 neonColor="neonBlue"
                 className="flex gap-2"
                 border={"border-slate-500"}
+                path="/#projects"
               >
-                <Eye className="w-6 h-6" />
-                My Work
+                <a href="/#projects" className="flex gap-2 items-center">
+                  <Eye className="w-6 h-6" />
+                  Projects
+                </a>
               </Button>
               <Button
                 variant="neon"
@@ -68,19 +71,26 @@ const Hero = () => {
                 copy={"My resume"}
                 textColor={"text-black"}
               >
-                <Download className="w-6 h-6" />
-                Resume
+                <a
+                  className="flex gap-2 items-center"
+                  href="https://charlesj-portfolio-assets.s3.ap-southeast-2.amazonaws.com/files/Charles%2BJoma+resume.docx"
+                  download
+                >
+                  <Download className="w-6 h-6" />
+                  Resume
+                </a>
               </Button>
               <Button
-              variant="neon"
+                variant="neon"
                 neonColor="neonOrange"
                 className="flex gap-2"
                 copy={"My Email"}
                 border={"border-slate-500"}
-                
               >
-                <Mail className="w-6 h-6" />
-                Email
+                <a className="flex gap-2 items-center" href="mailto:charlesjoma@outlook.com">
+                  <Mail className="w-6 h-6" />
+                  Email
+                </a>
               </Button>
             </div>
           </div>

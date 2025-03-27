@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Section
       id="contact"
-      className="w-full mx-auto -translate-y-6 px-4 py-4 border-neutral-300/40 transition-all duration-300 ease-in-out hover:shadow-2xl hover:translate-y-1 dark:border-white/10 shadow-xl border rounded-2xl background-blur-md"
+      className="bg-white w-full mx-auto -translate-y-6 px-4 py-4 border-neutral-300/40 transition-all duration-300 ease-in-out hover:shadow-2xl hover:translate-y-1 dark:border-white/10 shadow-xl border rounded-2xl background-blur-md text-black"
     >
       <div className="container mx-auto text-black">
         <div className="flex flex-col sm:flex-row justify-between sm:justify-around gap-10">

@@ -1,15 +1,19 @@
 "use client";
 import React from "react";
-import Image from "next/image";
-import { HTMLAttributes, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Spotify from "../spotify";
 import { cn } from "@/lib/utils";
+import Section from "../section";
 
 const List = ({ item, className, index, activeItem, ...props }: any) => {
+  const isActive = index === activeItem;
+  const backgroundImage = item.image?.src ? { backgroundImage: `url(${item.image.src})` } : {};
+
   return (
     <div
       className={cn(
-        "relative flex h-full w-20 mobile:w-full min-w-10 cursor-pointer overflow-x-hidden rounded-md transition-all delay-0 duration-300 ease-in-out",
+        "",
+        "relative flex h-full w-20 mobile:w-full min-w-10 bg-cover cursor-pointer overflow-x-hidden rounded-md transition-all delay-0 duration-300 ease-in-out",
         {
           "flex-grow": index === activeItem,
           "mobile:h-[80vh]": index === activeItem, // Active = tall
@@ -17,12 +21,15 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
         },
         className
       )}
+      style={backgroundImage}
       {...props}
     >
-      <div className="w-full h-[80vh] bg-black bg-opacity-50"></div>
+      <div
+        className={cn(`w-full h-[80vh] bg-black ${index === activeItem ? "bg-opacity-50" : ""}`)}
+      />
 
       {index === activeItem && (
-        <>
+        <Section>
           <div className="absolute bottom-4 left-4 min-w-fit text-white md:bottom-8 md:left-8">
             <div className="text-2xl font-bold md:text-4xl">{item.title}</div>
             <p className="mt-2 leading-3 text-sm md:mt-4 md:text-lg opacity-90">
@@ -40,11 +47,11 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
               <video
                 src={item.video.src}
                 autoPlay
-                className="w-full h-full object-cover  rounded-md"
+                className="w-full h-full object-cover rounded-md"
               />
             </div>
           ) : null}
-        </>
+        </Section>
       )}
     </div>
   );
@@ -69,7 +76,7 @@ const FlashUiCarousel = ({ list, autoPlay = true, className, ...props }: any) =>
   return (
     <>
       {/*  Desktop */}
-      <div className={cn("flex mobile:grid mobile:gap-2  w-full gap-1", className)}>
+      <div className={cn("flex mobile:grid mobile:gap-2 w-full gap-1", className)}>
         {list.map((item: any, index: any) => (
           <List
             key={item.title}
