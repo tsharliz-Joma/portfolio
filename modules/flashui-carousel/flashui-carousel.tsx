@@ -30,9 +30,9 @@ const List = ({ item, className, index, activeItem, ...props }: any) => {
 
       {index === activeItem && (
         <Section>
-          <div className="absolute bottom-4 left-4 min-w-fit text-white md:bottom-8 md:left-8">
+          <div className="absolute bottom-0 left-0 min-w-fit text-white w-full justify-center p-5 flex flex-col">
             <div className="text-2xl font-bold md:text-4xl">{item.title}</div>
-            <p className="mt-2 leading-3 text-sm md:mt-4 md:text-lg opacity-90">
+            <p className="mt-2 leading-4  text-sm md:mt-4 md:text-lg opacity-90">
               {item.description}
             </p>
           </div>
