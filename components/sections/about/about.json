@@ -1,0 +1,36 @@
+{
+  "About": [
+    {
+      "title": "Vocation",
+      "description": "Boxing isn’t just my sport—it’s where my mind sharpens and my spirit finds calm. I've found more clarity throwing punches alone in the gym than anywhere else in life. It humbles me, challenges me, centers me. As Ali said, “Float like a butterfly, sting like a bee”—and in that rhythm, I found who I’m meant to be.",
+      "image": {
+        "src": ""
+      },
+      "video": {
+        "src": "/static/img/charlesVsMatt.mp4"
+      },
+
+      "bg": "fightnight"
+    },
+    {
+      "title": "Passion",
+      "description": "Coffee’s always been more than just a job for me — it’s kind of my zone. There’s something about the rhythm of dialing in a shot, steaming milk just right, and hitting flow in the middle of a busy rush that feels… good. Like muscle memory meets mindfulness. I’ve made coffee in packed events and sleepy weekday shifts, and no matter the setting, I’ve always loved the moment someone takes that first sip and nods in approval. That’s the win. It’s calm, it’s chaos, and somehow, it’s home.",
+      "image": {
+        "src": "/static/img/PerfectSoyLatte.JPG"
+      },
+      "spotify": {
+        "uri": "https://open.spotify.com/track/5WJU527RQNyMLuKecjsL8V?si=561ddcf0edaa42e7"
+      },
+      "bg": "skytopia"
+    },
+    {
+      "title": "Profession",
+      "description": "Code is where my problem-solving and creativity collide. Whether I’m building interfaces or structuring backends, I approach software like I do a craft — with intention, curiosity, and care. I’ve worked across full stacks applications, adapted to fast-moving projects, and found importance in the details from clean architecture to those “DUHH” debugging moments. The deeper I go, the more it clicks for me, tech isn’t just my work, it’s my way of thinking.",
+      "image": {
+        "src": "/static/img/profession.jpeg"
+      },
+
+      "bg": "fightnight"
+    }
+  ]
+}

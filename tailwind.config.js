@@ -11,6 +11,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      animation: {
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
+      },
+      keyframes: {
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
+        },
+      },
       screens: {
         mobile: { max: "430px" },
         tablet: { max: "640px" },
@@ -97,6 +111,15 @@ module.exports = {
         secondary_charcoal: "#282828",
         paper: "#424242",
         "border-green": "#008000",
+        neonCyan: "#00fff7",
+        neonPink: "#ff00d4",
+        neonLime: "#aaff00",
+        neonOrange: "#ff6b00",
+        neonPurple: "#ae00ff",
+        neonBlue: "#00b7ff",
+
+        onNeonDark: "#000000",
+        onNeonLight: "#ffffff",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],

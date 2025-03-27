@@ -1,20 +1,21 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useId } from "react";
 import Script from "next/script";
 
 const Spotify = ({ uri }) => {
+  const embedId = useId();
+
   useEffect(() => {
     window.onSpotifyIframeApiReady = (IFrameAPI) => {
-      const element = document.getElementById("spotify-embed");
+      const element = document.getElementById(embedId);
       const options = {
         width: "100%",
         height: "200px",
         uri: uri,
       };
-      const callback = (EmbedController) => {};
-      IFrameAPI.createController(element, options, callback);
+      IFrameAPI.createController(element, options, () => {});
     };
-  }, [uri]);
+  }, [uri, embedId]);
 
   return (
     <div className="">
@@ -23,7 +24,7 @@ const Spotify = ({ uri }) => {
         strategy="afterInteractive"
         async
       />
-      <div id="spotify-embed"></div>
+      <div id={embedId}></div>
     </div>
   );
 };

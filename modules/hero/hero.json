@@ -6,5 +6,13 @@
     }
   },
   "titles": ["Charles Joma", "a Software Developer", "a Tech Enthusiast", "a Coffee Lover"],
-  "profile": "I'm a software developer with a passion for technology and coffee. I love learning new things and sharing my knowledge with others. I'm always looking for new opportunities to grow, improve my skills and do meaningful work."
+  "profile": "I'm a software developer with a passion for technology and coffee. I love learning new things and sharing my knowledge with others. I'm always looking for new opportunities to grow, improve my skills and do meaningful work.",
+  "Developer": {
+    "name": "Charles Joma",
+    "skills": ["React", "NextJS", "Node.js", "GraphQL", "Express", "MongoDB", "Docker", "AWS"],
+    "hardWorker": true,
+    "creativeThinker": true,
+    "quickLearner": true,
+    "type": "developer"
+  }
 }
