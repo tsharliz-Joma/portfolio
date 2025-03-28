@@ -56,7 +56,7 @@
       },
       "tech": [
         { "name": "React", "src": "static/logos/react.svg" },
-        { "name": "Amplify", "src": "static/logos/aws.svg" },
+        { "name": "Amplify", "src": "static/logos/AWS.svg" },
         { "name": "Tailwind", "src": "static/logos/tailwind.svg" }
       ]
     },
