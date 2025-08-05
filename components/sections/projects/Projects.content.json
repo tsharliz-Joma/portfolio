@@ -2,17 +2,17 @@
   "Projects": [
     {
       "title": "Coffee up",
-      "url": "https://coffeeup.web.app/",
+      "url": "https://coffeeup-2341e.web.app/",
       "repo": "https://github.com/tsharliz-Joma/ikhofiPhezulu",
       "img": {
         "src": "/static/img/coffeeup.svg"
       },
       "tech": [
-        { "name": "React", "src": "static/logos/react.svg" },
-        { "name": "MUI", "src": "static/logos/mui.svg" },
-        { "name": "Node", "src": "static/logos/node.svg" },
-        { "name": "Mongo DB", "src": "static/logos/mongodb.svg" },
-        { "name": "Square", "src": "static/logos/square.svg" }
+        {"name": "React", "src": "static/logos/react.svg"},
+        {"name": "MUI", "src": "static/logos/mui.svg"},
+        {"name": "Node", "src": "static/logos/node.svg"},
+        {"name": "Mongo DB", "src": "static/logos/mongodb.svg"},
+        {"name": "Square", "src": "static/logos/square.svg"}
       ],
       "description": ""
     },
@@ -24,11 +24,11 @@
         "src": "/static/img/island-fight-centre-desktop.png"
       },
       "tech": [
-        { "name": "React", "src": "static/logos/react.svg" },
-        { "name": "Firebase", "src": "static/logos/firebase.svg" },
-        { "name": "GSAP", "src": "static/logos/gsap.svg" },
-        { "name": "Scss", "src": "static/logos/scss.svg" },
-        { "name": "Mui", "src": "static/logos/mui.svg" }
+        {"name": "React", "src": "static/logos/react.svg"},
+        {"name": "Firebase", "src": "static/logos/firebase.svg"},
+        {"name": "GSAP", "src": "static/logos/gsap.svg"},
+        {"name": "Scss", "src": "static/logos/scss.svg"},
+        {"name": "Mui", "src": "static/logos/mui.svg"}
       ],
       "description": ""
     },
@@ -40,10 +40,10 @@
         "src": "/static/img/brain-train-mobile.svg"
       },
       "tech": [
-        { "name": "React", "src": "static/logos/react.svg" },
-        { "name": "Firebase", "src": "static/logos/firebase.svg" },
-        { "name": "Node", "src": "static/logos/node.svg" },
-        { "name": "Bootstrap", "src": "static/logos/bootstrap.svg" }
+        {"name": "React", "src": "static/logos/react.svg"},
+        {"name": "Firebase", "src": "static/logos/firebase.svg"},
+        {"name": "Node", "src": "static/logos/node.svg"},
+        {"name": "Bootstrap", "src": "static/logos/bootstrap.svg"}
       ],
       "description": ""
     },
@@ -55,9 +55,9 @@
         "src": "/static/img/cryptoclause.svg"
       },
       "tech": [
-        { "name": "React", "src": "static/logos/react.svg" },
-        { "name": "Amplify", "src": "static/logos/AWS.svg" },
-        { "name": "Tailwind", "src": "static/logos/tailwind.svg" }
+        {"name": "React", "src": "static/logos/react.svg"},
+        {"name": "Amplify", "src": "static/logos/AWS.svg"},
+        {"name": "Tailwind", "src": "static/logos/tailwind.svg"}
       ]
     },
     {
@@ -68,10 +68,10 @@
         "src": "/static/img/world-of-spheres.svg"
       },
       "tech": [
-        { "name": "Aframe", "src": "static/logos/aframe.svg" },
-        { "name": "Netlify", "src": "static/logos/netlify.svg" },
-        { "name": "Html", "src": "static/logos/html.svg" },
-        { "name": "javascript", "src": "static/logos/javascript.svg" }
+        {"name": "Aframe", "src": "static/logos/aframe.svg"},
+        {"name": "Netlify", "src": "static/logos/netlify.svg"},
+        {"name": "Html", "src": "static/logos/html.svg"},
+        {"name": "javascript", "src": "static/logos/javascript.svg"}
       ],
       "description": ""
     },
@@ -83,10 +83,10 @@
         "src": "/static/img/school-of-hard-knocks.svg"
       },
       "tech": [
-        { "name": "Ruby", "src": "static/logos/ruby.svg" },
-        { "name": "Heroku", "src": "static/logos/heroku.svg" },
-        { "name": "css", "src": "static/logos/css.svg" },
-        { "name": "html", "src": "static/logos/html.svg" }
+        {"name": "Ruby", "src": "static/logos/ruby.svg"},
+        {"name": "Heroku", "src": "static/logos/heroku.svg"},
+        {"name": "css", "src": "static/logos/css.svg"},
+        {"name": "html", "src": "static/logos/html.svg"}
       ],
       "description": ""
     },
@@ -98,9 +98,38 @@
         "src": "/static/img/pugilist-express.svg"
       },
       "tech": [
-        { "name": "React", "src": "static/logos/react.svg" },
-        { "name": "Firebase", "src": "static/logos/firebase.svg" },
-        { "name": "Bootstrap", "src": "static/logos/bootstrap.svg" }
+        {"name": "React", "src": "static/logos/react.svg"},
+        {"name": "Firebase", "src": "static/logos/firebase.svg"},
+        {"name": "Bootstrap", "src": "static/logos/bootstrap.svg"}
+      ],
+      "description": ""
+    },
+    {
+      "title": "Snake",
+      "url": "https://snakebycharles.netlify.app",
+      "repo": "https://github.com/tsharliz-Joma/snake",
+      "img": {
+        "src": "/static/img/snake.svg"
+      },
+      "tech": [
+        {"name": "Html", "src": "static/logos/html.svg"},
+        {"name": "Css", "src": "static/logos/css.svg"},
+        {"name": "Js", "src": "static/logos/javascript.svg"}
+      ],
+      "description": ""
+    },
+
+    {
+      "title": "Tetris",
+      "url": "https://tetrisbycharles.netlify.app/",
+      "repo": "https://github.com/tsharliz-Joma/tetris",
+      "img": {
+        "src": "/static/img/tetris.svg"
+      },
+      "tech": [
+        {"name": "Html", "src": "static/logos/html.svg"},
+        {"name": "Css", "src": "static/logos/css.svg"},
+        {"name": "Js", "src": "static/logos/javascript.svg"}
       ],
       "description": ""
     }

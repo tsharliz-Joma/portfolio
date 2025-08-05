@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Image from "next/image";
-import { MoveUpRight } from "lucide-react";
+import {MoveUpRight} from "lucide-react";
 import Data from "./Projects.content";
 
 export default function PortfolioGrid() {
-  const { Projects } = Data;
+  const {Projects} = Data;
   return (
     <section className="">
       <div className="container mx-auto ">
@@ -15,9 +15,8 @@ export default function PortfolioGrid() {
             <motion.article
               key={index}
               className="relative group shadow-lg overflow-hidden rounded-xl bg-white dark:bg-gray-800"
-              whileHover={{ scale: 1.05 }}
-              transition={{ type: "spring", stiffness: 300, damping: 20 }}
-            >
+              whileHover={{scale: 1.05}}
+              transition={{type: "spring", stiffness: 300, damping: 20}}>
               {/* Image with a slight hover scale effect */}
               <motion.div className="h-72 w-full">
                 <Image
@@ -25,7 +24,7 @@ export default function PortfolioGrid() {
                   alt={project.title}
                   height={600}
                   width={1200}
-                  className="h-full w-full object-cover transition-transform duration-500 ease-in-out rounded-t-xl"
+                  className="w-full h-full object-cover transition-transform duration-500 ease-in-out rounded-t-xl"
                 />
               </motion.div>
 
@@ -33,12 +32,23 @@ export default function PortfolioGrid() {
               <div className="flex flex-col absolute h-full bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out">
                 <div className="grow grid grid-cols-3 justify-items-center items-center  gap-2">
                   {project.tech?.map((img, index) => (
-                    <Image key={index} src={img.src} width={55} height={55} alt="" />
+                    <Image
+                      key={index}
+                      src={img.src}
+                      width={55}
+                      height={55}
+                      alt=""
+                      className="object-contain"
+                    />
                   ))}
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-white">{project.title}</h3>
-                  <p className="text-sm text-gray-300 mt-2">{project.description}</p>
+                  <h3 className="text-xl font-bold text-white">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm text-gray-300 mt-2">
+                    {project.description}
+                  </p>
                 </div>
               </div>
 

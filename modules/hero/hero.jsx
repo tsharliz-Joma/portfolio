@@ -1,11 +1,12 @@
 "use client";
-import React, { useEffect, useMemo, useState } from "react";
+import React, {useEffect, useMemo, useState} from "react";
 import Section from "@/components/ui/section";
-import { motion } from "framer-motion";
-import { Eye, Download, Mail } from "lucide-react";
+import {motion} from "framer-motion";
+import {Eye, Download, Mail} from "lucide-react";
 import content from "./hero.json";
 import InfoCard from "@/components/infoCard/InfoCard";
-import { Button } from "@/components/ui/button/button";
+import {Button} from "@/components/ui/button/button";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   const [titleNumber, setTitleNumber] = useState(0);
@@ -24,7 +25,11 @@ const Hero = () => {
 
   return (
     <Section id="Hero" className="w-full ">
-      <div className="flex flex-col items-center justify-center gap-8 ">
+      <div
+        className={cn(
+          `flex flex-col items-center justify-center`,
+          `gap-8 border-2 shadow-xl rounded-2xl backdrop-blur-md border-neutral-300/400  p-10`,
+        )}>
         <div className="grid grid-cols-2 mobile:grid-cols-1 gap-10 ">
           <div className="grid gap-y-5 w-full cols-span-2">
             <h1 className="text-4xl  desktop:text-5xl tracking-tighter text-left max-w-3xl">
@@ -35,14 +40,13 @@ const Hero = () => {
                   <motion.span
                     key={index}
                     className="absolute font-semibold"
-                    initial={{ opacity: 0, y: -100 }}
-                    transition={{ type: "spring", stiffness: 50 }}
+                    initial={{opacity: 0, y: -100}}
+                    transition={{type: "spring", stiffness: 50}}
                     animate={
                       titleNumber === index
-                        ? { y: 0, opacity: 1 }
-                        : { y: titleNumber > index ? -150 : 150, opacity: 0 }
-                    }
-                  >
+                        ? {y: 0, opacity: 1}
+                        : {y: titleNumber > index ? -150 : 150, opacity: 0}
+                    }>
                     {title}
                   </motion.span>
                 ))}
@@ -57,8 +61,7 @@ const Hero = () => {
                 neonColor="neonBlue"
                 className="flex gap-2"
                 border={"border-slate-500"}
-                path="/#projects"
-              >
+                path="/#projects">
                 <a href="/#projects" className="flex gap-2 items-center">
                   <Eye className="w-6 h-6" />
                   Projects
@@ -69,13 +72,11 @@ const Hero = () => {
                 neonColor="neonLime"
                 className="flex gap-2"
                 copy={"My resume"}
-                textColor={"text-black"}
-              >
+                textColor={"text-black"}>
                 <a
                   className="flex gap-2 items-center"
                   href="https://charlesj-portfolio-assets.s3.ap-southeast-2.amazonaws.com/files/Charles%2BJoma+resume.docx"
-                  download
-                >
+                  download>
                   <Download className="w-6 h-6" />
                   Resume
                 </a>
@@ -85,9 +86,10 @@ const Hero = () => {
                 neonColor="neonOrange"
                 className="flex gap-2"
                 copy={"My Email"}
-                border={"border-slate-500"}
-              >
-                <a className="flex gap-2 items-center" href="mailto:charlesjoma@outlook.com">
+                border={"border-slate-500"}>
+                <a
+                  className="flex gap-2 items-center"
+                  href="mailto:charlesjoma@outlook.com">
                   <Mail className="w-6 h-6" />
                   Email
                 </a>
