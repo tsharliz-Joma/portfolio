@@ -12,8 +12,8 @@ const Footer = () => {
       external: true,
     },
     {
-      label: "Rocket Power Tech (Business)",
-      href: "https://rocketpower.tech",
+      label: "Rocket Power Tech 🚀",
+      href: "https://rocket-power-tech.vercel.app/",
       external: true,
     },
   ];
